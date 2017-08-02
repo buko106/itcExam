@@ -1,0 +1,178 @@
+\documentclass[a4j]{jarticle}
+%%  packages
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{bm}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{listings}
+\usepackage[english]{babel}
+\lstset{
+ 	%枠外に行った時の自動改行
+ 	breaklines = true,
+ 	%標準の書体
+        basicstyle=\ttfamily\footnotesize,
+        commentstyle=\footnotesize\bfseries,
+        keywordstyle=\footnotesize\bfseries,
+ 	%枠 "t"は上に線を記載, "T"は上に二重線を記載
+	%他オプション：leftline，topline，bottomline，lines，single，shadowbox
+ 	frame = single,
+ 	%frameまでの間隔(行番号とプログラムの間)
+ 	framesep = 5pt,
+ 	%行番号の位置
+ 	numbers = left,
+	%行番号の間隔
+ 	stepnumber = 1,
+	%タブの大きさ
+ 	tabsize = 4,
+ 	%キャプションの場所("tb"ならば上下両方に記載)
+ 	captionpos = t
+}
+
+%% math commands
+\let \ds \displaystyle
+\newcommand{\idiff}[3]{
+  \frac{d^{#1} #2}{d #3^{#1}}
+}
+\newcommand{\diff}[3]{
+  \frac{\mathrm{d}^{#1} #2}{\mathrm{d} #3^{#1}}
+}
+\newcommand{\pdiff}[3]{
+  \frac{\partial^{#1} #2}{\partial #3^{#1}}
+}
+
+
+
+%% title configuration
+\title{東京大学情報理工学系研究科2012年度過去問}
+\author{}
+\date{}
+
+
+%% headings
+\pagestyle{headings}
+\markright{東京大学情報理工学系研究科2012年度過去問}
+
+
+
+
+\begin{document}
+%%  begin title page
+\thispagestyle{empty}
+\maketitle
+\pagebreak
+
+\section{第１問}
+
+\begin{screen}
+正方行列$D$が直行行列であるとは，$DD^\top$と$D^\top D$とがともに単位行列$I$となることをいう．ここで$D^\top$は$D$の転置行列を表す．また，次の事実を証明なしに用いてよい：$D^\top D$が単位行列ならば，$DD^\top$も単位行列．
+
+行列$A$を次のように定める．
+
+$$A=
+\begin{pmatrix}
+0 & 1 & 1 \\
+2 & -1 & 1 \\
+1 & 1 & -1
+\end{pmatrix}$$
+
+以下の各問に答えよ．
+\end{screen}
+
+\begin{screen}
+(1)
+行列$A^\top A$の固有値と固有ベクトルを求めよ．
+\end{screen}
+$A^\top A=
+\begin{pmatrix}
+5& -1&  1\\
+-1&  3& -1\\
+ 1& -1&  3
+\end{pmatrix}$$
+$である．特性方程式$\det(\lambda I -A^\top A)=(\lambda-6)(\lambda-3)(\lambda-2)=0$を解くことにより，$\lambda = 6,3,2$となる．(1)$\lambda=6$のとき．$A^\top A\left(\begin{array}{c} x \\ y \\ z \end{array} \right) = 6\left(\begin{array}{c} x \\ y \\ z \end{array} \right)$を解いて，固有ベクトルは$t\left(\begin{array}{c} 2 \\ -1 \\ 1 \end{array} \right)$ $(t\in \mathbb{R})$である．(2)$\lambda=3$のとき，同様にして固有ベクトル$t\left(\begin{array}{c} -1 \\ -1 \\ 1 \end{array} \right)$ $(t\in \mathbb{R})$ である．(3)$\lambda=2$のとき，同様にして固有ベクトル$t\left(\begin{array}{c} 0\\ 1 \\ 1 \end{array} \right)$ $(t\in \mathbb{R})$．
+
+\begin{screen}
+(2)
+$$ A^\top A=U\begin{pmatrix}
+\lambda_1& 0&  0\\
+0&  \lambda_2& 0\\
+0& 0&  \lambda_3
+\end{pmatrix}
+U^\top $$
+
+となるような実数$\lambda_1,\lambda_2,\lambda_3$と直行行列
+$$ U=\begin{pmatrix}
+u_{11} & u_{12} & u_{13} \\
+u_{21} & u_{22} & u_{23} \\
+u_{31} & u_{32} & u_{33}
+\end{pmatrix}
+=\begin{pmatrix}
+\bm{u}_1 & \bm{u}_2 & \bm{u}_3 \\
+\end{pmatrix}
+$$
+を求めよ．ただし，$\lambda_1\geq\lambda_2\geq \lambda_3$かつ$u_{31} \geq 0 ,u_{32} \geq 0, u_{33}\geq 0$となるようにせよ．ここで$\bm{u}_i$は次のような$3 \times 1$の列ベクトルを表す．
+$$ \bm{u}_i = \left(\begin{array}{c} u_{1i}\\ u_{2i} \\ u_{3i} \end{array} \right)$$
+\end{screen}
+
+
+$A^\top A$は対称行列である．従って，正規化した固有ベクトルを並べた直交行列により対角化可能である．$\lambda_1\geq\lambda_2\geq \lambda_3$かつ$u_{31} \geq 0 ,u_{32} \geq 0, u_{33}\geq 0$に注意して正規化すると，
+
+$\lambda_1=6,\lambda_2=3 ,\lambda_3=2,
+\ds
+\bm{u}_1 = \frac{1}{\sqrt{6}}\left(\begin{array}{c} 2\\ -1 \\ 1 \end{array} \right),
+\bm{u}_2 = \frac{1}{\sqrt{3}}\left(\begin{array}{c} -1 \\ -1 \\ 1 \end{array} \right),
+\bm{u}_3 = \frac{1}{\sqrt{2}}\left(\begin{array}{c} 0\\ 1 \\ 1 \end{array} \right)
+$．
+
+
+\begin{screen}
+(3)
+$B^2=A^\top A$となるような行列$B$のうち，固有値がすべて正のものを一つ求めよ．
+\end{screen}
+
+
+$\Lambda=\begin{pmatrix}
+\sqrt{\lambda_1}& 0&  0\\
+0&  \sqrt{\lambda_2}& 0\\
+0& 0&  \sqrt{\lambda_3}
+\end{pmatrix}$と定める．$(U\Lambda U^\top)^2=U\Lambda^2 U^\top=A^\top A$であるので，$B=U\Lambda U^\top$と定める．$B$は$U$により対角化され，固有値は$\sqrt{\lambda_1},\sqrt{\lambda_2},\sqrt{\lambda_3}$であり，すべて正である．以上により，$B=U\Lambda U^\top$．
+\begin{screen}
+(4)
+$3 \times 3$の行列$C$を
+$$ C=\begin{pmatrix}
+\frac{1}{\sqrt{\lambda_1}}\bm{u}_1 & \frac{1}{\sqrt{\lambda_2}}\bm{u}_2 & \frac{1}{\sqrt{\lambda_3}}\bm{u}_3 
+\end{pmatrix}$$
+によって定める．このとき，$AC$が直交行列であることを証明せよ．
+\end{screen}
+
+
+$C^\top U = \begin{pmatrix}
+\frac{1}{\sqrt{\lambda_1}}& 0&  0\\
+0&  \frac{1}{\sqrt{\lambda_2}}& 0\\
+0& 0&  \frac{1}{\sqrt{\lambda_3}}
+\end{pmatrix}$を用いて計算すると，
+$$(AC)^\top AC = C^\top A^\top AC =C^\top U
+\begin{pmatrix}
+\lambda_1& 0&  0\\
+0&  \lambda_2& 0\\
+0& 0&  \lambda_3
+\end{pmatrix}
+(C^\top U)^\top=I$$である．問で与えられた事実より$(AC)^\top AC=AC(AC)^\top=I$を満たすので，$AC$は直交行列である．
+\begin{screen}
+(5)
+$$A=V\begin{pmatrix}
+\sqrt{\lambda_1}& 0&  0\\
+0&  \sqrt{\lambda_2}& 0\\
+0& 0&  \sqrt{\lambda_3}
+\end{pmatrix}W$$
+となるような$3 \times 3$直交行列$V,W$をみつけよ．
+\end{screen}
+
+
+$V=AC$と選ぶ．このとき$V\begin{pmatrix}
+\sqrt{\lambda_1}& 0&  0\\
+0&  \sqrt{\lambda_2}& 0\\
+0& 0&  \sqrt{\lambda_3}
+\end{pmatrix}W=AUW$であるので，$W=U^\top$と選べばよい．(4)より$V=AC$は直交行列，$U$が直交行列であるので$W=U^\top$も直交行列である．以上により$V,W$は題の条件を満たす直交行列である．
+
+\end{document}
+
+
