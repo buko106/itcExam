@@ -105,4 +105,53 @@
 
 \section{}
 
+\begin{screen}
+ 独立な確率変数の列$x_0,x_1,x_2,\cdots$において，各$x_i$ $(i=0,1,2,\cdots)$は，確率$p$で$1$の値をとり，確率$1-p$で$0$の値をとるものとする．以下の設問に答えよ．
+\end{screen}
+
+
+\begin{screen}
+ (1)確率変数列$x_0,x_1,x_2,\cdots$に関して，以下の小問に答えよ．
+ \begin{itemize}
+  \item[(1-1)]$x_i$の分散を求めよ．また，$x_0=x_1=1$となる確率を求めよ．
+  \item[(1-2)]$k(k\geq 0)$を$x_k=x_{k+1}$が成り立つ最小の整数とする．たとえば，$x_0,x_1,x_2,\cdots$が$1,0,0,1,0,1,1,1,0,0,\cdots$ならば$k=1$となり$x_k=0$となる．\\
+              $x_k=1$となる確率を求めよ．
+ \end{itemize}
+\end{screen}
+
+\begin{itemize}
+ \item[(1-1)] $x_i$の期待値は$0\cdot (1-p) + 1\cdot p = p$である．よって分散は$(0-p)^2 (1-p) + (1-p)^2 p = p(1-p)$
+ \item[(1-2)] (i)$x_0=1$のとき．$1,0$を$n$回繰り返した後に$1,1$となる．従ってその確率は$\ds \sum_{n=0}^\infty p^n(1-p)^n\cdot p^2$ \\
+              (ii)$x_0=0$のとき，$0$の後に$1,0$を$n$回繰り返した後に$1,1$となる．従ってその確率は \\ $\ds \sum_{n=0}^\infty (1-p) \cdot p^n(1-p)^n\cdot p^2$  \\
+              (i)+(ii)によって，確率は
+              $$p^2(2-p)\sum_{n=0}^\infty p^n(1-p)^n = \frac{p^2(2-p)}{1-p(1-p)}$$
+\end{itemize}
+
+\begin{screen}
+ (2)確率変数列$x_0,x_1,x_2,\cdots$をもとに確率変数列$y_0,y_1,y_2,\cdots$を以下のように定める．
+ \begin{align*}
+  y_0 &= 1 & \\
+  y_{i+1} &= y_i + \alpha(x_i-y_i) & (i=0,1,2,\cdots)
+ \end{align*}
+ ただし，$0<\alpha<1$と仮定する．以下の小問に答えよ．
+ \begin{itemize}
+  \item[(2-1)] $\ds y_n=(1-\alpha)^n + \sum_{i=0}^{n-1}(1-\alpha)^{n-i-1}\alpha x_i$ $(n=1,2,\cdots)$であることを示せ．
+  \item[(2-2)] $y_n$の期待値$E_n$と分散$V_n$を求めよ．
+  \item[(2-3)]
+ \end{itemize}
+\end{screen}
+
+\begin{itemize}
+  \item[(2-1)] 数学的帰納法により示す．(i) $n=1$のとき．$y_1 = (1-\alpha) + \alpha x_0 = y_0 + \alpha(x_0-y_0)$で成立する．(ii) $n=k(k\geq 1)$で成り立つことを仮定する．
+               $\ds y_{k+1}=(1-\alpha)y_k + \alpha x_k = (1-\alpha)^{k+1} + \sum_{i=0}^{k}(1-\alpha)^{k-i}\alpha x_i $となり$n=k+1$のときも成立する．
+  \item[(2-2)] $\ds E_n = E[(1-\alpha)^n] + \sum_{i=0}^{n-1}(1-\alpha)^{n-i-1}\alpha E[x_i] = (1-\alpha)^n + p\alpha \sum_{i=0}^{n-1}(1-\alpha)^i = p + (1-p)(1-\alpha)^n$ \\
+               $x_i$の独立性より \\
+               \begin{align*}
+                V_n &= V[(1-\alpha)^n] + \sum_{i=0}^{n-1}(1-\alpha)^{2(n-i-1)}\alpha^2 V[x_i] \\
+                &= 0 + p(1-p)\alpha \sum_{i=0}^{n-1}(1-\alpha)^{2i} \\
+                &= p(1-p)\alpha\frac{1-(1-\alpha)^{2n}}{1-(1-\alpha)^2}
+               \end{align*}
+  \item[(2-3)]
+\end{itemize}
+
 \end{document}
