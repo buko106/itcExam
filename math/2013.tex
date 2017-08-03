@@ -1,0 +1,129 @@
+\documentclass[a4j]{jarticle}
+%%  packages
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{bm}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{listings}
+\usepackage[english]{babel}
+\lstset{
+ 	%枠外に行った時の自動改行
+ 	breaklines = true,
+ 	%標準の書体
+        basicstyle=\ttfamily\footnotesize,
+        commentstyle=\footnotesize\bfseries,
+        keywordstyle=\footnotesize\bfseries,
+ 	%枠 "t"は上に線を記載, "T"は上に二重線を記載
+	%他オプション：leftline，topline，bottomline，lines，single，shadowbox
+ 	frame = single,
+ 	%frameまでの間隔(行番号とプログラムの間)
+ 	framesep = 5pt,
+ 	%行番号の位置
+ 	numbers = left,
+	%行番号の間隔
+ 	stepnumber = 1,
+	%タブの大きさ
+ 	tabsize = 4,
+ 	%キャプションの場所("tb"ならば上下両方に記載)
+ 	captionpos = t
+}
+
+%% math commands
+\let \ds \displaystyle
+\newcommand{\idiff}[3]{
+  \frac{d^{#1} #2}{d #3^{#1}}
+}
+\newcommand{\diff}[3]{
+  \frac{\mathrm{d}^{#1} #2}{\mathrm{d} #3^{#1}}
+}
+\newcommand{\pdiff}[3]{
+  \frac{\partial^{#1} #2}{\partial #3^{#1}}
+}
+
+
+
+%% title configuration
+\title{東京大学情報理工学系研究科2013年度過去問}
+\author{}
+\date{}
+
+
+%% headings
+\pagestyle{headings}
+\markright{東京大学情報理工学系研究科2013年度過去問}
+
+
+
+
+\begin{document}
+%%  begin title page
+\thispagestyle{empty}
+\maketitle
+\pagebreak
+
+\section{}
+
+\section{}
+
+\begin{screen}
+ 実数軸上の関数$f=f(x)$であって，$f(0)=0,f(1)=1$となるものの集合を$\mathcal{F}$とする．$\mathcal{F}$の元$f$に対して，$I=I[f]$を
+ $$I[f]=\int_0^1\left[\left\{f(x)\right\}^2+\left\{\diff{}{f(x)}{x}\right\}^2\right]\mathrm{d}x$$
+ と定義する．$I$を最小化する$\mathcal{F}$の元を求めたい．以下の設問に答えよ．ただし，本問題において考える関数はすべていたるところで十分滑らかな関数とする．
+\end{screen}
+
+\begin{screen}
+ (1)任意の$f,g\in\mathcal{F}$と任意の$t\in[0,1]$に対して
+ $$I[(1-t)f+tg]\leq(1-t)I[f]+tI[g]$$
+ となることを示せ．
+\end{screen}
+
+\begin{align*}
+ (\mbox{右辺})-(\mbox{左辺}) &= \cdots \\
+ &= t(1-t)I[f-g]\geq 0 \\
+ ( \because I[f-g]\geq 0 \mbox{かつ，} 0\leq t \leq 1 \mbox{より} & t(1-t)\geq 0  )
+\end{align*}
+
+\begin{screen}
+ (2)任意の$g\in\mathcal{F}$に対して，
+ $$\left. \diff{}{}{t} I[(1-t)f+tg] \right|_{t=0} = 0$$
+ が成り立つような$f\in\mathcal{F}$を考える．$f$が満たすべき常微分方程式を導け．その際，次の事実を利用してよい．
+
+ 関数$F$が，$G(0)=G(1)=0$となる任意の関数$G$に対して，
+ $$\int_0^1G(x)F(x)\mathrm{d}x=0$$
+ を満たすなら，$x\in [0,1]$に対して$F(x)=0$である．
+\end{screen}
+
+(1)の計算を利用して，
+
+\begin{align*}
+ \diff{}{}{t} I[(1-t)f+tg] &= \diff{}{}{t}\Bigl((1-t)I[f]+tI[g]-t(1-t)I[f-g]\Bigr) \\
+ &= -I[f] + I[g] + (2t-1)I[f-g] \\
+ \left. \diff{}{}{t} I[(1-t)f+tg] \right|_{t=0} &= -I[f]+I[g]+I[f-g] \\
+ &= 0
+\end{align*}
+
+$I$の定義に代入して整理すると，
+
+\begin{align*}
+ & \int_0^1\Bigl\{f(x)\bigl(f(x)-g(x)\bigr) + f'(x)\bigl(f'(x)-g'(x)\bigr)\Bigr\} \mathrm{d}x = 0 \\
+ \intertext{部分積分を用いて}
+ \Leftrightarrow & \int_0^1f(x)\bigl(f(x)-g(x)\bigr)\mathrm{d}x + \Bigl[ f'(x)\bigl(f(x)-g(x)\bigr) \Bigr]_0^1 - \int_0^1 f''(x)\bigl(f(x)-g(x)\bigr) \mathrm{d}x = 0 \\
+ \Leftrightarrow & \int_0^1\bigl(f(x)-f''(x)\bigr)\bigl(f(x)-g(x)\bigr)\mathrm{d}x =0
+ \intertext{$G(x)=f(x)-g(x)$と置くと，$G(x)$は$G(0)=G(1)=0$を満たす任意の関数であるので，設問で与えられてた事実を用いて}
+ \Rightarrow & f(x)-f''(x) = 0 
+\end{align*}
+
+\begin{screen}
+ (3)設問(2)で導いた常微分方程式の解は$I$を最小化する．その理由を説明せよ．
+\end{screen}
+
+$\diff{}{}{t} I[f+t(g-f)] \bigr|_{t=0} = 0$と変形すると，任意の方向$g-f$に関しての微分が$0$となる極値を考えていることになるから．(詳しくは汎関数の方向微分を参照．)
+
+\begin{screen}
+ (3)設問(2)で導いた常微分方程式の解を求めよ．
+\end{screen}
+
+特性方程式$r^2-1=0$を解いて，$r=\pm 1$であるから$f(x)=Ae^x + Be^{-x}$と表せる．\\
+$f(0)=A+B=0,f(1)=Ae + Be^{-1}=1$を解いて，$\ds A=-B=\frac{e}{e^2-1}$
+$$\therefore f(x)=\frac{e}{e^2-1}(e^x-e^{-x})$$
+
+\end{document}
