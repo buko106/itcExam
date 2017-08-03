@@ -81,6 +81,7 @@ $$A=
 (1)
 行列$A^\top A$の固有値と固有ベクトルを求めよ．
 \end{screen}
+
 $A^\top A=
 \begin{pmatrix}
 5& -1&  1\\
@@ -143,7 +144,6 @@ $$ C=\begin{pmatrix}
 によって定める．このとき，$AC$が直交行列であることを証明せよ．
 \end{screen}
 
-
 $C^\top U = \begin{pmatrix}
 \frac{1}{\sqrt{\lambda_1}}& 0&  0\\
 0&  \frac{1}{\sqrt{\lambda_2}}& 0\\
@@ -186,8 +186,61 @@ $$H=\left\{ (x,y,z) | x^2+y^2+z^2=1,z\geq 0\right\}$$
 
 以下の各問に答えよ．
 \end{screen}
+
 \begin{screen}
  (1)角APBの大きさ$\angle$APBを求めよ．
 \end{screen}
+
 中心Pで点A,Bを通る円($H$と平面$z=\cos \alpha$の交線)の半径は$\sin\alpha$．したがって$\angle$APB$=\ds\frac{\alpha}{\sin\alpha}$
+
+\begin{screen}
+ (2)三角形NAB(三本の線分NA,AB,BNで囲まれた平面図形)の面積を$T(\alpha)$とする．
+ $$\frac{T(\alpha)}{\alpha^2}$$
+ が$\alpha\rightarrow 0$で収束することを示し，その極限値を求めよ．
+\end{screen}
+
+$\beta = \angle \mbox{APB}=\frac{\alpha}{\sin\alpha}$とおく．
+\begin{align*}
+ \mbox{AB}^2 &=\mbox{AP}^2 + \mbox{BP}^2 - 2 \cdot \mbox{AP} \cdot \mbox{BP} \cdot \cos \beta \\
+ &= 2\sin^2\alpha(1-\cos\beta)\\
+ \mbox{AN}^2 &= \mbox{AP}^2 + \mbox{NP}^2\\
+ &= \sin^2\alpha + (1-\cos\alpha)^2\\
+ &= 2(1-\cos\alpha)\\
+ \cos\angle\mbox{ANB}&=\frac{\mbox{AN}^2+\mbox{BN}^2-\mbox{AB}^2}{2\cdot \mbox{AN}\cdot\mbox{BN}}\\
+ &= 1- \frac{1}{2}(1+\cos\alpha)(1-\cos\beta)\\
+ T(\alpha) &= \frac{1}{2}\cdot\mbox{AN}\cdot\mbox{BN}\cdot\sin\angle\mbox{ANB}\\
+ &= (1-\cos\alpha)\sqrt{1-\cos^2\angle\mbox{ANB}}\\
+ \therefore \lim_{\alpha\rightarrow 0}\frac{T(\alpha)}{\alpha^2} &= \lim_{\alpha\rightarrow 0}\frac{1-\cos\alpha}{\alpha^2}\sqrt{1-\cos^2\angle\mbox{ANB}}\\
+ &= \frac{1}{2}\sqrt{1-\left(1-\frac{1}{2}\cdot 2 \cdot (1-\cos 1)\right)^2}\\
+ &= \frac{1}{2}\sin 1
+\end{align*}
+
+\begin{screen}
+ (3)$H$のうち，平面$z=\cos\alpha$上およびその上側の部分を$H_\alpha$とする．
+ $$H_\alpha = \left\{(x,y,z)|x^2+y^2+z^2 = 1, z \geq \cos\alpha \right\}$$
+ $H_\alpha$上の点の座標を，図の$\theta,\phi$を用いて表わせ．また$\theta,\phi$の取りうる値の範囲を求めよ．
+\end{screen}
+
+$$\left(x,y,z\right)=\left(\cos\phi\sin\theta,\sin\phi\sin\theta,\cos\theta\right)$$
+$$0\leq\phi<2\pi,0\leq\theta\leq\alpha$$
+
+\begin{screen}
+ (4)$H_\alpha$の曲面積を求めよ．
+\end{screen}
+
+$\theta,\phi$を微小変化させたときの曲面積の増分は$\mathrm{d}S = \mathrm{d}\theta \cdot \sin\theta \mathrm{d} \phi$で表される．
+\begin{align*}
+ \therefore \int_{H_\alpha}\mathrm{d}S &= \int_0^{2\pi}\int_0^\alpha \sin\theta\mathrm{d}\theta\mathrm{d}\phi\\
+ &= 2\pi(1-\cos\alpha)
+\end{align*}
+
+\begin{screen}
+ (5)$H_\alpha$上で，三本の弧AB,弧BN,弧NAで囲まれた部分(図の斜線部)の曲面積を$S(\alpha)$とする．ただし，弧BN,弧NAはそれぞれ，$H$上でBとN，NとAを最短距離で結ぶ曲線(大円の一部)である．
+ $$\frac{S(\alpha)}{\alpha^2}$$
+ が$\alpha\rightarrow 0$で収束することを示し，その極限値を求めよ．
+\end{screen}
+
+(4)と同様にして，$S(\alpha)=\beta(1-\cos\alpha)$
+$$\therefore \lim_{\alpha\rightarrow 0}\frac{S(\alpha)}{\alpha^2}=1\cdot \frac{1}{2}=\frac{1}{2}$$
+
 \end{document}
