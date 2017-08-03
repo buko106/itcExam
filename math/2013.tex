@@ -62,6 +62,40 @@
 
 \section{}
 
+\begin{screen}
+ 以下の設問に答えよ．
+\end{screen}
+
+\begin{screen}
+ (1) $\small\begin{pmatrix}c_1&c_2&c_3&c_4&c_5&c_6&c_7 \end{pmatrix}=\small\begin{pmatrix}1&2&-8&20&-44&92&-188 \end{pmatrix}$に対して，整数$k(\geq 1)$と$k \times k$定数行列$M$の組が存在し，それらは全ての$i=1,2,\cdots,7-k$について次式を満す．
+ $$\left(\begin{array}{c} c_{i+1}\\ c_{i+2} \\ \vdots \\ c_{i+k} \end{array} \right) =  M \left(\begin{array}{c} c_{i}\\ c_{i+1} \\ \vdots \\ c_{i+k-1} \end{array} \right)$$
+ 順に$k=1,2,\cdots$の場合を調べることにより，それらのうちで$k$が最も小さい組を求めよ．
+\end{screen}
+
+\begin{screen}
+ (2)設問(1)の$c_i(i=1,2,\cdots,7)$は，設問(1)で求めた$k$と$M$の組，および実数の定数ベクトル$L(\in \mathbb{R}^{1\times k})$，$N(\in\mathbb{R}^{k \times 1})$を用いて，$c_i=LM^{i-1}N$と表せる．そのようなL,Nの組のひとつを示せ．
+\end{screen}
+
+\begin{screen}
+ (3)設問(1),(2)で求めた$M,K,N$を用い，$c_i=LM^{i-1}N$によって$c_8,c_9,\cdots$を定義する．次の行列$C$のランクを求めよ．導出過程も示すこと．
+ $$C=
+ \begin{pmatrix}
+  c_1 & c_2 & c_3 & c_4 & c_5 & c_6 & \cdots & c_{10} \\
+  c_2 & c_3 & c_4 & c_5 & c_6 & c_7 & \cdots & c_{11} \\
+  c_3 & c_4 & c_5 & c_6 & c_7 & c_8 & \cdots & c_{12} \\
+  c_4 & c_5 & c_6 & c_7 & c_8 & c_9 & \cdots & c_{13} \\
+  c_5 & c_6 & c_7 & c_8 & c_9 & c_{10} & \cdots & c_{14} \\
+  c_6 & c_7 & c_8 & c_9 & c_{10} & c_{11} & \cdots & c_{15} \\
+  \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \cdots & \vdots \\
+  c_{10} & c_{11} & c_{12} & c_{13} & c_{14} & c_{15} & \cdots & c_{19}
+ \end{pmatrix}$$
+\end{screen}
+
+\begin{screen}
+ (4)設問(1),(2)で求めた$M,N,L$と$k \times k$単位行列$I$を用いて，スカラの$x$を変数とする関数$f(x)=L(I-xM)^{-1}N$を定義する．$f(x)$の$x=0$におけるテイラー級数を$f(x)=f_1+f_2x+f_3x^2+\cdots$とする．$f_i(\in\mathbb{R}),i=1,2,\cdots$を$c_i(=LM^{-1}N),i=1,2,\cdots$を用いて表わせ．導出過程も示すこと．必要ならば対角行列$D$についての次式を用いてよい．
+ $$\diff{i}{}{x}(I-xD)^{-1}\Biggr|_{x=0}=i!D^i,i=1,2,\cdots$$
+\end{screen}
+
 \section{}
 
 \begin{screen}
