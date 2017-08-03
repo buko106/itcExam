@@ -137,21 +137,28 @@
  \begin{itemize}
   \item[(2-1)] $\ds y_n=(1-\alpha)^n + \sum_{i=0}^{n-1}(1-\alpha)^{n-i-1}\alpha x_i$ $(n=1,2,\cdots)$であることを示せ．
   \item[(2-2)] $y_n$の期待値$E_n$と分散$V_n$を求めよ．
-  \item[(2-3)]
+  \item[(2-3)] $\ds E_\infty = \lim_{n\rightarrow \infty}E_n,V_\infty = \lim_{n\rightarrow \infty}V_n$とおく．$\ds \frac{1}{2}<p<\frac{3}{4}$であるとき，
+               $$E_\infty - \sqrt{V_\infty} \geq \frac{1}{2}$$
+               を満たす$\alpha$の最大値を求めよ．
  \end{itemize}
 \end{screen}
 
 \begin{itemize}
-  \item[(2-1)] 数学的帰納法により示す．(i) $n=1$のとき．$y_1 = (1-\alpha) + \alpha x_0 = y_0 + \alpha(x_0-y_0)$で成立する．(ii) $n=k(k\geq 1)$で成り立つことを仮定する．
-               $\ds y_{k+1}=(1-\alpha)y_k + \alpha x_k = (1-\alpha)^{k+1} + \sum_{i=0}^{k}(1-\alpha)^{k-i}\alpha x_i $となり$n=k+1$のときも成立する．
-  \item[(2-2)] $\ds E_n = E[(1-\alpha)^n] + \sum_{i=0}^{n-1}(1-\alpha)^{n-i-1}\alpha E[x_i] = (1-\alpha)^n + p\alpha \sum_{i=0}^{n-1}(1-\alpha)^i = p + (1-p)(1-\alpha)^n$ \\
-               $x_i$の独立性より \\
-               \begin{align*}
-                V_n &= V[(1-\alpha)^n] + \sum_{i=0}^{n-1}(1-\alpha)^{2(n-i-1)}\alpha^2 V[x_i] \\
-                &= 0 + p(1-p)\alpha \sum_{i=0}^{n-1}(1-\alpha)^{2i} \\
-                &= p(1-p)\alpha\frac{1-(1-\alpha)^{2n}}{1-(1-\alpha)^2}
-               \end{align*}
-  \item[(2-3)]
+ \item[(2-1)] 数学的帰納法により示す．(i) $n=1$のとき．$y_1 = (1-\alpha) + \alpha x_0 = y_0 + \alpha(x_0-y_0)$で成立する．(ii) $n=k(k\geq 1)$で成り立つことを仮定する．
+              $\ds y_{k+1}=(1-\alpha)y_k + \alpha x_k = (1-\alpha)^{k+1} + \sum_{i=0}^{k}(1-\alpha)^{k-i}\alpha x_i $となり$n=k+1$のときも成立する．
+ \item[(2-2)] $\ds E_n = E[(1-\alpha)^n] + \sum_{i=0}^{n-1}(1-\alpha)^{n-i-1}\alpha E[x_i] = (1-\alpha)^n + p\alpha \sum_{i=0}^{n-1}(1-\alpha)^i = p + (1-p)(1-\alpha)^n$ \\
+              $x_i$の独立性より \\
+              \begin{align*}
+               V_n &= V[(1-\alpha)^n] + \sum_{i=0}^{n-1}(1-\alpha)^{2(n-i-1)}\alpha^2 V[x_i] \\
+               &= 0 + p(1-p)\alpha \sum_{i=0}^{n-1}(1-\alpha)^{2i} \\
+               &= p(1-p)\alpha\frac{1-(1-\alpha)^{2n}}{1-(1-\alpha)^2}
+              \end{align*}
+ \item[(2-3)] $\ds E_\infty=p,V_\infty = \frac{p(1-p)\alpha}{1-(1-\alpha)^2}$となる．
+              \begin{align*}
+               E_\infty - \sqrt{V_\infty} &\geq \frac{1}{2} \\
+               \Leftrightarrow \left(E_\infty - \frac{1}{2} \right)^2 & \geq V_\infty \\
+               \Leftrightarrow p^2 + p + \frac{1}{4} &\geq \frac{p(1-p)\alpha}{1-(1-\alpha)^2}
+              \end{align*}
 \end{itemize}
 
 \end{document}
