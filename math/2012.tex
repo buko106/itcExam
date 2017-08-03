@@ -6,24 +6,24 @@
 \usepackage{listings}
 \usepackage[english]{babel}
 \lstset{
- 	%枠外に行った時の自動改行
+ 	%$BOH30$K9T$C$?;~$N<+F02~9T(B
  	breaklines = true,
- 	%標準の書体
+ 	%$BI8=`$N=qBN(B
         basicstyle=\ttfamily\footnotesize,
         commentstyle=\footnotesize\bfseries,
         keywordstyle=\footnotesize\bfseries,
- 	%枠 "t"は上に線を記載, "T"は上に二重線を記載
-	%他オプション：leftline，topline，bottomline，lines，single，shadowbox
+ 	%$BOH(B "t"$B$O>e$K@~$r5-:\(B, "T"$B$O>e$KFs=E@~$r5-:\(B
+	%$BB>%*%W%7%g%s!'(Bleftline$B!$(Btopline$B!$(Bbottomline$B!$(Blines$B!$(Bsingle$B!$(Bshadowbox
  	frame = single,
- 	%frameまでの間隔(行番号とプログラムの間)
+ 	%frame$B$^$G$N4V3V(B($B9THV9f$H%W%m%0%i%`$N4V(B)
  	framesep = 5pt,
- 	%行番号の位置
+ 	%$B9THV9f$N0LCV(B
  	numbers = left,
-	%行番号の間隔
+	%$B9THV9f$N4V3V(B
  	stepnumber = 1,
-	%タブの大きさ
+	%$B%?%V$NBg$-$5(B
  	tabsize = 4,
- 	%キャプションの場所("tb"ならば上下両方に記載)
+ 	%$B%-%c%W%7%g%s$N>l=j(B("tb"$B$J$i$P>e2<N>J}$K5-:\(B)
  	captionpos = t
 }
 
@@ -42,14 +42,14 @@
 
 
 %% title configuration
-\title{東京大学情報理工学系研究科2012年度過去問}
+\title{$BEl5~Bg3X>pJsM}9)3X7O8&5f2J(B2012$BG/EY2a5nLd(B}
 \author{}
 \date{}
 
 
 %% headings
 \pagestyle{headings}
-\markright{東京大学情報理工学系研究科2012年度過去問}
+\markright{$BEl5~Bg3X>pJsM}9)3X7O8&5f2J(B2012$BG/EY2a5nLd(B}
 
 
 
@@ -60,12 +60,12 @@
 \maketitle
 \pagebreak
 
-\section{第１問}
+\section{$BBh#1Ld(B}
 
 \begin{screen}
-正方行列$D$が直行行列であるとは，$DD^\top$と$D^\top D$とがともに単位行列$I$となることをいう．ここで$D^\top$は$D$の転置行列を表す．また，次の事実を証明なしに用いてよい：$D^\top D$が単位行列ならば，$DD^\top$も単位行列．
+$B@5J}9TNs(B$D$$B$,D>9T9TNs$G$"$k$H$O!$(B$DD^\top$$B$H(B$D^\top D$$B$H$,$H$b$KC10L9TNs(B$I$$B$H$J$k$3$H$r$$$&!%$3$3$G(B$D^\top$$B$O(B$D$$B$NE>CV9TNs$rI=$9!%$^$?!$<!$N;v<B$r>ZL@$J$7$KMQ$$$F$h$$!'(B$D^\top D$$B$,C10L9TNs$J$i$P!$(B$DD^\top$$B$bC10L9TNs!%(B
 
-行列$A$を次のように定める．
+$B9TNs(B$A$$B$r<!$N$h$&$KDj$a$k!%(B
 
 $$A=
 \begin{pmatrix}
@@ -74,12 +74,12 @@ $$A=
 1 & 1 & -1
 \end{pmatrix}$$
 
-以下の各問に答えよ．
+$B0J2<$N3FLd$KEz$($h!%(B
 \end{screen}
 
 \begin{screen}
 (1)
-行列$A^\top A$の固有値と固有ベクトルを求めよ．
+$B9TNs(B$A^\top A$$B$N8GM-CM$H8GM-%Y%/%H%k$r5a$a$h!%(B
 \end{screen}
 $A^\top A=
 \begin{pmatrix}
@@ -87,7 +87,7 @@ $A^\top A=
 -1&  3& -1\\
  1& -1&  3
 \end{pmatrix}$$
-$である．特性方程式$\det(\lambda I -A^\top A)=(\lambda-6)(\lambda-3)(\lambda-2)=0$を解くことにより，$\lambda = 6,3,2$となる．(1)$\lambda=6$のとき．$A^\top A\left(\begin{array}{c} x \\ y \\ z \end{array} \right) = 6\left(\begin{array}{c} x \\ y \\ z \end{array} \right)$を解いて，固有ベクトルは$t\left(\begin{array}{c} 2 \\ -1 \\ 1 \end{array} \right)$ $(t\in \mathbb{R})$である．(2)$\lambda=3$のとき，同様にして固有ベクトル$t\left(\begin{array}{c} -1 \\ -1 \\ 1 \end{array} \right)$ $(t\in \mathbb{R})$ である．(3)$\lambda=2$のとき，同様にして固有ベクトル$t\left(\begin{array}{c} 0\\ 1 \\ 1 \end{array} \right)$ $(t\in \mathbb{R})$．
+$$B$G$"$k!%FC@-J}Dx<0(B$\det(\lambda I -A^\top A)=(\lambda-6)(\lambda-3)(\lambda-2)=0$$B$r2r$/$3$H$K$h$j!$(B$\lambda = 6,3,2$$B$H$J$k!%(B(1)$\lambda=6$$B$N$H$-!%(B$A^\top A\left(\begin{array}{c} x \\ y \\ z \end{array} \right) = 6\left(\begin{array}{c} x \\ y \\ z \end{array} \right)$$B$r2r$$$F!$8GM-%Y%/%H%k$O(B$t\left(\begin{array}{c} 2 \\ -1 \\ 1 \end{array} \right)$ $(t\in \mathbb{R})$$B$G$"$k!%(B(2)$\lambda=3$$B$N$H$-!$F1MM$K$7$F8GM-%Y%/%H%k(B$t\left(\begin{array}{c} -1 \\ -1 \\ 1 \end{array} \right)$ $(t\in \mathbb{R})$ $B$G$"$k!%(B(3)$\lambda=2$$B$N$H$-!$F1MM$K$7$F8GM-%Y%/%H%k(B$t\left(\begin{array}{c} 0\\ 1 \\ 1 \end{array} \right)$ $(t\in \mathbb{R})$$B!%(B
 
 \begin{screen}
 (2)
@@ -98,7 +98,7 @@ $$ A^\top A=U\begin{pmatrix}
 \end{pmatrix}
 U^\top $$
 
-となるような実数$\lambda_1,\lambda_2,\lambda_3$と直行行列
+$B$H$J$k$h$&$J<B?t(B$\lambda_1,\lambda_2,\lambda_3$$B$HD>9T9TNs(B
 $$ U=\begin{pmatrix}
 u_{11} & u_{12} & u_{13} \\
 u_{21} & u_{22} & u_{23} \\
@@ -108,24 +108,24 @@ u_{31} & u_{32} & u_{33}
 \bm{u}_1 & \bm{u}_2 & \bm{u}_3 \\
 \end{pmatrix}
 $$
-を求めよ．ただし，$\lambda_1\geq\lambda_2\geq \lambda_3$かつ$u_{31} \geq 0 ,u_{32} \geq 0, u_{33}\geq 0$となるようにせよ．ここで$\bm{u}_i$は次のような$3 \times 1$の列ベクトルを表す．
+$B$r5a$a$h!%$?$@$7!$(B$\lambda_1\geq\lambda_2\geq \lambda_3$$B$+$D(B$u_{31} \geq 0 ,u_{32} \geq 0, u_{33}\geq 0$$B$H$J$k$h$&$K$;$h!%$3$3$G(B$\bm{u}_i$$B$O<!$N$h$&$J(B$3 \times 1$$B$NNs%Y%/%H%k$rI=$9!%(B
 $$ \bm{u}_i = \left(\begin{array}{c} u_{1i}\\ u_{2i} \\ u_{3i} \end{array} \right)$$
 \end{screen}
 
 
-$A^\top A$は対称行列である．従って，正規化した固有ベクトルを並べた直交行列により対角化可能である．$\lambda_1\geq\lambda_2\geq \lambda_3$かつ$u_{31} \geq 0 ,u_{32} \geq 0, u_{33}\geq 0$に注意して正規化すると，
+$A^\top A$$B$OBP>N9TNs$G$"$k!%=>$C$F!$@55,2=$7$?8GM-%Y%/%H%k$rJB$Y$?D>8r9TNs$K$h$jBP3Q2=2DG=$G$"$k!%(B$\lambda_1\geq\lambda_2\geq \lambda_3$$B$+$D(B$u_{31} \geq 0 ,u_{32} \geq 0, u_{33}\geq 0$$B$KCm0U$7$F@55,2=$9$k$H!$(B
 
 $\lambda_1=6,\lambda_2=3 ,\lambda_3=2,
 \ds
 \bm{u}_1 = \frac{1}{\sqrt{6}}\left(\begin{array}{c} 2\\ -1 \\ 1 \end{array} \right),
 \bm{u}_2 = \frac{1}{\sqrt{3}}\left(\begin{array}{c} -1 \\ -1 \\ 1 \end{array} \right),
 \bm{u}_3 = \frac{1}{\sqrt{2}}\left(\begin{array}{c} 0\\ 1 \\ 1 \end{array} \right)
-$．
+$$B!%(B
 
 
 \begin{screen}
 (3)
-$B^2=A^\top A$となるような行列$B$のうち，固有値がすべて正のものを一つ求めよ．
+$B^2=A^\top A$$B$H$J$k$h$&$J9TNs(B$B$$B$N$&$A!$8GM-CM$,$9$Y$F@5$N$b$N$r0l$D5a$a$h!%(B
 \end{screen}
 
 
@@ -133,14 +133,14 @@ $\Lambda=\begin{pmatrix}
 \sqrt{\lambda_1}& 0&  0\\
 0&  \sqrt{\lambda_2}& 0\\
 0& 0&  \sqrt{\lambda_3}
-\end{pmatrix}$と定める．$(U\Lambda U^\top)^2=U\Lambda^2 U^\top=A^\top A$であるので，$B=U\Lambda U^\top$と定める．$B$は$U$により対角化され，固有値は$\sqrt{\lambda_1},\sqrt{\lambda_2},\sqrt{\lambda_3}$であり，すべて正である．以上により，$B=U\Lambda U^\top$．
+\end{pmatrix}$$B$HDj$a$k!%(B$(U\Lambda U^\top)^2=U\Lambda^2 U^\top=A^\top A$$B$G$"$k$N$G!$(B$B=U\Lambda U^\top$$B$HDj$a$k!%(B$B$$B$O(B$U$$B$K$h$jBP3Q2=$5$l!$8GM-CM$O(B$\sqrt{\lambda_1},\sqrt{\lambda_2},\sqrt{\lambda_3}$$B$G$"$j!$$9$Y$F@5$G$"$k!%0J>e$K$h$j!$(B$B=U\Lambda U^\top$$B!%(B
 \begin{screen}
 (4)
-$3 \times 3$の行列$C$を
+$3 \times 3$$B$N9TNs(B$C$$B$r(B
 $$ C=\begin{pmatrix}
 \frac{1}{\sqrt{\lambda_1}}\bm{u}_1 & \frac{1}{\sqrt{\lambda_2}}\bm{u}_2 & \frac{1}{\sqrt{\lambda_3}}\bm{u}_3 
 \end{pmatrix}$$
-によって定める．このとき，$AC$が直交行列であることを証明せよ．
+$B$K$h$C$FDj$a$k!%$3$N$H$-!$(B$AC$$B$,D>8r9TNs$G$"$k$3$H$r>ZL@$;$h!%(B
 \end{screen}
 
 
@@ -148,14 +148,14 @@ $C^\top U = \begin{pmatrix}
 \frac{1}{\sqrt{\lambda_1}}& 0&  0\\
 0&  \frac{1}{\sqrt{\lambda_2}}& 0\\
 0& 0&  \frac{1}{\sqrt{\lambda_3}}
-\end{pmatrix}$を用いて計算すると，
+\end{pmatrix}$$B$rMQ$$$F7W;;$9$k$H!$(B
 $$(AC)^\top AC = C^\top A^\top AC =C^\top U
 \begin{pmatrix}
 \lambda_1& 0&  0\\
 0&  \lambda_2& 0\\
 0& 0&  \lambda_3
 \end{pmatrix}
-(C^\top U)^\top=I$$である．問で与えられた事実より$(AC)^\top AC=AC(AC)^\top=I$を満たすので，$AC$は直交行列である．
+(C^\top U)^\top=I$$$B$G$"$k!%Ld$GM?$($i$l$?;v<B$h$j(B$(AC)^\top AC=AC(AC)^\top=I$$B$rK~$?$9$N$G!$(B$AC$$B$OD>8r9TNs$G$"$k!%(B
 \begin{screen}
 (5)
 $$A=V\begin{pmatrix}
@@ -163,16 +163,31 @@ $$A=V\begin{pmatrix}
 0&  \sqrt{\lambda_2}& 0\\
 0& 0&  \sqrt{\lambda_3}
 \end{pmatrix}W$$
-となるような$3 \times 3$直交行列$V,W$をみつけよ．
+$B$H$J$k$h$&$J(B$3 \times 3$$BD>8r9TNs(B$V,W$$B$r$_$D$1$h!%(B
 \end{screen}
 
 
-$V=AC$と選ぶ．このとき$V\begin{pmatrix}
+$V=AC$$B$HA*$V!%$3$N$H$-(B$V\begin{pmatrix}
 \sqrt{\lambda_1}& 0&  0\\
 0&  \sqrt{\lambda_2}& 0\\
 0& 0&  \sqrt{\lambda_3}
-\end{pmatrix}W=AUW$であるので，$W=U^\top$と選べばよい．(4)より$V=AC$は直交行列，$U$が直交行列であるので$W=U^\top$も直交行列である．以上により$V,W$は題の条件を満たす直交行列である．
+\end{pmatrix}W=AUW$$B$G$"$k$N$G!$(B$W=U^\top$$B$HA*$Y$P$h$$!%(B(4)$B$h$j(B$V=AC$$B$OD>8r9TNs!$(B$U$$B$,D>8r9TNs$G$"$k$N$G(B$W=U^\top$$B$bD>8r9TNs$G$"$k!%0J>e$K$h$j(B$V,W$$B$OBj$N>r7o$rK~$?$9D>8r9TNs$G$"$k!%(B
 
+\section{$BBh#2Ld(B}
+
+\begin{screen}
+$xyz$$B6u4VFb$K$"$k!$86E@(B$O$$B$rCf?4$H$9$kC10L5eLL$N!$>eB&$NH>5eLL$r(B$H$$B$H$9$k!%(B
+$$H=\left\{ (x,y,z) | x^2+y^2+z^2=1,z\geq 0\right\}$$
+$B2<?^$N$h$&$K!$(B$H$$B$HJ?LL(B$z=\cos \alpha$$B$N8r@~(B($B1_$K$J$k(B)$B$+$i!$D9$5(B$\alpha$$B$N8L$r@Z$j<h$j!$C<E@$r(BA$B!$(BB$B$H$9$k!%$3$3$G!$(B$0 < \alpha < \frac{\pi}{2}$$B$G$"$k!%$^$?!$E@(BN$B$r(B$(0,0,1)$$B!$E@(BP$B$r(B$(0,0,\cos\alpha)$$B$H$9$k!%(B
+ 
+\centering\includegraphics[width=7cm]{figure_2012_01.png}
+ 
+\centering $B?^(B
+
+$B0J2<$N3FLd$KEz$($h!%(B
+\end{screen}
+\begin{screen}
+ (1)$B3Q(BAPB$B$NBg$-$5(B$\angle$APB$B$r5a$a$h!%(B
+\end{screen}
+$BCf?4(BP$B$GE@(BA,B$B$rDL$k1_(B($H$$B$HJ?LL(B$z=\cos \alpha$$B$N8r@~(B)$B$NH>7B$O(B$\sin\alpha$$B!%$7$?$,$C$F(B$\angle$APB$=\ds\frac{\alpha}{\sin\alpha}$
 \end{document}
-
-
