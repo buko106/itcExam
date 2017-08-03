@@ -1,0 +1,108 @@
+\documentclass[a4j]{jarticle}
+%%  packages
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{bm}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{listings}
+\usepackage[english]{babel}
+\lstset{
+ 	%枠外に行った時の自動改行
+ 	breaklines = true,
+ 	%標準の書体
+        basicstyle=\ttfamily\footnotesize,
+        commentstyle=\footnotesize\bfseries,
+        keywordstyle=\footnotesize\bfseries,
+ 	%枠 "t"は上に線を記載, "T"は上に二重線を記載
+	%他オプション：leftline，topline，bottomline，lines，single，shadowbox
+ 	frame = single,
+ 	%frameまでの間隔(行番号とプログラムの間)
+ 	framesep = 5pt,
+ 	%行番号の位置
+ 	numbers = left,
+	%行番号の間隔
+ 	stepnumber = 1,
+	%タブの大きさ
+ 	tabsize = 4,
+ 	%キャプションの場所("tb"ならば上下両方に記載)
+ 	captionpos = t
+}
+
+%% math commands
+\let \ds \displaystyle
+\newcommand{\idiff}[3]{
+  \frac{d^{#1} #2}{d #3^{#1}}
+}
+\newcommand{\diff}[3]{
+  \frac{\mathrm{d}^{#1} #2}{\mathrm{d} #3^{#1}}
+}
+\newcommand{\pdiff}[3]{
+  \frac{\partial^{#1} #2}{\partial #3^{#1}}
+}
+
+
+
+%% title configuration
+\title{東京大学大学院情報理工学系研究科2014年度過去問}
+\author{}
+\date{}
+
+
+%% headings
+\pagestyle{headings}
+\markright{東京大学大学院情報理工学系研究科2014年度過去問}
+
+
+
+
+\begin{document}
+%%  begin title page
+\thispagestyle{empty}
+\maketitle
+\pagebreak
+
+\section{}
+
+\begin{screen}
+ 実正方行列$M$は，$M=M^T$を満たすとき対称行列という．ただし，$M^T$は$M$の転置行列を表す．以下の設問に答えよ．
+\end{screen}
+
+\begin{screen}
+ (1)以下の対称行列$A$のすべての固有値と，それらの固有に対応する固有ベクトルを求めよ．
+ $$A=\begin{pmatrix}
+    1 & -1 & 0 \\
+    -1 & 1 & -1 \\
+    0 & -1 & 1
+   \end{pmatrix}$$
+\end{screen}
+
+
+\begin{screen}
+ (2)実正方行列$M$が対称行列ならば、その固有値はすべて実数となることを証明せよ．
+\end{screen}
+
+
+\begin{screen}
+ (3)実正方行列$M$の固有値がすべて実数であっても$M$は必ずしも対称行列であるとは限らない．そのような行列$M$の具体例を1つ挙げよ．
+\end{screen}
+
+
+\begin{screen}
+ (4)$\bm{u}=\begin{pmatrix}x \\ y \\ z\end{pmatrix}$を原点を除く3次元実ベクトルとする．ここで，設問(1)の対称行列$A$を用いて，関数$f(x,y,z)$を次のように定義する．
+ $$f(x,y,z)=\frac{\bm{u}^TA\bm{u}}{\bm{u}^T\bm{u}}$$
+ ただし，$\bm{u}^T$は$\bm{u}$の転置を表す．また，関数$g(x,y,z)$を次のように定義する．
+ $$g(x,y,z)=\frac{xy+yz}{x^2+y^2+z^2}$$
+ このとき，次の関係式が成り立つことを示せ．
+ $$f(x,y,z)=1-2g(x,y,z)$$
+\end{screen}
+
+
+\begin{screen}
+ (5)設問(4)の関数$g(x,y,z)$について，次の不等式が成立つことを設問(1)の対称行列$A$の固有値分解を用いて示せ．
+ $$-\frac{1}{\sqrt{2}}\leq g(x,y,z) \leq \frac{1}{\sqrt{2}}$$
+\end{screen}
+
+\section{}
+
+\section{}
+
+\end{document}
