@@ -60,7 +60,7 @@
 \maketitle
 \pagebreak
 
-\section{第１問}
+\section{}
 
 \begin{screen}
 正方行列$D$が直行行列であるとは，$DD^\top$と$D^\top D$とがともに単位行列$I$となることをいう．ここで$D^\top$は$D$の転置行列を表す．また，次の事実を証明なしに用いてよい：$D^\top D$が単位行列ならば，$DD^\top$も単位行列．
@@ -173,7 +173,7 @@ $V=AC$と選ぶ．このとき$V\begin{pmatrix}
 0& 0&  \sqrt{\lambda_3}
 \end{pmatrix}W=AUW$であるので，$W=U^\top$と選べばよい．(4)より$V=AC$は直交行列，$U$が直交行列であるので$W=U^\top$も直交行列である．以上により$V,W$は題の条件を満たす直交行列である．
 
-\section{第２問}
+\section{}
 
 \begin{screen}
 $xyz$空間内にある，原点$O$を中心とする単位球面の，上側の半球面を$H$とする．
@@ -242,5 +242,88 @@ $\theta,\phi$を微小変化させたときの曲面積の増分は$\mathrm{d}S = \mathrm{d}
 
 (4)と同様にして，$S(\alpha)=\beta(1-\cos\alpha)$
 $$\therefore \lim_{\alpha\rightarrow 0}\frac{S(\alpha)}{\alpha^2}=1\cdot \frac{1}{2}=\frac{1}{2}$$
+
+\section{}
+\begin{screen}
+ あるお菓子には，$K$種類のカードのうちの１枚が等確率で付属しており、任意の異なる$r$種類$(K\geq r)$のカードを集めると賞品がもらえる．お菓子を一つずつ順々に購入し，$n$番目のお菓子を入手した時に，$r$種類のカードが初めて揃う確率を$p(n,r)$とする．以下の各問に答えよ．
+\end{screen}
+
+\begin{screen}
+ (1)$p(n,r)$を次のように表すことを考える．
+ $$p(n,r)=\sum_{i=1}^{n+1-r}C_ip(n-i,r-1)$$
+ $C_i$を$K,r,i$の式で表わせ．
+\end{screen}
+
+$(n-i)$番目のお菓子を入手して初めて$(r-1)$種類のカードが揃ったのちに，続く$(i-1)$回は既に持っている$(r-1)$種類のカードのみを入手し，$n$回目で持っていない$(K-r+1)$種類のうちの１つを入手する場合の確率は
+$$p(n-i,r-1)\left(\frac{r-1}{K}\right)^{i-1}\frac{K-r+1}{K}$$
+$$\therefore C_i = \left(\frac{r-1}{K}\right)^{i-1}\frac{K-r+1}{K}$$
+\begin{screen}
+ (2)次の関係式を考える．
+ $$p(n,r)=Ap(n-1,r)+Bp(n-1,r-1)$$
+ $A,B$を$K,r$の式で表わせ．
+\end{screen}
+
+\begin{align*}
+ p(n-1,r) &= \sum_{i=1}^{n-r}C_i p(n-1-i,r-1)\\
+ &= \sum_{i=2}^{n+1-r}C_{i-1} p(n-i,r-1)\\
+ C_i = \frac{r-1}{K}C_{i-1} (i\geq 2)& \mbox{より} \\
+ &= \frac{K}{r-1}\sum_{i=2}^{n+1-r}C_i p(n-i,r-1)\\
+ &= \frac{K}{r-1}\left(p(n,r) - C_1p(n-1,r-1)\right)\\
+ \therefore p(n,r) &= \frac{r-1}{K}p(n-1,r) + C_1 p(n-1,r-1)\\
+ \mbox{以上により}A&=\frac{r-1}{K}, B=C_1 = \frac{K-r+1}{K}
+\end{align*}
+
+\begin{screen}
+ (3)$z$の多項式$P(z,r)$を次のように定める．
+ $$P(z,r)=\sum_{n=0}^\infty p(n,r)z^n$$
+ この時，$P(z,r),P(z,r-1)$の間に次の関係式が成り立つことを示せ．
+ $$\left(K-(r-1)z\right)P(z,r)=\left(K-r+1\right)zP(z,r-1)$$
+\end{screen}
+
+以下$r\geq 1$を仮定する．
+\begin{align*}
+ P(z,r) &= \sum_{n=0}^\infty p(n,r)z^n \\
+ &= p(0,r) + \sum_{n=1}^\infty p(n,r)z^n \\
+ &= \sum_{n=1}^\infty \left(\frac{r-1}{K}p(n-1,r)+\frac{K-r+1}{K}p(n-1,r-1)\right)z^n \\
+ &= \sum_{n=0}^\infty \left(\frac{r-1}{K}p(n,r)+\frac{K-r+1}{K}p(n,r-1)\right)z^{n+1} \\
+ &= \frac{r-1}{K}zP(z,r) + \frac{K-r+1}{K}zP(z,r-1) \\
+\end{align*}
+
+整理して，
+$$ \left(K-(r-1)z\right)P(z,r)=\left(K-r+1\right)zP(z,r-1) $$
+
+\begin{screen}
+ (4)賞品をもらうために購入しなければならないお菓子の個数の期待値が$P'(1,r)$であることを示せ．なお，$P'$は$z$による$P$の微分である．
+\end{screen}
+
+期待値は$\ds\sum_{n=0}^\infty np(n,r)$で表される．一方$\ds P'(z,r)=\sum_{n=0}^\infty np(n,r)z^{n-1}$であるので\\ $\ds P'(1,r)=\sum_{n=0}^\infty np(n,r)$となり期待値に一致する．
+
+\begin{screen}
+ (5)$K=r=7$の時に賞品をもらうために購入しなければならない賞品の個数の期待値を求めよ．
+\end{screen}
+
+(3)の結果に$K=7$を代入して用いると，
+
+\begin{align*}
+ P(z,7) &= \frac{z}{7-6z}P(z,6) \\
+ &= \frac{z}{7-6z}\cdot\frac{2z}{7-5z}P(z,5) \\
+ &= \cdots \\
+ &= 6! z^6 P(z,1) \prod_{k=1}^6 \frac{1}{7-kz} \\
+ \intertext{ここで$P(z,1)=p(1,1)z=z$であるので} \\
+ &= 6! z^7 \prod_{k=1}^6 \frac{1}{7-kz} \\
+ &= \frac{6! z^7 }{F(z)}
+\end{align*}
+
+$\ds F(z) = \prod_{k=1}^6 (7-kz)$とおいた．
+
+注意深く計算すると，$F(1)=6!,F'(1)=-6!\left(\frac{1}{6}+\frac{2}{5}+\frac{3}{4}+\cdots+\frac{6}{1}\right)$ 
+である．
+
+\begin{align*}
+ P'(z,7) &= 6! \cdot \frac{7z^6F(z) - z^7 F'(z) }{(F(z))^2} \\
+ P'(1,7) &= 6! \cdot \frac{7\cdot 6! + 6!\left(\frac{1}{6}+\frac{2}{5}+\frac{3}{4}+\cdots+\frac{6}{1}\right) }{(6!)^2} \\
+ &= 7 + \left(\frac{1}{6}+\frac{2}{5}+\frac{3}{4}+\cdots+\frac{6}{1}\right) \\
+ &= 18.15
+\end{align*}
 
 \end{document}
