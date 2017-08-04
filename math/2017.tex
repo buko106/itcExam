@@ -1,0 +1,108 @@
+\documentclass[a4j]{jarticle}
+%%  packages
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{bm}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{listings}
+\usepackage[english]{babel}
+\lstset{
+ 	%枠外に行った時の自動改行
+ 	breaklines = true,
+ 	%標準の書体
+        basicstyle=\ttfamily\footnotesize,
+        commentstyle=\footnotesize\bfseries,
+        keywordstyle=\footnotesize\bfseries,
+ 	%枠 "t"は上に線を記載, "T"は上に二重線を記載
+	%他オプション：leftline，topline，bottomline，lines，single，shadowbox
+ 	frame = single,
+ 	%frameまでの間隔(行番号とプログラムの間)
+ 	framesep = 5pt,
+ 	%行番号の位置
+ 	numbers = left,
+	%行番号の間隔
+ 	stepnumber = 1,
+	%タブの大きさ
+ 	tabsize = 4,
+ 	%キャプションの場所("tb"ならば上下両方に記載)
+ 	captionpos = t
+}
+
+%% math commands
+\let \ds \displaystyle
+\newcommand{\idiff}[3]{
+  \frac{d^{#1} #2}{d #3^{#1}}
+}
+\newcommand{\diff}[3]{
+  \frac{\mathrm{d}^{#1} #2}{\mathrm{d} #3^{#1}}
+}
+\newcommand{\pdiff}[3]{
+  \frac{\partial^{#1} #2}{\partial #3^{#1}}
+}
+
+
+
+%% title configuration
+\title{東京大学大学院情報理工学系研究科2017年度過去問}
+\author{}
+\date{}
+
+
+%% headings
+\pagestyle{headings}
+\markright{東京大学大学院情報理工学系研究科2017年度過去問}
+
+
+
+
+\begin{document}
+%%  begin title page
+\thispagestyle{empty}
+\maketitle
+\pagebreak
+
+\section{}
+
+\begin{screen}
+ 3次元ベクトル $\begin{pmatrix} x_n \\ y_n \\ z_n \end{pmatrix}$は式
+ $$\begin{pmatrix} x_{n+1} \\ y_{n+1} \\ z_{n+1} \end{pmatrix} = A\begin{pmatrix} x_n \\ y_n \\ z_n \end{pmatrix} \quad\quad (n=0,1,2,\cdots)$$
+ を満たすものとする．ただし，$x_0,y_0,z_0,\alpha$は実数とし，
+ $$A=
+ \begin{pmatrix}
+  1 - 2\alpha & \alpha & \alpha \\
+  \alpha & 1-\alpha & 0 \\
+  \alpha &  0 & 1-\alpha
+ \end{pmatrix}, \quad\quad 0<\alpha < \frac{1}{3}$$
+ とする．以下の問いに答えよ．
+\end{screen}
+
+
+\begin{screen}
+ (1) $x_n+y_n+z_n$ を $x_0,y_0,z_0$ を用いて表せ．
+\end{screen}
+
+
+\begin{screen}
+ (2) 行列 $A$ の固有値 $\lambda_1,\lambda_2,\lambda_3$ と，それぞれの固有値に対応する固有ベクトル $\bm{v}_1,\bm{v}_2,\bm{v}_3$ を求めよ．
+\end{screen}
+
+
+\begin{screen}
+ (3) 行列 $A$ を $\lambda_1,\lambda_2,\lambda_3,\bm{v}_1,\bm{v}_2,\bm{v}_3$ を用いて表せ．
+\end{screen}
+
+
+\begin{screen}
+ (4) $\begin{pmatrix} x_n \\ y_n \\ z_n \end{pmatrix}$ を$x_0,y_0,z_0,\alpha$を用いて表せ．
+\end{screen}
+
+\begin{screen}
+ (5) $\ds \lim_{n\rightarrow\infty}\begin{pmatrix} x_n \\ y_n \\ z_n \end{pmatrix}$を求めよ．
+\end{screen}
+
+\begin{screen}
+ (6) 以下の式
+ $$f(x_0,y_0,z_0)=\frac{(x_n,y_n,z_n)\begin{pmatrix} x_{n+1} \\ y_{n+1} \\ z_{n+1} \end{pmatrix}}{(x_n,y_n,z_n)\begin{pmatrix} x_n \\ y_n \\ z_n \end{pmatrix}}$$
+ を$x_0,y_0,z_0$の関数とみなして， $f(x_0,y_0,z_0)$の最大値および最小値を求めよ．ただし，\\ $x_0^2+y_0^2+z_0^2 \neq 0$ とする．
+\end{screen}
+
+\end{document}
