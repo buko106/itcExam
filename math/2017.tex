@@ -105,4 +105,88 @@
  を$x_0,y_0,z_0$の関数とみなして， $f(x_0,y_0,z_0)$の最大値および最小値を求めよ．ただし，\\ $x_0^2+y_0^2+z_0^2 \neq 0$ とする．
 \end{screen}
 
+\section{}
+
+\begin{screen}
+ 実数値関数 $u(x,t)$ が $0 \leq 1,$ $t\geq 0$ で定義されている．ここで，$x$と$t$は互いに独立である．偏微分方程式
+\begin{align*}
+ \pdiff{}{u}{t} = \pdiff{2}{u}{x} \tag{$\ast$} \\
+\end{align*}
+ の解を次の条件
+ \begin{align*}
+  \mbox{境界条件：} & u(0,t) = u(1,t) = 0 \\
+  \mbox{初期条件：} & u(x,0) = x-x^2\\
+ \end{align*}
+ のもとで求める．ただし，定数関数$u(x,t)=0$は明らかに解であるから，それ以外の解を考える．以下の問いに答えよ．
+\end{screen}
+
+
+\begin{screen}
+ (1) 次の式を計算せよ．ここで，$n,$ $m$ はともに正の整数とする．
+ $$\int_0^1 \sin(n \pi x) \sin(m \pi x) \mathrm{d}x$$
+\end{screen}
+
+$\ds I = \int_0^1 \sin(n \pi x) \sin(m \pi x) \mathrm{d}x$ とおく．
+\begin{align*}
+ I &= \int_0^1 \sin(n \pi x) \sin(m \pi x) \mathrm{d}x \\
+ &= \left[- \frac{1}{m \pi} \sin(n \pi x) \cos(m \pi x)\right]_0^1 + \frac{n}{m} \int_0^1 \cos(n \pi x) \cos(m \pi x) \mathrm{d} x \\
+ &= \left[\frac{n}{m^2 \pi } \cos(n \pi x)\sin(m \pi x)\right]_0^1 + \frac{n^2}{m^2} \int_0^1 \sin(n \pi x) \sin(m \pi x) \mathrm{d}x \\
+ &= \frac{n^2}{m^2} I 
+\end{align*}
+
+\begin{itemize}
+ \item[(i)] $m \neq n$ の場合．$I=0$
+ \item[(ii)] $m = n$ の場合．
+             \begin{align*}
+              I &= \int_0^1 \sin^2 (n \pi x) \mathrm{d}x \\
+              &= \frac{1}{2} \int_0^1 \Bigl(1-\cos(2n\pi x)\Bigr) \mathrm{d}x \\
+              \therefore I&= \frac{1}{2}
+             \end{align*}
+\end{itemize}
+
+\begin{screen}
+ (2) $x$のみの関数$\xi(x)$ および $t$のみの関数$\tau(t)$ を用いて，$u(x,t)=\xi(x)\tau(t)$ とおけるとする．任意の定数$C$を用いて，$\xi$および$\tau$が満たす常微分方程式をそれぞれ表せ．関数$f(x)$と関数$g(t)$が任意の$x$と$t$について$f(x)=g(t)$を満たす場合は，$f(x)$と$g(t)$が定数関数となることを用いてもよい．
+\end{screen}
+
+$(\ast)$に$u(x,t)=\xi(x)\tau(t)$を代入すると，
+\begin{align*}
+ \xi(x) \cdot \pdiff{}{\tau}{t}(t) &= \pdiff{2}{\xi}{x}(x) \cdot \tau(t) \\
+ \intertext{変数分離して，題で与えられた事実を用いると}
+ \frac{\ds\pdiff{}{\tau}{t}(t)}{\tau(t)} &= \frac{\ds\pdiff{2}{\xi}{x}(x)}{\xi(x)} = C
+\end{align*}
+
+よって満たすべき常微分方程式は
+$$
+\begin{cases}
+ \ds\idiff{}{\tau}{t} = C\tau(t) \\
+ \\
+ \ds\idiff{2}{\xi}{x} = C\xi(x)
+\end{cases}
+$$
+
+\begin{screen}
+ (3) 設問(2) の常微分方程式を解け．次に，境界条件を満たす偏微分方程式$(\ast)$の解の一つが次の式で表される $u_n(x,t)$ で与えられることを示し，$\alpha,$ $\beta$ を正の整数 $n$を用いて表せ．
+ $$u_n(x,t) = e^{\alpha t}\sin(\beta x)$$
+\end{screen}
+
+(2)の常微分方程式を解くと，$\xi(x) = Ae^{\sqrt{C}x}+Be^{-\sqrt{C}x},$ $\tau(t) = De^{Ct}$ となる．境界条件から$\xi(0)=\xi(1)=0 \Leftrightarrow A+B=0 \land Ae^{\sqrt{C}}+Be^{-\sqrt{C}} = 0 \Rightarrow e^{\sqrt{C}}=e^{-\sqrt{C}} \Rightarrow C=-n^2\pi^2$
+
+$A,B,D$を適当に定めれば $u_n(x,t) = e^{-n^2\pi^2 t} \sin(n \pi x)$ つまり，$\alpha = -n^2\pi^2, \beta = n \pi$となる．
+
+\begin{screen}
+ (4) 境界条件と初期条件を満たす偏微分方程式$(\ast)$の解は $u_n(x,t)$ の線型結合として次の式で表される．$c_n$ を求めよ．設問(1)の結果を用いてもよい．
+ $$u(x,t) = \sum_{n=1}^\infty c_n u_n (x,t)$$
+\end{screen}
+
+初期条件$u_0 (x) = x-x^2$ とおく．$m$を正の整数として
+
+\begin{align*}
+ \int_0^1 \sin(m \pi x)u_0(x) \mathrm{d} x&=  \int_0^1 \sin(m \pi x)u(x,0) \mathrm{d} x \\
+ \int_0^1 (x-x^2)\sin(m \pi x) \mathrm{d} x&=  \int_0^1 \sin(m \pi x)\sum_{n=1}^\infty c_n u_n(x,0) \mathrm{d} x \\
+ \frac{1}{m\pi} \int_0^1(1-2x)\cos(m \pi x) \mathrm{d}x &= \sum_{n=1}^\infty c_n \int_0^1 \sin(n \pi x) \sin( m \pi x) \mathrm{d} x \\
+ \frac{2}{m^2\pi^2}\int_0^1 \sin(m \pi x)\mathrm{d}x&= \frac{c_m}{2}
+\end{align*}
+
+$$ \therefore c_n = \frac{4}{n^2\pi^2}\int_0^1 \sin(n \pi x)\mathrm{d}x = \frac{4}{n^3\pi^3}(1-\cos(n \pi))$$
+
 \end{document}
