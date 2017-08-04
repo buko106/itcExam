@@ -140,6 +140,43 @@
 
 \section{}
 
+\begin{screen}
+ 以下の設問に答えよ．
+\end{screen}
 
+\begin{screen}
+ (1) $n$ 個の同等な玉を，互いに区別できる $r$ 個の箱に入れる方法は何通りあるか．ただし，$n \geq 1, $ $1 \leq r \leq n$とし，どの箱にも少なくとも1個の玉が入るものとする．
+\end{screen}
+
+\begin{screen}
+ 次に，黒玉$n$個と白玉$m$個を無作為に1列に並べることを考える．同じ色のひと続きの並びを連と呼び，黒玉の連の個数を$r$，白玉の連の個数を$s$とする．ただし，$n \geq 1$ , $m \geq 1$ , $1 \leq r \leq n$ , $1  \leq s \leq m$とする．たとえば
+ $$\underline{\mbox{●\hspace{1mm}●}}\hspace{1mm}\underline{\mbox{○\hspace{1mm}○\hspace{1mm}○}}\hspace{1mm}\underline{\mbox{●\hspace{1mm}●\hspace{1mm}●}}\hspace{1mm}\underline{\mbox{○\hspace{1mm}○}}\hspace{1mm}\underline{\mbox{●}}$$
+ の場合は $r=3,s=2$となる．
+\end{screen}
+
+\begin{screen}
+ (2) 黒玉同士，白玉同士を区別しないで並べる方法は全部で何通りなるか．
+\end{screen}
+
+\begin{screen}
+ (3) 黒玉の連の個数が$r$，白玉の連の個数が$s$となる確率$P(r,s)$を求めよ．
+\end{screen}
+
+\begin{screen}
+ (4) 黒玉の連の個数が$r$となる確率$P(r)$を求めよ．
+\end{screen}
+
+\begin{screen}
+ (5) $(1+x)^n(1+x)^m = (1+x)^{n+m}$ を使って，次式が成り立つことを示せ．
+ \begin{align*}
+  \sum_{l=0}^{\min\{n,m\}}\binom{n}{l}\binom{m}{l} &= \binom{n+m}{m} \tag{3.1} \\
+  \sum_{l=0}^{\min\{n-1,m\}} \binom{n}{l+1}\binom{m}{l} &= \binom{n+m}{m+1} \tag{3.2}
+ \end{align*}
+\end{screen}
+
+\begin{screen}
+ (6) $r$の期待値 $E(r)$ と分散 $V(r)$ を求めよ．また，$N=n+m,$ $\ds \lim_{N \rightarrow \infty}\frac{n}{N} = \lambda$とするとき \\ ($\lambda$は実数の定数)，$\ds \lim_{N \rightarrow \infty}\frac{E(r)}{N}$と$\ds \lim_{N \rightarrow \infty}\frac{V(r)}{N}$を求めよ．
+
+\end{screen}
 
 \end{document}
