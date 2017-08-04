@@ -116,6 +116,14 @@
  ただし，任意の奇関数$h(x)$に対して$\ds \int_{-1}^1h(x)\mathrm{d}x = 0$であることを用いてよい．
 \end{screen}
 
+\begin{align*}
+ (q_0,q_1) &= \int_{-1}^1 x \mathrm{d}x = 0 \\
+ (q_0,q_2) &= \int_{-1}^1 (3x^2 -1)\mathrm{d}x = 0 \\
+ (q_1,q_2) &= \int_{-1}^1 (3x^3 -x)\mathrm{d}x =0 \\
+ (q_0,q_0) &= \int_{-1}^1 \mathrm{d}x = 2\\
+ (q_1,q_1) &= \int_{-1}^1 x^2\mathrm{d}x =\frac{2}{3}\\
+ (q_2,q_2) &= \int_{-1}^1 (9x^4 - 6 x^2 + 1)\mathrm{d}x = 2 \left[\frac{9}{5}x^5-2x^3 + x\right]_0^1 = \frac{8}{5}\\
+\end{align*}
 
 \begin{screen}
  (2) $p_k(x)$ を $x$ の $k$ 次多項式(ただし，$x^k$ の項の係数は $0$ でないとする)とし，多項式関数の列 $p_0(x),p_1(x),\cdots$ を考える．以下では，$N$ 個の関数の組 $\left\{p_0(x),p_1(x),\cdots,p_{N-1}(x)\right\}$ が $[0,N-1]$ 内の任意の整数 $i,j$ に対して
@@ -130,6 +138,21 @@
  \end{itemize}
 \end{screen}
 
+\begin{itemize}
+ \item[(2-1)] $q_0(x),q_1(x),q_2(x)$は既に直交しているので，正規化することで$p_0(x),p_1(x),p_2(x)$を得る．
+              \begin{align*}
+               p_0(x) &= \frac{q_0(x)}{\sqrt{(q_0,q_0)}} = \frac{1}{\sqrt{2}} \\
+               p_1(x) &= \frac{q_1(x)}{\sqrt{(q_1,q_1)}} = \sqrt{\frac{3}{2}} x \\
+               p_2(x) &= \frac{q_2(x)}{\sqrt{(q_2,q_2)}} = \sqrt{\frac{8}{5}} (3x^2-1)
+              \end{align*}
+ \item[(2-2)] $q_3(x)=x^3$と定めて，グラムシュミットの直交化を用いる．
+              \begin{align*}
+               u_3(x) &= q_3(x) - \frac{(p_2,q_3)}{(p_2,p_2)}p_2(x) - \frac{(p_1,q_3)}{(p_1,p_1)}p_1(x) - \frac{(p_0,q_3)}{(p_0,p_0)}p_0(x) \\
+               &= x^3 - \frac{3}{5} x \\
+               p_3(x) &= \frac{u_3(x)}{\sqrt{(u_3,u_3)}} \\
+               &= \sqrt{\frac{7}{8}}(5x^3 - 3x)
+              \end{align*}
+\end{itemize}
 
 \begin{screen}
  (3) いま，関数の組$\left\{p_0(x),p_1(x),\cdots,p_{N-1}(x)\right\}$が正規直交条件を満たしているとする．このとき小問(2-2)と同様に，関数の組$\left\{p_0(x),p_1(x),\cdots,p_{N}(x)\right\}$が正規直交条件をみたすように$p_N(x)$を定めることができる．次の手順により，この$p_N(x)$は符号を除いて一意でることを示せ．
@@ -140,6 +163,13 @@
   \item[(3-2)] $p_N(x)$とは異なる$N$次多項式関数$\tilde{p}_N(x)$が存在して，関数の組$\left\{p_0(x),p_1(x),\cdots,\right.$ $\left.p_{N-1}(x),\tilde{p}_{N}(x)\right\}$も正規直交条件を満たしたとする．このとき，前問(3-1)で$f_N(x)=\tilde{p}_N(x)$の場合を考えることで$\tilde{p}_N(x)=-p_N(x)$を示せ．
  \end{itemize}
 \end{screen}
+
+\begin{itemize}
+ \item[(3-1)] 正規直交条件より，$\ds (f_N,p_k) = \sum_{i=0}^N c_i (p_i,p_k) = c_k$
+ \item[(3-2)] $0 \leq k < N$のとき，$c_k = (\tilde{p}_N,p_k) = 0$ であるので，$\tilde{p}_N(x)=c_N p_N(x)$となる．\\ $(\tilde{p}_N,\tilde{p}_N)=(c_kp_N,c_kp_N)=c_k^2=1$ \\ $\therefore c_k = \pm 1$ \quad よって$p_N$と$\tilde{p}_N$が異なるとき，$\tilde{p}_N(x)=-p_N(x)$
+
+               
+\end{itemize}
 
 \section{}
 
