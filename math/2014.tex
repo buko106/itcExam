@@ -6,24 +6,24 @@
 \usepackage{listings}
 \usepackage[english]{babel}
 \lstset{
- 	%$BOH30$K9T$C$?;~$N<+F02~9T(B
+ 	%枠外に行った時の自動改行
  	breaklines = true,
- 	%$BI8=`$N=qBN(B
+ 	%標準の書体
         basicstyle=\ttfamily\footnotesize,
         commentstyle=\footnotesize\bfseries,
         keywordstyle=\footnotesize\bfseries,
- 	%$BOH(B "t"$B$O>e$K@~$r5-:\(B, "T"$B$O>e$KFs=E@~$r5-:\(B
-	%$BB>%*%W%7%g%s!'(Bleftline$B!$(Btopline$B!$(Bbottomline$B!$(Blines$B!$(Bsingle$B!$(Bshadowbox
+ 	%枠 "t"は上に線を記載, "T"は上に二重線を記載
+	%他オプション：leftline，topline，bottomline，lines，single，shadowbox
  	frame = single,
- 	%frame$B$^$G$N4V3V(B($B9THV9f$H%W%m%0%i%`$N4V(B)
+ 	%frameまでの間隔(行番号とプログラムの間)
  	framesep = 5pt,
- 	%$B9THV9f$N0LCV(B
+ 	%行番号の位置
  	numbers = left,
-	%$B9THV9f$N4V3V(B
+	%行番号の間隔
  	stepnumber = 1,
-	%$B%?%V$NBg$-$5(B
+	%タブの大きさ
  	tabsize = 4,
- 	%$B%-%c%W%7%g%s$N>l=j(B("tb"$B$J$i$P>e2<N>J}$K5-:\(B)
+ 	%キャプションの場所("tb"ならば上下両方に記載)
  	captionpos = t
 }
 
@@ -42,14 +42,14 @@
 
 
 %% title configuration
-\title{$BEl5~Bg3XBg3X1!>pJsM}9)3X7O8&5f2J(B2014$BG/EY2a5nLd(B}
+\title{東京大学大学院情報理工学系研究科2014年度過去問}
 \author{}
 \date{}
 
 
 %% headings
 \pagestyle{headings}
-\markright{$BEl5~Bg3XBg3X1!>pJsM}9)3X7O8&5f2J(B2014$BG/EY2a5nLd(B}
+\markright{東京大学大学院情報理工学系研究科2014年度過去問}
 
 
 
@@ -63,11 +63,11 @@
 \section{}
 
 \begin{screen}
- $B<B@5J}9TNs(B$M$$B$O!$(B$M=M^T$$B$rK~$?$9$H$-BP>N9TNs$H$$$&!%$?$@$7!$(B$M^T$$B$O(B$M$$B$NE>CV9TNs$rI=$9!%0J2<$N@_Ld$KEz$($h!%(B
+ 実正方行列$M$は，$M=M^T$を満たすとき対称行列という．ただし，$M^T$は$M$の転置行列を表す．以下の設問に答えよ．
 \end{screen}
 
 \begin{screen}
- (1)$B0J2<$NBP>N9TNs(B$A$$B$N$9$Y$F$N8GM-CM$H!$$=$l$i$N8GM-$KBP1~$9$k8GM-%Y%/%H%k$r5a$a$h!%(B
+ (1)以下の対称行列$A$のすべての固有値と，それらの固有に対応する固有ベクトルを求めよ．
  $$A=\begin{pmatrix}
     1 & -1 & 0 \\
     -1 & 1 & -1 \\
@@ -77,43 +77,43 @@
 
 
 \begin{screen}
- (2)$B<B@5J}9TNs(B$M$$B$,BP>N9TNs$J$i$P!"$=$N8GM-CM$O$9$Y$F<B?t$H$J$k$3$H$r>ZL@$;$h!%(B
+ (2)実正方行列$M$が対称行列ならば、その固有値はすべて実数となることを証明せよ．
 \end{screen}
 
 
 \begin{screen}
- (3)$B<B@5J}9TNs(B$M$$B$N8GM-CM$,$9$Y$F<B?t$G$"$C$F$b(B$M$$B$OI,$:$7$bBP>N9TNs$G$"$k$H$O8B$i$J$$!%$=$N$h$&$J9TNs(B$M$$B$N6qBNNc$r(B1$B$D5s$2$h!%(B
+ (3)実正方行列$M$の固有値がすべて実数であっても$M$は必ずしも対称行列であるとは限らない．そのような行列$M$の具体例を1つ挙げよ．
 \end{screen}
 
 
 \begin{screen}
- (4)$\bm{u}=\begin{pmatrix}x \\ y \\ z\end{pmatrix}$$B$r86E@$r=|$/(B3$B<!85<B%Y%/%H%k$H$9$k!%$3$3$G!$@_Ld(B(1)$B$NBP>N9TNs(B$A$$B$rMQ$$$F!$4X?t(B$f(x,y,z)$$B$r<!$N$h$&$KDj5A$9$k!%(B
+ (4)$\bm{u}=\begin{pmatrix}x \\ y \\ z\end{pmatrix}$を原点を除く3次元実ベクトルとする．ここで，設問(1)の対称行列$A$を用いて，関数$f(x,y,z)$を次のように定義する．
  $$f(x,y,z)=\frac{\bm{u}^TA\bm{u}}{\bm{u}^T\bm{u}}$$
- $B$?$@$7!$(B$\bm{u}^T$$B$O(B$\bm{u}$$B$NE>CV$rI=$9!%$^$?!$4X?t(B$g(x,y,z)$$B$r<!$N$h$&$KDj5A$9$k!%(B
+ ただし，$\bm{u}^T$は$\bm{u}$の転置を表す．また，関数$g(x,y,z)$を次のように定義する．
  $$g(x,y,z)=\frac{xy+yz}{x^2+y^2+z^2}$$
- $B$3$N$H$-!$<!$N4X78<0$,@.$jN)$D$3$H$r<($;!%(B
+ このとき，次の関係式が成り立つことを示せ．
  $$f(x,y,z)=1-2g(x,y,z)$$
 \end{screen}
 
 
 \begin{screen}
- (5)$B@_Ld(B(4)$B$N4X?t(B$g(x,y,z)$$B$K$D$$$F!$<!$NITEy<0$,@.N)$D$3$H$r@_Ld(B(1)$B$NBP>N9TNs(B$A$$B$N8GM-CMJ,2r$rMQ$$$F<($;!%(B
+ (5)設問(4)の関数$g(x,y,z)$について，次の不等式が成立つことを設問(1)の対称行列$A$の固有値分解を用いて示せ．
  $$-\frac{1}{\sqrt{2}}\leq g(x,y,z) \leq \frac{1}{\sqrt{2}}$$
 \end{screen}
 
 \section{}
 
 \begin{screen}
- $B6h4V(B$[-1,1]$$B$GDj5A$5$l$?<B4X?t(B$f(x),g(x)$$B$KBP$7$F!$(B
+ 区間$[-1,1]$で定義された実関数$f(x),g(x)$に対して，
  $$(f,g)=\int_{-1}^1f(x)g(x)\mathrm{d}x$$
- $B$H$*$/!%0J2<$N@_Ld$KEz$($h!%(B
+ とおく．以下の設問に答えよ．
 \end{screen}
 
 
 \begin{screen}
- (1)$B0J2<$GDj5A$5$l$kB?9`<0(B$q_0(x),q_1(x),q_2(x)$$B$KBP$7$F(B$(q_0,q_1),$ $(q_0,q_2),$ $(q_1,q_2),$ $(q_0,q_0),$ $(q_1,q_1),$ $(q_2,q_2)$$B$r7W;;$;$h!%(B
+ (1)以下で定義される多項式$q_0(x),q_1(x),q_2(x)$に対して$(q_0,q_1),$ $(q_0,q_2),$ $(q_1,q_2),$ $(q_0,q_0),$ $(q_1,q_1),$ $(q_2,q_2)$を計算せよ．
  $$q_0(x)=1,\quad q_1(x)=x,\quad q_2(x)=3x^2-1$$
- $B$?$@$7!$G$0U$N4q4X?t(B$h(x)$$B$KBP$7$F(B$\ds \int_{-1}^1h(x)\mathrm{d}x = 0$$B$G$"$k$3$H$rMQ$$$F$h$$!%(B
+ ただし，任意の奇関数$h(x)$に対して$\ds \int_{-1}^1h(x)\mathrm{d}x = 0$であることを用いてよい．
 \end{screen}
 
 \begin{align*}
@@ -126,26 +126,26 @@
 \end{align*}
 
 \begin{screen}
- (2) $p_k(x)$ $B$r(B $x$ $B$N(B $k$ $B<!B?9`<0(B($B$?$@$7!$(B$x^k$ $B$N9`$N78?t$O(B $0$ $B$G$J$$$H$9$k(B)$B$H$7!$B?9`<04X?t$NNs(B $p_0(x),p_1(x),\cdots$ $B$r9M$($k!%0J2<$G$O!$(B$N$ $B8D$N4X?t$NAH(B $\left\{p_0(x),p_1(x),\cdots,p_{N-1}(x)\right\}$ $B$,(B $[0,N-1]$ $BFb$NG$0U$N@0?t(B $i,j$ $B$KBP$7$F(B
+ (2) $p_k(x)$ を $x$ の $k$ 次多項式(ただし，$x^k$ の項の係数は $0$ でないとする)とし，多項式関数の列 $p_0(x),p_1(x),\cdots$ を考える．以下では，$N$ 個の関数の組 $\left\{p_0(x),p_1(x),\cdots,p_{N-1}(x)\right\}$ が $[0,N-1]$ 内の任意の整数 $i,j$ に対して
  $$(p_i,p_j)=\begin{cases}
               1 &(i=j)\\
               0 &(i \neq j)
              \end{cases}$$
- $B$rK~$?$9$H$-!$$=$NAH$O@55,D>8r>r7o$rK~$?$9$H$$$&!%(B
+ を満たすとき，その組は正規直交条件を満たすという．
  \begin{itemize}
-  \item[(2-1)] $B@_Ld(B(1)$B$GDj5A$7$?(B$q_0(x),q_1(x),q_2(x)$$B$rMQ$$$F!$@55,D>8r>r7o$rK~$?$94X?t$NAH(B$\left\{p_0(x),p_1(x),p_2(x)\right\}$$B$r0l$D5a$a$h!%(B
-  \item[(2-2)] $B4X?t$NAH(B$\left\{p_0(x),p_1(x),p_2(x),p_3(x)\right\}$$B$,@55,D>8r>r7o$rK~$?$9$h$&$J(B$p_3(x)$$B$r0l$D5a$a$h!%$?$@$7!$(B$p_0(x),p_1(x),p_2(x)$$B$OA0Ld(B(2-1)$B$G5a$a$?$b$N$H$9$k!%(B
+  \item[(2-1)] 設問(1)で定義した$q_0(x),q_1(x),q_2(x)$を用いて，正規直交条件を満たす関数の組$\left\{p_0(x),p_1(x),p_2(x)\right\}$を一つ求めよ．
+  \item[(2-2)] 関数の組$\left\{p_0(x),p_1(x),p_2(x),p_3(x)\right\}$が正規直交条件を満たすような$p_3(x)$を一つ求めよ．ただし，$p_0(x),p_1(x),p_2(x)$は前問(2-1)で求めたものとする．
  \end{itemize}
 \end{screen}
 
 \begin{itemize}
- \item[(2-1)] $q_0(x),q_1(x),q_2(x)$$B$O4{$KD>8r$7$F$$$k$N$G!$@55,2=$9$k$3$H$G(B$p_0(x),p_1(x),p_2(x)$$B$rF@$k!%(B
+ \item[(2-1)] $q_0(x),q_1(x),q_2(x)$は既に直交しているので，正規化することで$p_0(x),p_1(x),p_2(x)$を得る．
               \begin{align*}
                p_0(x) &= \frac{q_0(x)}{\sqrt{(q_0,q_0)}} = \frac{1}{\sqrt{2}} \\
                p_1(x) &= \frac{q_1(x)}{\sqrt{(q_1,q_1)}} = \sqrt{\frac{3}{2}} x \\
                p_2(x) &= \frac{q_2(x)}{\sqrt{(q_2,q_2)}} = \sqrt{\frac{8}{5}} (3x^2-1)
               \end{align*}
- \item[(2-2)] $q_3(x)=x^3$$B$HDj$a$F!$%0%i%`%7%e%_%C%H$ND>8r2=$rMQ$$$k!%(B
+ \item[(2-2)] $q_3(x)=x^3$と定めて，グラムシュミットの直交化を用いる．
               \begin{align*}
                u_3(x) &= q_3(x) - \frac{(p_2,q_3)}{(p_2,p_2)}p_2(x) - \frac{(p_1,q_3)}{(p_1,p_1)}p_1(x) - \frac{(p_0,q_3)}{(p_0,p_0)}p_0(x) \\
                &= x^3 - \frac{3}{5} x \\
@@ -155,18 +155,18 @@
 \end{itemize}
 
 \begin{screen}
- (3) $B$$$^!$4X?t$NAH(B$\left\{p_0(x),p_1(x),\cdots,p_{N-1}(x)\right\}$$B$,@55,D>8r>r7o$rK~$?$7$F$$$k$H$9$k!%$3$N$H$->.Ld(B(2-2)$B$HF1MM$K!$4X?t$NAH(B$\left\{p_0(x),p_1(x),\cdots,p_{N}(x)\right\}$$B$,@55,D>8r>r7o$r$_$?$9$h$&$K(B$p_N(x)$$B$rDj$a$k$3$H$,$G$-$k!%<!$N<j=g$K$h$j!$$3$N(B$p_N(x)$$B$OId9f$r=|$$$F0l0U$G$k$3$H$r<($;!%(B
+ (3) いま，関数の組$\left\{p_0(x),p_1(x),\cdots,p_{N-1}(x)\right\}$が正規直交条件を満たしているとする．このとき小問(2-2)と同様に，関数の組$\left\{p_0(x),p_1(x),\cdots,p_{N}(x)\right\}$が正規直交条件をみたすように$p_N(x)$を定めることができる．次の手順により，この$p_N(x)$は符号を除いて一意でることを示せ．
  \begin{itemize}
-  \item[(3-1)] $B0lHL$KG$0U$N(B$N$$B<!B?9`<0(B$f_N(x)$$B$O(B
+  \item[(3-1)] 一般に任意の$N$次多項式$f_N(x)$は
                $$f_N(x)=\sum_{k=0}^Nc_kp_k(x)$$
-               $B$H=q$1$k!%$3$N78?t(B $c_k$ $(k=0,\cdots,N)$$B$r(B$p_0(x),p_1(x),\cdots,p_{N}(x)$$B$H(B$f_N(x)$$B$rMQ$$$FI=$;!%(B
-  \item[(3-2)] $p_N(x)$$B$H$O0[$J$k(B$N$$B<!B?9`<04X?t(B$\tilde{p}_N(x)$$B$,B8:_$7$F!$4X?t$NAH(B$\left\{p_0(x),p_1(x),\cdots,\right.$ $\left.p_{N-1}(x),\tilde{p}_{N}(x)\right\}$$B$b@55,D>8r>r7o$rK~$?$7$?$H$9$k!%$3$N$H$-!$A0Ld(B(3-1)$B$G(B$f_N(x)=\tilde{p}_N(x)$$B$N>l9g$r9M$($k$3$H$G(B$\tilde{p}_N(x)=-p_N(x)$$B$r<($;!%(B
+               と書ける．この係数 $c_k$ $(k=0,\cdots,N)$を$p_0(x),p_1(x),\cdots,p_{N}(x)$と$f_N(x)$を用いて表せ．
+  \item[(3-2)] $p_N(x)$とは異なる$N$次多項式関数$\tilde{p}_N(x)$が存在して，関数の組$\left\{p_0(x),p_1(x),\cdots,\right.$ $\left.p_{N-1}(x),\tilde{p}_{N}(x)\right\}$も正規直交条件を満たしたとする．このとき，前問(3-1)で$f_N(x)=\tilde{p}_N(x)$の場合を考えることで$\tilde{p}_N(x)=-p_N(x)$を示せ．
  \end{itemize}
 \end{screen}
 
 \begin{itemize}
- \item[(3-1)] $B@55,D>8r>r7o$h$j!$(B$\ds (f_N,p_k) = \sum_{i=0}^N c_i (p_i,p_k) = c_k$
- \item[(3-2)] $0 \leq k < N$$B$N$H$-!$(B$c_k = (\tilde{p}_N,p_k) = 0$ $B$G$"$k$N$G!$(B$\tilde{p}_N(x)=c_N p_N(x)$$B$H$J$k!%(B\\ $(\tilde{p}_N,\tilde{p}_N)=(c_kp_N,c_kp_N)=c_k^2=1$ \\ $\therefore c_k = \pm 1$ \quad $B$h$C$F(B$p_N$$B$H(B$\tilde{p}_N$$B$,0[$J$k$H$-!$(B$\tilde{p}_N(x)=-p_N(x)$
+ \item[(3-1)] 正規直交条件より，$\ds (f_N,p_k) = \sum_{i=0}^N c_i (p_i,p_k) = c_k$
+ \item[(3-2)] $0 \leq k < N$のとき，$c_k = (\tilde{p}_N,p_k) = 0$ であるので，$\tilde{p}_N(x)=c_N p_N(x)$となる．\\ $(\tilde{p}_N,\tilde{p}_N)=(c_kp_N,c_kp_N)=c_k^2=1$ \\ $\therefore c_k = \pm 1$ \quad よって$p_N$と$\tilde{p}_N$が異なるとき，$\tilde{p}_N(x)=-p_N(x)$
 
                
 \end{itemize}
@@ -174,62 +174,62 @@
 \section{}
 
 \begin{screen}
- $BFHN)$J3NN(JQ?t$NNs(B$x_0,x_1,x_2,\cdots$$B$K$*$$$F!$3F(B$x_i$ $(i=0,1,2,\cdots)$$B$O!$3NN((B$p$$B$G(B$1$$B$NCM$r$H$j!$3NN((B$1-p$$B$G(B$0$$B$NCM$r$H$k$b$N$H$9$k!%0J2<$N@_Ld$KEz$($h!%(B
+ 独立な確率変数の列$x_0,x_1,x_2,\cdots$において，各$x_i$ $(i=0,1,2,\cdots)$は，確率$p$で$1$の値をとり，確率$1-p$で$0$の値をとるものとする．以下の設問に答えよ．
 \end{screen}
 
 
 \begin{screen}
- (1)$B3NN(JQ?tNs(B$x_0,x_1,x_2,\cdots$$B$K4X$7$F!$0J2<$N>.Ld$KEz$($h!%(B
+ (1)確率変数列$x_0,x_1,x_2,\cdots$に関して，以下の小問に答えよ．
  \begin{itemize}
-  \item[(1-1)]$x_i$$B$NJ,;6$r5a$a$h!%$^$?!$(B$x_0=x_1=1$$B$H$J$k3NN($r5a$a$h!%(B
-  \item[(1-2)]$k(k\geq 0)$$B$r(B$x_k=x_{k+1}$$B$,@.$jN)$D:G>.$N@0?t$H$9$k!%$?$H$($P!$(B$x_0,x_1,x_2,\cdots$$B$,(B$1,0,0,1,0,1,1,1,0,0,\cdots$$B$J$i$P(B$k=1$$B$H$J$j(B$x_k=0$$B$H$J$k!%(B\\
-              $x_k=1$$B$H$J$k3NN($r5a$a$h!%(B
+  \item[(1-1)]$x_i$の分散を求めよ．また，$x_0=x_1=1$となる確率を求めよ．
+  \item[(1-2)]$k(k\geq 0)$を$x_k=x_{k+1}$が成り立つ最小の整数とする．たとえば，$x_0,x_1,x_2,\cdots$が$1,0,0,1,0,1,1,1,0,0,\cdots$ならば$k=1$となり$x_k=0$となる．\\
+              $x_k=1$となる確率を求めよ．
  \end{itemize}
 \end{screen}
 
 \begin{itemize}
- \item[(1-1)] $x_i$$B$N4|BTCM$O(B$0\cdot (1-p) + 1\cdot p = p$$B$G$"$k!%$h$C$FJ,;6$O(B$(0-p)^2 (1-p) + (1-p)^2 p = p(1-p)$
- \item[(1-2)] (i)$x_0=1$$B$N$H$-!%(B$1,0$$B$r(B$n$$B2s7+$jJV$7$?8e$K(B$1,1$$B$H$J$k!%=>$C$F$=$N3NN($O(B$\ds \sum_{n=0}^\infty p^n(1-p)^n\cdot p^2$ \\
-              (ii)$x_0=0$$B$N$H$-!$(B$0$$B$N8e$K(B$1,0$$B$r(B$n$$B2s7+$jJV$7$?8e$K(B$1,1$$B$H$J$k!%=>$C$F$=$N3NN($O(B \\ $\ds \sum_{n=0}^\infty (1-p) \cdot p^n(1-p)^n\cdot p^2$  \\
-              (i)+(ii)$B$K$h$C$F!$3NN($O(B
+ \item[(1-1)] $x_i$の期待値は$0\cdot (1-p) + 1\cdot p = p$である．よって分散は$(0-p)^2 (1-p) + (1-p)^2 p = p(1-p)$
+ \item[(1-2)] (i)$x_0=1$のとき．$1,0$を$n$回繰り返した後に$1,1$となる．従ってその確率は$\ds \sum_{n=0}^\infty p^n(1-p)^n\cdot p^2$ \\
+              (ii)$x_0=0$のとき，$0$の後に$1,0$を$n$回繰り返した後に$1,1$となる．従ってその確率は \\ $\ds \sum_{n=0}^\infty (1-p) \cdot p^n(1-p)^n\cdot p^2$  \\
+              (i)+(ii)によって，確率は
               $$p^2(2-p)\sum_{n=0}^\infty p^n(1-p)^n = \frac{p^2(2-p)}{1-p(1-p)}$$
 \end{itemize}
 
 \begin{screen}
- (2)$B3NN(JQ?tNs(B$x_0,x_1,x_2,\cdots$$B$r$b$H$K3NN(JQ?tNs(B$y_0,y_1,y_2,\cdots$$B$r0J2<$N$h$&$KDj$a$k!%(B
+ (2)確率変数列$x_0,x_1,x_2,\cdots$をもとに確率変数列$y_0,y_1,y_2,\cdots$を以下のように定める．
  \begin{align*}
   y_0 &= 1 & \\
   y_{i+1} &= y_i + \alpha(x_i-y_i) & (i=0,1,2,\cdots)
  \end{align*}
- $B$?$@$7!$(B$0<\alpha<1$$B$H2>Dj$9$k!%0J2<$N>.Ld$KEz$($h!%(B
+ ただし，$0<\alpha<1$と仮定する．以下の小問に答えよ．
  \begin{itemize}
-  \item[(2-1)] $\ds y_n=(1-\alpha)^n + \sum_{i=0}^{n-1}(1-\alpha)^{n-i-1}\alpha x_i$ $(n=1,2,\cdots)$$B$G$"$k$3$H$r<($;!%(B
-  \item[(2-2)] $y_n$$B$N4|BTCM(B$E_n$$B$HJ,;6(B$V_n$$B$r5a$a$h!%(B
-  \item[(2-3)] $\ds E_\infty = \lim_{n\rightarrow \infty}E_n,V_\infty = \lim_{n\rightarrow \infty}V_n$$B$H$*$/!%(B$\ds \frac{1}{2}<p<\frac{3}{4}$$B$G$"$k$H$-!$(B
+  \item[(2-1)] $\ds y_n=(1-\alpha)^n + \sum_{i=0}^{n-1}(1-\alpha)^{n-i-1}\alpha x_i$ $(n=1,2,\cdots)$であることを示せ．
+  \item[(2-2)] $y_n$の期待値$E_n$と分散$V_n$を求めよ．
+  \item[(2-3)] $\ds E_\infty = \lim_{n\rightarrow \infty}E_n,V_\infty = \lim_{n\rightarrow \infty}V_n$とおく．$\ds \frac{1}{2}<p<\frac{3}{4}$であるとき，
                $$E_\infty - \sqrt{V_\infty} \geq \frac{1}{2}$$
-               $B$rK~$?$9(B$\alpha$$B$N:GBgCM$r5a$a$h!%(B
+               を満たす$\alpha$の最大値を求めよ．
  \end{itemize}
 \end{screen}
 
 \begin{itemize}
- \item[(2-1)] $B?t3XE*5"G<K!$K$h$j<($9!%(B(i) $n=1$$B$N$H$-!%(B$y_1 = (1-\alpha) + \alpha x_0 = y_0 + \alpha(x_0-y_0)$$B$G@.N)$9$k!%(B(ii) $n=k(k\geq 1)$$B$G@.$jN)$D$3$H$r2>Dj$9$k!%(B
-              $\ds y_{k+1}=(1-\alpha)y_k + \alpha x_k = (1-\alpha)^{k+1} + \sum_{i=0}^{k}(1-\alpha)^{k-i}\alpha x_i $$B$H$J$j(B$n=k+1$$B$N$H$-$b@.N)$9$k!%(B
+ \item[(2-1)] 数学的帰納法により示す．(i) $n=1$のとき．$y_1 = (1-\alpha) + \alpha x_0 = y_0 + \alpha(x_0-y_0)$で成立する．(ii) $n=k(k\geq 1)$で成り立つことを仮定する．
+              $\ds y_{k+1}=(1-\alpha)y_k + \alpha x_k = (1-\alpha)^{k+1} + \sum_{i=0}^{k}(1-\alpha)^{k-i}\alpha x_i $となり$n=k+1$のときも成立する．
  \item[(2-2)] $\ds E_n = E[(1-\alpha)^n] + \sum_{i=0}^{n-1}(1-\alpha)^{n-i-1}\alpha E[x_i] = (1-\alpha)^n + p\alpha \sum_{i=0}^{n-1}(1-\alpha)^i = p + (1-p)(1-\alpha)^n$ \\
-              $x_i$$B$NFHN)@-$h$j(B \\
+              $x_i$の独立性より \\
               \begin{align*}
                V_n &= V[(1-\alpha)^n] + \sum_{i=0}^{n-1}(1-\alpha)^{2(n-i-1)}\alpha^2 V[x_i] \\
                &= 0 + p(1-p)\alpha^2 \sum_{i=0}^{n-1}(1-\alpha)^{2i} \\
                &= p(1-p)\alpha^2\frac{1-(1-\alpha)^{2n}}{1-(1-\alpha)^2} \\
                &= p(1-p)\alpha \frac{1-(1-\alpha)^{2n}}{2-\alpha}
               \end{align*}
- \item[(2-3)] $\ds E_\infty=p,V_\infty = p(1-p)\frac{\alpha}{2-\alpha}$$B$H$J$k!%(B$\ds p>\frac{1}{2}$$B$h$j!$(B
+ \item[(2-3)] $\ds E_\infty=p,V_\infty = p(1-p)\frac{\alpha}{2-\alpha}$となる．$\ds p>\frac{1}{2}$より，
               \begin{align*}
                &E_\infty - \sqrt{V_\infty} \geq \frac{1}{2} \\
                &\Leftrightarrow \left(E_\infty - \frac{1}{2} \right)^2  \geq V_\infty \\
                &\Leftrightarrow p^2 - p + \frac{1}{4} \geq p(1-p)\frac{\alpha}{2-\alpha} \\
                &\Leftrightarrow \alpha \leq 2\left(p-\frac{1}{2}\right)^2
               \end{align*}
-              $B$H$J$j!$:GBgCM$O(B$\ds \alpha = 2\left(p-\frac{1}{2}\right)^2$
+              となり，最大値は$\ds \alpha = 2\left(p-\frac{1}{2}\right)^2$
 \end{itemize}
 
 \end{document}

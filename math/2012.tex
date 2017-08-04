@@ -6,24 +6,24 @@
 \usepackage{listings}
 \usepackage[english]{babel}
 \lstset{
- 	%$BOH30$K9T$C$?;~$N<+F02~9T(B
+ 	%枠外に行った時の自動改行
  	breaklines = true,
- 	%$BI8=`$N=qBN(B
+ 	%標準の書体
         basicstyle=\ttfamily\footnotesize,
         commentstyle=\footnotesize\bfseries,
         keywordstyle=\footnotesize\bfseries,
- 	%$BOH(B "t"$B$O>e$K@~$r5-:\(B, "T"$B$O>e$KFs=E@~$r5-:\(B
-	%$BB>%*%W%7%g%s!'(Bleftline$B!$(Btopline$B!$(Bbottomline$B!$(Blines$B!$(Bsingle$B!$(Bshadowbox
+ 	%枠 "t"は上に線を記載, "T"は上に二重線を記載
+	%他オプション：leftline，topline，bottomline，lines，single，shadowbox
  	frame = single,
- 	%frame$B$^$G$N4V3V(B($B9THV9f$H%W%m%0%i%`$N4V(B)
+ 	%frameまでの間隔(行番号とプログラムの間)
  	framesep = 5pt,
- 	%$B9THV9f$N0LCV(B
+ 	%行番号の位置
  	numbers = left,
-	%$B9THV9f$N4V3V(B
+	%行番号の間隔
  	stepnumber = 1,
-	%$B%?%V$NBg$-$5(B
+	%タブの大きさ
  	tabsize = 4,
- 	%$B%-%c%W%7%g%s$N>l=j(B("tb"$B$J$i$P>e2<N>J}$K5-:\(B)
+ 	%キャプションの場所("tb"ならば上下両方に記載)
  	captionpos = t
 }
 
@@ -42,14 +42,14 @@
 
 
 %% title configuration
-\title{$BEl5~Bg3XBg3X1!>pJsM}9)3X7O8&5f2J(B2012$BG/EY2a5nLd(B}
+\title{東京大学大学院情報理工学系研究科2012年度過去問}
 \author{}
 \date{}
 
 
 %% headings
 \pagestyle{headings}
-\markright{$BEl5~Bg3XBg3X1!>pJsM}9)3X7O8&5f2J(B2012$BG/EY2a5nLd(B}
+\markright{東京大学大学院情報理工学系研究科2012年度過去問}
 
 
 
@@ -63,9 +63,9 @@
 \section{}
 
 \begin{screen}
-$B@5J}9TNs(B$D$$B$,D>9T9TNs$G$"$k$H$O!$(B$DD^\top$$B$H(B$D^\top D$$B$H$,$H$b$KC10L9TNs(B$I$$B$H$J$k$3$H$r$$$&!%$3$3$G(B$D^\top$$B$O(B$D$$B$NE>CV9TNs$rI=$9!%$^$?!$<!$N;v<B$r>ZL@$J$7$KMQ$$$F$h$$!'(B$D^\top D$$B$,C10L9TNs$J$i$P!$(B$DD^\top$$B$bC10L9TNs!%(B
+正方行列$D$が直行行列であるとは，$DD^\top$と$D^\top D$とがともに単位行列$I$となることをいう．ここで$D^\top$は$D$の転置行列を表す．また，次の事実を証明なしに用いてよい：$D^\top D$が単位行列ならば，$DD^\top$も単位行列．
 
-$B9TNs(B$A$$B$r<!$N$h$&$KDj$a$k!%(B
+行列$A$を次のように定める．
 
 $$A=
 \begin{pmatrix}
@@ -74,12 +74,12 @@ $$A=
 1 & 1 & -1
 \end{pmatrix}$$
 
-$B0J2<$N3FLd$KEz$($h!%(B
+以下の各問に答えよ．
 \end{screen}
 
 \begin{screen}
 (1)
-$B9TNs(B$A^\top A$$B$N8GM-CM$H8GM-%Y%/%H%k$r5a$a$h!%(B
+行列$A^\top A$の固有値と固有ベクトルを求めよ．
 \end{screen}
 
 $A^\top A=
@@ -88,7 +88,7 @@ $A^\top A=
 -1&  3& -1\\
  1& -1&  3
 \end{pmatrix}$$
-$$B$G$"$k!%FC@-J}Dx<0(B$\det(\lambda I -A^\top A)=(\lambda-6)(\lambda-3)(\lambda-2)=0$$B$r2r$/$3$H$K$h$j!$(B$\lambda = 6,3,2$$B$H$J$k!%(B(1)$\lambda=6$$B$N$H$-!%(B$A^\top A\left(\begin{array}{c} x \\ y \\ z \end{array} \right) = 6\left(\begin{array}{c} x \\ y \\ z \end{array} \right)$$B$r2r$$$F!$8GM-%Y%/%H%k$O(B$t\left(\begin{array}{c} 2 \\ -1 \\ 1 \end{array} \right)$ $(t\in \mathbb{R})$$B$G$"$k!%(B(2)$\lambda=3$$B$N$H$-!$F1MM$K$7$F8GM-%Y%/%H%k(B$t\left(\begin{array}{c} -1 \\ -1 \\ 1 \end{array} \right)$ $(t\in \mathbb{R})$ $B$G$"$k!%(B(3)$\lambda=2$$B$N$H$-!$F1MM$K$7$F8GM-%Y%/%H%k(B$t\left(\begin{array}{c} 0\\ 1 \\ 1 \end{array} \right)$ $(t\in \mathbb{R})$$B!%(B
+$である．特性方程式$\det(\lambda I -A^\top A)=(\lambda-6)(\lambda-3)(\lambda-2)=0$を解くことにより，$\lambda = 6,3,2$となる．(1)$\lambda=6$のとき．$A^\top A\left(\begin{array}{c} x \\ y \\ z \end{array} \right) = 6\left(\begin{array}{c} x \\ y \\ z \end{array} \right)$を解いて，固有ベクトルは$t\left(\begin{array}{c} 2 \\ -1 \\ 1 \end{array} \right)$ $(t\in \mathbb{R})$である．(2)$\lambda=3$のとき，同様にして固有ベクトル$t\left(\begin{array}{c} -1 \\ -1 \\ 1 \end{array} \right)$ $(t\in \mathbb{R})$ である．(3)$\lambda=2$のとき，同様にして固有ベクトル$t\left(\begin{array}{c} 0\\ 1 \\ 1 \end{array} \right)$ $(t\in \mathbb{R})$．
 
 \begin{screen}
 (2)
@@ -99,7 +99,7 @@ $$ A^\top A=U\begin{pmatrix}
 \end{pmatrix}
 U^\top $$
 
-$B$H$J$k$h$&$J<B?t(B$\lambda_1,\lambda_2,\lambda_3$$B$HD>9T9TNs(B
+となるような実数$\lambda_1,\lambda_2,\lambda_3$と直行行列
 $$ U=\begin{pmatrix}
 u_{11} & u_{12} & u_{13} \\
 u_{21} & u_{22} & u_{23} \\
@@ -109,24 +109,24 @@ u_{31} & u_{32} & u_{33}
 \bm{u}_1 & \bm{u}_2 & \bm{u}_3 \\
 \end{pmatrix}
 $$
-$B$r5a$a$h!%$?$@$7!$(B$\lambda_1\geq\lambda_2\geq \lambda_3$$B$+$D(B$u_{31} \geq 0 ,u_{32} \geq 0, u_{33}\geq 0$$B$H$J$k$h$&$K$;$h!%$3$3$G(B$\bm{u}_i$$B$O<!$N$h$&$J(B$3 \times 1$$B$NNs%Y%/%H%k$rI=$9!%(B
+を求めよ．ただし，$\lambda_1\geq\lambda_2\geq \lambda_3$かつ$u_{31} \geq 0 ,u_{32} \geq 0, u_{33}\geq 0$となるようにせよ．ここで$\bm{u}_i$は次のような$3 \times 1$の列ベクトルを表す．
 $$ \bm{u}_i = \left(\begin{array}{c} u_{1i}\\ u_{2i} \\ u_{3i} \end{array} \right)$$
 \end{screen}
 
 
-$A^\top A$$B$OBP>N9TNs$G$"$k!%=>$C$F!$@55,2=$7$?8GM-%Y%/%H%k$rJB$Y$?D>8r9TNs$K$h$jBP3Q2=2DG=$G$"$k!%(B$\lambda_1\geq\lambda_2\geq \lambda_3$$B$+$D(B$u_{31} \geq 0 ,u_{32} \geq 0, u_{33}\geq 0$$B$KCm0U$7$F@55,2=$9$k$H!$(B
+$A^\top A$は対称行列である．従って，正規化した固有ベクトルを並べた直交行列により対角化可能である．$\lambda_1\geq\lambda_2\geq \lambda_3$かつ$u_{31} \geq 0 ,u_{32} \geq 0, u_{33}\geq 0$に注意して正規化すると，
 
 $\lambda_1=6,\lambda_2=3 ,\lambda_3=2,
 \ds
 \bm{u}_1 = \frac{1}{\sqrt{6}}\left(\begin{array}{c} 2\\ -1 \\ 1 \end{array} \right),
 \bm{u}_2 = \frac{1}{\sqrt{3}}\left(\begin{array}{c} -1 \\ -1 \\ 1 \end{array} \right),
 \bm{u}_3 = \frac{1}{\sqrt{2}}\left(\begin{array}{c} 0\\ 1 \\ 1 \end{array} \right)
-$$B!%(B
+$．
 
 
 \begin{screen}
 (3)
-$B^2=A^\top A$$B$H$J$k$h$&$J9TNs(B$B$$B$N$&$A!$8GM-CM$,$9$Y$F@5$N$b$N$r0l$D5a$a$h!%(B
+$B^2=A^\top A$となるような行列$B$のうち，固有値がすべて正のものを一つ求めよ．
 \end{screen}
 
 
@@ -134,28 +134,28 @@ $\Lambda=\begin{pmatrix}
 \sqrt{\lambda_1}& 0&  0\\
 0&  \sqrt{\lambda_2}& 0\\
 0& 0&  \sqrt{\lambda_3}
-\end{pmatrix}$$B$HDj$a$k!%(B$(U\Lambda U^\top)^2=U\Lambda^2 U^\top=A^\top A$$B$G$"$k$N$G!$(B$B=U\Lambda U^\top$$B$HDj$a$k!%(B$B$$B$O(B$U$$B$K$h$jBP3Q2=$5$l!$8GM-CM$O(B$\sqrt{\lambda_1},\sqrt{\lambda_2},\sqrt{\lambda_3}$$B$G$"$j!$$9$Y$F@5$G$"$k!%0J>e$K$h$j!$(B$B=U\Lambda U^\top$$B!%(B
+\end{pmatrix}$と定める．$(U\Lambda U^\top)^2=U\Lambda^2 U^\top=A^\top A$であるので，$B=U\Lambda U^\top$と定める．$B$は$U$により対角化され，固有値は$\sqrt{\lambda_1},\sqrt{\lambda_2},\sqrt{\lambda_3}$であり，すべて正である．以上により，$B=U\Lambda U^\top$．
 \begin{screen}
 (4)
-$3 \times 3$$B$N9TNs(B$C$$B$r(B
+$3 \times 3$の行列$C$を
 $$ C=\begin{pmatrix}
 \frac{1}{\sqrt{\lambda_1}}\bm{u}_1 & \frac{1}{\sqrt{\lambda_2}}\bm{u}_2 & \frac{1}{\sqrt{\lambda_3}}\bm{u}_3 
 \end{pmatrix}$$
-$B$K$h$C$FDj$a$k!%$3$N$H$-!$(B$AC$$B$,D>8r9TNs$G$"$k$3$H$r>ZL@$;$h!%(B
+によって定める．このとき，$AC$が直交行列であることを証明せよ．
 \end{screen}
 
 $C^\top U = \begin{pmatrix}
 \frac{1}{\sqrt{\lambda_1}}& 0&  0\\
 0&  \frac{1}{\sqrt{\lambda_2}}& 0\\
 0& 0&  \frac{1}{\sqrt{\lambda_3}}
-\end{pmatrix}$$B$rMQ$$$F7W;;$9$k$H!$(B
+\end{pmatrix}$を用いて計算すると，
 $$(AC)^\top AC = C^\top A^\top AC =C^\top U
 \begin{pmatrix}
 \lambda_1& 0&  0\\
 0&  \lambda_2& 0\\
 0& 0&  \lambda_3
 \end{pmatrix}
-(C^\top U)^\top=I$$$B$G$"$k!%Ld$GM?$($i$l$?;v<B$h$j(B$(AC)^\top AC=AC(AC)^\top=I$$B$rK~$?$9$N$G!$(B$AC$$B$OD>8r9TNs$G$"$k!%(B
+(C^\top U)^\top=I$$である．問で与えられた事実より$(AC)^\top AC=AC(AC)^\top=I$を満たすので，$AC$は直交行列である．
 \begin{screen}
 (5)
 $$A=V\begin{pmatrix}
@@ -163,43 +163,43 @@ $$A=V\begin{pmatrix}
 0&  \sqrt{\lambda_2}& 0\\
 0& 0&  \sqrt{\lambda_3}
 \end{pmatrix}W$$
-$B$H$J$k$h$&$J(B$3 \times 3$$BD>8r9TNs(B$V,W$$B$r$_$D$1$h!%(B
+となるような$3 \times 3$直交行列$V,W$をみつけよ．
 \end{screen}
 
 
-$V=AC$$B$HA*$V!%$3$N$H$-(B$V\begin{pmatrix}
+$V=AC$と選ぶ．このとき$V\begin{pmatrix}
 \sqrt{\lambda_1}& 0&  0\\
 0&  \sqrt{\lambda_2}& 0\\
 0& 0&  \sqrt{\lambda_3}
-\end{pmatrix}W=AUW$$B$G$"$k$N$G!$(B$W=U^\top$$B$HA*$Y$P$h$$!%(B(4)$B$h$j(B$V=AC$$B$OD>8r9TNs!$(B$U$$B$,D>8r9TNs$G$"$k$N$G(B$W=U^\top$$B$bD>8r9TNs$G$"$k!%0J>e$K$h$j(B$V,W$$B$OBj$N>r7o$rK~$?$9D>8r9TNs$G$"$k!%(B
+\end{pmatrix}W=AUW$であるので，$W=U^\top$と選べばよい．(4)より$V=AC$は直交行列，$U$が直交行列であるので$W=U^\top$も直交行列である．以上により$V,W$は題の条件を満たす直交行列である．
 
 \section{}
 
 \begin{screen}
-$xyz$$B6u4VFb$K$"$k!$86E@(B$O$$B$rCf?4$H$9$kC10L5eLL$N!$>eB&$NH>5eLL$r(B$H$$B$H$9$k!%(B
+$xyz$空間内にある，原点$O$を中心とする単位球面の，上側の半球面を$H$とする．
 $$H=\left\{ (x,y,z) | x^2+y^2+z^2=1,z\geq 0\right\}$$
-$B2<?^$N$h$&$K!$(B$H$$B$HJ?LL(B$z=\cos \alpha$$B$N8r@~(B($B1_$K$J$k(B)$B$+$i!$D9$5(B$\alpha$$B$N8L$r@Z$j<h$j!$C<E@$r(BA$B!$(BB$B$H$9$k!%$3$3$G!$(B$0 < \alpha < \frac{\pi}{2}$$B$G$"$k!%$^$?!$E@(BN$B$r(B$(0,0,1)$$B!$E@(BP$B$r(B$(0,0,\cos\alpha)$$B$H$9$k!%(B
+下図のように，$H$と平面$z=\cos \alpha$の交線(円になる)から，長さ$\alpha$の弧を切り取り，端点をA，Bとする．ここで，$0 < \alpha < \frac{\pi}{2}$である．また，点Nを$(0,0,1)$，点Pを$(0,0,\cos\alpha)$とする．
  
 \centering\includegraphics[width=7cm]{figure_2012_01.png}
  
-\centering $B?^(B
+\centering 図
 
-$B0J2<$N3FLd$KEz$($h!%(B
+以下の各問に答えよ．
 \end{screen}
 
 \begin{screen}
- (1)$B3Q(BAPB$B$NBg$-$5(B$\angle$APB$B$r5a$a$h!%(B
+ (1)角APBの大きさ$\angle$APBを求めよ．
 \end{screen}
 
-$BCf?4(BP$B$GE@(BA,B$B$rDL$k1_(B($H$$B$HJ?LL(B$z=\cos \alpha$$B$N8r@~(B)$B$NH>7B$O(B$\sin\alpha$$B!%$7$?$,$C$F(B$\angle$APB$=\ds\frac{\alpha}{\sin\alpha}$
+中心Pで点A,Bを通る円($H$と平面$z=\cos \alpha$の交線)の半径は$\sin\alpha$．したがって$\angle$APB$=\ds\frac{\alpha}{\sin\alpha}$
 
 \begin{screen}
- (2)$B;03Q7A(BNAB($B;0K\$N@~J,(BNA,AB,BN$B$G0O$^$l$?J?LL?^7A(B)$B$NLL@Q$r(B$T(\alpha)$$B$H$9$k!%(B
+ (2)三角形NAB(三本の線分NA,AB,BNで囲まれた平面図形)の面積を$T(\alpha)$とする．
  $$\frac{T(\alpha)}{\alpha^2}$$
- $B$,(B$\alpha\rightarrow 0$$B$G<}B+$9$k$3$H$r<($7!$$=$N6K8BCM$r5a$a$h!%(B
+ が$\alpha\rightarrow 0$で収束することを示し，その極限値を求めよ．
 \end{screen}
 
-$\beta = \angle \mbox{APB}=\frac{\alpha}{\sin\alpha}$$B$H$*$/!%(B
+$\beta = \angle \mbox{APB}=\frac{\alpha}{\sin\alpha}$とおく．
 \begin{align*}
  \mbox{AB}^2 &=\mbox{AP}^2 + \mbox{BP}^2 - 2 \cdot \mbox{AP} \cdot \mbox{BP} \cdot \cos \beta \\
  &= 2\sin^2\alpha(1-\cos\beta)\\
@@ -216,71 +216,71 @@ $\beta = \angle \mbox{APB}=\frac{\alpha}{\sin\alpha}$$B$H$*$/!%(B
 \end{align*}
 
 \begin{screen}
- (3)$H$$B$N$&$A!$J?LL(B$z=\cos\alpha$$B>e$*$h$S$=$N>eB&$NItJ,$r(B$H_\alpha$$B$H$9$k!%(B
+ (3)$H$のうち，平面$z=\cos\alpha$上およびその上側の部分を$H_\alpha$とする．
  $$H_\alpha = \left\{(x,y,z)|x^2+y^2+z^2 = 1, z \geq \cos\alpha \right\}$$
- $H_\alpha$$B>e$NE@$N:BI8$r!$?^$N(B$\theta,\phi$$B$rMQ$$$FI=$o$;!%$^$?(B$\theta,\phi$$B$N<h$j$&$kCM$NHO0O$r5a$a$h!%(B
+ $H_\alpha$上の点の座標を，図の$\theta,\phi$を用いて表わせ．また$\theta,\phi$の取りうる値の範囲を求めよ．
 \end{screen}
 
 $$\left(x,y,z\right)=\left(\cos\phi\sin\theta,\sin\phi\sin\theta,\cos\theta\right)$$
 $$0\leq\phi<2\pi,0\leq\theta\leq\alpha$$
 
 \begin{screen}
- (4)$H_\alpha$$B$N6JLL@Q$r5a$a$h!%(B
+ (4)$H_\alpha$の曲面積を求めよ．
 \end{screen}
 
-$\theta,\phi$$B$rHy>.JQ2=$5$;$?$H$-$N6JLL@Q$NA}J,$O(B$\mathrm{d}S = \mathrm{d}\theta \cdot \sin\theta \mathrm{d} \phi$$B$GI=$5$l$k!%(B
+$\theta,\phi$を微小変化させたときの曲面積の増分は$\mathrm{d}S = \mathrm{d}\theta \cdot \sin\theta \mathrm{d} \phi$で表される．
 \begin{align*}
  \therefore \int_{H_\alpha}\mathrm{d}S &= \int_0^{2\pi}\int_0^\alpha \sin\theta\mathrm{d}\theta\mathrm{d}\phi\\
  &= 2\pi(1-\cos\alpha)
 \end{align*}
 
 \begin{screen}
- (5)$H_\alpha$$B>e$G!$;0K\$N8L(BAB,$B8L(BBN,$B8L(BNA$B$G0O$^$l$?ItJ,(B($B?^$N<P@~It(B)$B$N6JLL@Q$r(B$S(\alpha)$$B$H$9$k!%$?$@$7!$8L(BBN,$B8L(BNA$B$O$=$l$>$l!$(B$H$$B>e$G(BB$B$H(BN$B!$(BN$B$H(BA$B$r:GC;5wN%$G7k$V6J@~(B($BBg1_$N0lIt(B)$B$G$"$k!%(B
+ (5)$H_\alpha$上で，三本の弧AB,弧BN,弧NAで囲まれた部分(図の斜線部)の曲面積を$S(\alpha)$とする．ただし，弧BN,弧NAはそれぞれ，$H$上でBとN，NとAを最短距離で結ぶ曲線(大円の一部)である．
  $$\frac{S(\alpha)}{\alpha^2}$$
- $B$,(B$\alpha\rightarrow 0$$B$G<}B+$9$k$3$H$r<($7!$$=$N6K8BCM$r5a$a$h!%(B
+ が$\alpha\rightarrow 0$で収束することを示し，その極限値を求めよ．
 \end{screen}
 
-(4)$B$HF1MM$K$7$F!$(B$S(\alpha)=\beta(1-\cos\alpha)$
+(4)と同様にして，$S(\alpha)=\beta(1-\cos\alpha)$
 $$\therefore \lim_{\alpha\rightarrow 0}\frac{S(\alpha)}{\alpha^2}=1\cdot \frac{1}{2}=\frac{1}{2}$$
 
 \section{}
 \begin{screen}
- $B$"$k$*2[;R$K$O!$(B$K$$B<oN`$N%+!<%I$N$&$A$N#1Kg$,Ey3NN($GIUB0$7$F$*$j!"G$0U$N0[$J$k(B$r$$B<oN`(B$(K\geq r)$$B$N%+!<%I$r=8$a$k$H>^IJ$,$b$i$($k!%$*2[;R$r0l$D$:$D=g!9$K9XF~$7!$(B$n$$BHVL\$N$*2[;R$rF~<j$7$?;~$K!$(B$r$$B<oN`$N%+!<%I$,=i$a$FB7$&3NN($r(B$p(n,r)$$B$H$9$k!%0J2<$N3FLd$KEz$($h!%(B
+ あるお菓子には，$K$種類のカードのうちの１枚が等確率で付属しており、任意の異なる$r$種類$(K\geq r)$のカードを集めると賞品がもらえる．お菓子を一つずつ順々に購入し，$n$番目のお菓子を入手した時に，$r$種類のカードが初めて揃う確率を$p(n,r)$とする．以下の各問に答えよ．
 \end{screen}
 
 \begin{screen}
- (1)$p(n,r)$$B$r<!$N$h$&$KI=$9$3$H$r9M$($k!%(B
+ (1)$p(n,r)$を次のように表すことを考える．
  $$p(n,r)=\sum_{i=1}^{n+1-r}C_ip(n-i,r-1)$$
- $C_i$$B$r(B$K,r,i$$B$N<0$GI=$o$;!%(B
+ $C_i$を$K,r,i$の式で表わせ．
 \end{screen}
 
-$(n-i)$$BHVL\$N$*2[;R$rF~<j$7$F=i$a$F(B$(r-1)$$B<oN`$N%+!<%I$,B7$C$?$N$A$K!$B3$/(B$(i-1)$$B2s$O4{$K;}$C$F$$$k(B$(r-1)$$B<oN`$N%+!<%I$N$_$rF~<j$7!$(B$n$$B2sL\$G;}$C$F$$$J$$(B$(K-r+1)$$B<oN`$N$&$A$N#1$D$rF~<j$9$k>l9g$N3NN($O(B
+$(n-i)$番目のお菓子を入手して初めて$(r-1)$種類のカードが揃ったのちに，続く$(i-1)$回は既に持っている$(r-1)$種類のカードのみを入手し，$n$回目で持っていない$(K-r+1)$種類のうちの１つを入手する場合の確率は
 $$p(n-i,r-1)\left(\frac{r-1}{K}\right)^{i-1}\frac{K-r+1}{K}$$
 $$\therefore C_i = \left(\frac{r-1}{K}\right)^{i-1}\frac{K-r+1}{K}$$
 \begin{screen}
- (2)$B<!$N4X78<0$r9M$($k!%(B
+ (2)次の関係式を考える．
  $$p(n,r)=Ap(n-1,r)+Bp(n-1,r-1)$$
- $A,B$$B$r(B$K,r$$B$N<0$GI=$o$;!%(B
+ $A,B$を$K,r$の式で表わせ．
 \end{screen}
 
 \begin{align*}
  p(n-1,r) &= \sum_{i=1}^{n-r}C_i p(n-1-i,r-1)\\
  &= \sum_{i=2}^{n+1-r}C_{i-1} p(n-i,r-1)\\
- C_i = \frac{r-1}{K}C_{i-1} (i\geq 2)& \mbox{$B$h$j(B} \\
+ C_i = \frac{r-1}{K}C_{i-1} (i\geq 2)& \mbox{より} \\
  &= \frac{K}{r-1}\sum_{i=2}^{n+1-r}C_i p(n-i,r-1)\\
  &= \frac{K}{r-1}\left(p(n,r) - C_1p(n-1,r-1)\right)\\
  \therefore p(n,r) &= \frac{r-1}{K}p(n-1,r) + C_1 p(n-1,r-1)\\
- \mbox{$B0J>e$K$h$j(B}A&=\frac{r-1}{K}, B=C_1 = \frac{K-r+1}{K}
+ \mbox{以上により}A&=\frac{r-1}{K}, B=C_1 = \frac{K-r+1}{K}
 \end{align*}
 
 \begin{screen}
- (3)$z$$B$NB?9`<0(B$P(z,r)$$B$r<!$N$h$&$KDj$a$k!%(B
+ (3)$z$の多項式$P(z,r)$を次のように定める．
  $$P(z,r)=\sum_{n=0}^\infty p(n,r)z^n$$
- $B$3$N;~!$(B$P(z,r),P(z,r-1)$$B$N4V$K<!$N4X78<0$,@.$jN)$D$3$H$r<($;!%(B
+ この時，$P(z,r),P(z,r-1)$の間に次の関係式が成り立つことを示せ．
  $$\left(K-(r-1)z\right)P(z,r)=\left(K-r+1\right)zP(z,r-1)$$
 \end{screen}
 
-$B0J2<(B$r\geq 1$$B$r2>Dj$9$k!%(B
+以下$r\geq 1$を仮定する．
 \begin{align*}
  P(z,r) &= \sum_{n=0}^\infty p(n,r)z^n \\
  &= p(0,r) + \sum_{n=1}^\infty p(n,r)z^n \\
@@ -289,35 +289,35 @@ $$\therefore C_i = \left(\frac{r-1}{K}\right)^{i-1}\frac{K-r+1}{K}$$
  &= \frac{r-1}{K}zP(z,r) + \frac{K-r+1}{K}zP(z,r-1) \\
 \end{align*}
 
-$B@0M}$7$F!$(B
+整理して，
 $$ \left(K-(r-1)z\right)P(z,r)=\left(K-r+1\right)zP(z,r-1) $$
 
 \begin{screen}
- (4)$B>^IJ$r$b$i$&$?$a$K9XF~$7$J$1$l$P$J$i$J$$$*2[;R$N8D?t$N4|BTCM$,(B$P'(1,r)$$B$G$"$k$3$H$r<($;!%$J$*!$(B$P'$$B$O(B$z$$B$K$h$k(B$P$$B$NHyJ,$G$"$k!%(B
+ (4)賞品をもらうために購入しなければならないお菓子の個数の期待値が$P'(1,r)$であることを示せ．なお，$P'$は$z$による$P$の微分である．
 \end{screen}
 
-$B4|BTCM$O(B$\ds\sum_{n=0}^\infty np(n,r)$$B$GI=$5$l$k!%0lJ}(B$\ds P'(z,r)=\sum_{n=0}^\infty np(n,r)z^{n-1}$$B$G$"$k$N$G(B\\ $\ds P'(1,r)=\sum_{n=0}^\infty np(n,r)$$B$H$J$j4|BTCM$K0lCW$9$k!%(B
+期待値は$\ds\sum_{n=0}^\infty np(n,r)$で表される．一方$\ds P'(z,r)=\sum_{n=0}^\infty np(n,r)z^{n-1}$であるので\\ $\ds P'(1,r)=\sum_{n=0}^\infty np(n,r)$となり期待値に一致する．
 
 \begin{screen}
- (5)$K=r=7$$B$N;~$K>^IJ$r$b$i$&$?$a$K9XF~$7$J$1$l$P$J$i$J$$>^IJ$N8D?t$N4|BTCM$r5a$a$h!%(B
+ (5)$K=r=7$の時に賞品をもらうために購入しなければならない賞品の個数の期待値を求めよ．
 \end{screen}
 
-(3)$B$N7k2L$K(B$K=7$$B$rBeF~$7$FMQ$$$k$H!$(B
+(3)の結果に$K=7$を代入して用いると，
 
 \begin{align*}
  P(z,7) &= \frac{z}{7-6z}P(z,6) \\
  &= \frac{z}{7-6z}\cdot\frac{2z}{7-5z}P(z,5) \\
  &= \cdots \\
  &= 6! z^6 P(z,1) \prod_{k=1}^6 \frac{1}{7-kz} \\
- \intertext{$B$3$3$G(B$P(z,1)=p(1,1)z=z$$B$G$"$k$N$G(B} \\
+ \intertext{ここで$P(z,1)=p(1,1)z=z$であるので} \\
  &= 6! z^7 \prod_{k=1}^6 \frac{1}{7-kz} \\
  &= \frac{6! z^7 }{F(z)}
 \end{align*}
 
-$\ds F(z) = \prod_{k=1}^6 (7-kz)$$B$H$*$$$?!%(B
+$\ds F(z) = \prod_{k=1}^6 (7-kz)$とおいた．
 
-$BCm0U?<$/7W;;$9$k$H!$(B$F(1)=6!,F'(1)=-6!\left(\frac{1}{6}+\frac{2}{5}+\frac{3}{4}+\cdots+\frac{6}{1}\right)$ 
-$B$G$"$k!%(B
+注意深く計算すると，$F(1)=6!,F'(1)=-6!\left(\frac{1}{6}+\frac{2}{5}+\frac{3}{4}+\cdots+\frac{6}{1}\right)$ 
+である．
 
 \begin{align*}
  P'(z,7) &= 6! \cdot \frac{7z^6F(z) - z^7 F'(z) }{(F(z))^2} \\

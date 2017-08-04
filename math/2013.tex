@@ -6,24 +6,24 @@
 \usepackage{listings}
 \usepackage[english]{babel}
 \lstset{
- 	%$BOH30$K9T$C$?;~$N<+F02~9T(B
+ 	%枠外に行った時の自動改行
  	breaklines = true,
- 	%$BI8=`$N=qBN(B
+ 	%標準の書体
         basicstyle=\ttfamily\footnotesize,
         commentstyle=\footnotesize\bfseries,
         keywordstyle=\footnotesize\bfseries,
- 	%$BOH(B "t"$B$O>e$K@~$r5-:\(B, "T"$B$O>e$KFs=E@~$r5-:\(B
-	%$BB>%*%W%7%g%s!'(Bleftline$B!$(Btopline$B!$(Bbottomline$B!$(Blines$B!$(Bsingle$B!$(Bshadowbox
+ 	%枠 "t"は上に線を記載, "T"は上に二重線を記載
+	%他オプション：leftline，topline，bottomline，lines，single，shadowbox
  	frame = single,
- 	%frame$B$^$G$N4V3V(B($B9THV9f$H%W%m%0%i%`$N4V(B)
+ 	%frameまでの間隔(行番号とプログラムの間)
  	framesep = 5pt,
- 	%$B9THV9f$N0LCV(B
+ 	%行番号の位置
  	numbers = left,
-	%$B9THV9f$N4V3V(B
+	%行番号の間隔
  	stepnumber = 1,
-	%$B%?%V$NBg$-$5(B
+	%タブの大きさ
  	tabsize = 4,
- 	%$B%-%c%W%7%g%s$N>l=j(B("tb"$B$J$i$P>e2<N>J}$K5-:\(B)
+ 	%キャプションの場所("tb"ならば上下両方に記載)
  	captionpos = t
 }
 
@@ -42,14 +42,14 @@
 
 
 %% title configuration
-\title{$BEl5~Bg3XBg3X1!>pJsM}9)3X7O8&5f2J(B2013$BG/EY2a5nLd(B}
+\title{東京大学大学院情報理工学系研究科2013年度過去問}
 \author{}
 \date{}
 
 
 %% headings
 \pagestyle{headings}
-\markright{$BEl5~Bg3XBg3X1!>pJsM}9)3X7O8&5f2J(B2013$BG/EY2a5nLd(B}
+\markright{東京大学大学院情報理工学系研究科2013年度過去問}
 
 
 
@@ -63,21 +63,21 @@
 \section{}
 
 \begin{screen}
- $B0J2<$N@_Ld$KEz$($h!%(B
+ 以下の設問に答えよ．
 \end{screen}
 
 \begin{screen}
- (1) $\small\begin{pmatrix}c_1&c_2&c_3&c_4&c_5&c_6&c_7 \end{pmatrix}=\small\begin{pmatrix}1&2&-8&20&-44&92&-188 \end{pmatrix}$$B$KBP$7$F!$@0?t(B$k(\geq 1)$$B$H(B$k \times k$$BDj?t9TNs(B$M$$B$NAH$,B8:_$7!$$=$l$i$OA4$F$N(B$i=1,2,\cdots,7-k$$B$K$D$$$F<!<0$rK~$9!%(B
+ (1) $\small\begin{pmatrix}c_1&c_2&c_3&c_4&c_5&c_6&c_7 \end{pmatrix}=\small\begin{pmatrix}1&2&-8&20&-44&92&-188 \end{pmatrix}$に対して，整数$k(\geq 1)$と$k \times k$定数行列$M$の組が存在し，それらは全ての$i=1,2,\cdots,7-k$について次式を満す．
  $$\left(\begin{array}{c} c_{i+1}\\ c_{i+2} \\ \vdots \\ c_{i+k} \end{array} \right) =  M \left(\begin{array}{c} c_{i}\\ c_{i+1} \\ \vdots \\ c_{i+k-1} \end{array} \right)$$
- $B=g$K(B$k=1,2,\cdots$$B$N>l9g$rD4$Y$k$3$H$K$h$j!$$=$l$i$N$&$A$G(B$k$$B$,:G$b>.$5$$AH$r5a$a$h!%(B
+ 順に$k=1,2,\cdots$の場合を調べることにより，それらのうちで$k$が最も小さい組を求めよ．
 \end{screen}
 
 \begin{screen}
- (2)$B@_Ld(B(1)$B$N(B$c_i(i=1,2,\cdots,7)$$B$O!$@_Ld(B(1)$B$G5a$a$?(B$k$$B$H(B$M$$B$NAH!$$*$h$S<B?t$NDj?t%Y%/%H%k(B$L(\in \mathbb{R}^{1\times k})$$B!$(B$N(\in\mathbb{R}^{k \times 1})$$B$rMQ$$$F!$(B$c_i=LM^{i-1}N$$B$HI=$;$k!%$=$N$h$&$J(BL,N$B$NAH$N$R$H$D$r<($;!%(B
+ (2)設問(1)の$c_i(i=1,2,\cdots,7)$は，設問(1)で求めた$k$と$M$の組，および実数の定数ベクトル$L(\in \mathbb{R}^{1\times k})$，$N(\in\mathbb{R}^{k \times 1})$を用いて，$c_i=LM^{i-1}N$と表せる．そのようなL,Nの組のひとつを示せ．
 \end{screen}
 
 \begin{screen}
- (3)$B@_Ld(B(1),(2)$B$G5a$a$?(B$M,K,N$$B$rMQ$$!$(B$c_i=LM^{i-1}N$$B$K$h$C$F(B$c_8,c_9,\cdots$$B$rDj5A$9$k!%<!$N9TNs(B$C$$B$N%i%s%/$r5a$a$h!%F3=P2aDx$b<($9$3$H!%(B
+ (3)設問(1),(2)で求めた$M,K,N$を用い，$c_i=LM^{i-1}N$によって$c_8,c_9,\cdots$を定義する．次の行列$C$のランクを求めよ．導出過程も示すこと．
  $$C=
  \begin{pmatrix}
   c_1 & c_2 & c_3 & c_4 & c_5 & c_6 & \cdots & c_{10} \\
@@ -92,41 +92,41 @@
 \end{screen}
 
 \begin{screen}
- (4)$B@_Ld(B(1),(2)$B$G5a$a$?(B$M,N,L$$B$H(B$k \times k$$BC10L9TNs(B$I$$B$rMQ$$$F!$%9%+%i$N(B$x$$B$rJQ?t$H$9$k4X?t(B$f(x)=L(I-xM)^{-1}N$$B$rDj5A$9$k!%(B$f(x)$$B$N(B$x=0$$B$K$*$1$k%F%$%i!<5i?t$r(B$f(x)=f_1+f_2x+f_3x^2+\cdots$$B$H$9$k!%(B$f_i(\in\mathbb{R}),i=1,2,\cdots$$B$r(B$c_i(=LM^{-1}N),i=1,2,\cdots$$B$rMQ$$$FI=$o$;!%F3=P2aDx$b<($9$3$H!%I,MW$J$i$PBP3Q9TNs(B$D$$B$K$D$$$F$N<!<0$rMQ$$$F$h$$!%(B
+ (4)設問(1),(2)で求めた$M,N,L$と$k \times k$単位行列$I$を用いて，スカラの$x$を変数とする関数$f(x)=L(I-xM)^{-1}N$を定義する．$f(x)$の$x=0$におけるテイラー級数を$f(x)=f_1+f_2x+f_3x^2+\cdots$とする．$f_i(\in\mathbb{R}),i=1,2,\cdots$を$c_i(=LM^{-1}N),i=1,2,\cdots$を用いて表わせ．導出過程も示すこと．必要ならば対角行列$D$についての次式を用いてよい．
  $$\diff{i}{}{x}(I-xD)^{-1}\Biggr|_{x=0}=i!D^i,i=1,2,\cdots$$
 \end{screen}
 
 \section{}
 
 \begin{screen}
- $B<B?t<4>e$N4X?t(B$f=f(x)$$B$G$"$C$F!$(B$f(0)=0,f(1)=1$$B$H$J$k$b$N$N=89g$r(B$\mathcal{F}$$B$H$9$k!%(B$\mathcal{F}$$B$N85(B$f$$B$KBP$7$F!$(B$I=I[f]$$B$r(B
+ 実数軸上の関数$f=f(x)$であって，$f(0)=0,f(1)=1$となるものの集合を$\mathcal{F}$とする．$\mathcal{F}$の元$f$に対して，$I=I[f]$を
  $$I[f]=\int_0^1\left[\left\{f(x)\right\}^2+\left\{\diff{}{f(x)}{x}\right\}^2\right]\mathrm{d}x$$
- $B$HDj5A$9$k!%(B$I$$B$r:G>.2=$9$k(B$\mathcal{F}$$B$N85$r5a$a$?$$!%0J2<$N@_Ld$KEz$($h!%$?$@$7!$K\LdBj$K$*$$$F9M$($k4X?t$O$9$Y$F$$$?$k$H$3$m$G==J,3j$i$+$J4X?t$H$9$k!%(B
+ と定義する．$I$を最小化する$\mathcal{F}$の元を求めたい．以下の設問に答えよ．ただし，本問題において考える関数はすべていたるところで十分滑らかな関数とする．
 \end{screen}
 
 \begin{screen}
- (1)$BG$0U$N(B$f,g\in\mathcal{F}$$B$HG$0U$N(B$t\in[0,1]$$B$KBP$7$F(B
+ (1)任意の$f,g\in\mathcal{F}$と任意の$t\in[0,1]$に対して
  $$I[(1-t)f+tg]\leq(1-t)I[f]+tI[g]$$
- $B$H$J$k$3$H$r<($;!%(B
+ となることを示せ．
 \end{screen}
 
 \begin{align*}
- (\mbox{$B1&JU(B})-(\mbox{$B:8JU(B}) &= \cdots \\
+ (\mbox{右辺})-(\mbox{左辺}) &= \cdots \\
  &= t(1-t)I[f-g]\geq 0 \\
- ( \because I[f-g]\geq 0 \mbox{$B$+$D!$(B} 0\leq t \leq 1 \mbox{$B$h$j(B} & t(1-t)\geq 0  )
+ ( \because I[f-g]\geq 0 \mbox{かつ，} 0\leq t \leq 1 \mbox{より} & t(1-t)\geq 0  )
 \end{align*}
 
 \begin{screen}
- (2)$BG$0U$N(B$g\in\mathcal{F}$$B$KBP$7$F!$(B
+ (2)任意の$g\in\mathcal{F}$に対して，
  $$\left. \diff{}{}{t} I[(1-t)f+tg] \right|_{t=0} = 0$$
- $B$,@.$jN)$D$h$&$J(B$f\in\mathcal{F}$$B$r9M$($k!%(B$f$$B$,K~$?$9$Y$->oHyJ,J}Dx<0$rF3$1!%$=$N:]!$<!$N;v<B$rMxMQ$7$F$h$$!%(B
+ が成り立つような$f\in\mathcal{F}$を考える．$f$が満たすべき常微分方程式を導け．その際，次の事実を利用してよい．
 
- $B4X?t(B$F$$B$,!$(B$G(0)=G(1)=0$$B$H$J$kG$0U$N4X?t(B$G$$B$KBP$7$F!$(B
+ 関数$F$が，$G(0)=G(1)=0$となる任意の関数$G$に対して，
  $$\int_0^1G(x)F(x)\mathrm{d}x=0$$
- $B$rK~$?$9$J$i!$(B$x\in [0,1]$$B$KBP$7$F(B$F(x)=0$$B$G$"$k!%(B
+ を満たすなら，$x\in [0,1]$に対して$F(x)=0$である．
 \end{screen}
 
-(1)$B$N7W;;$rMxMQ$7$F!$(B
+(1)の計算を利用して，
 
 \begin{align*}
  \diff{}{}{t} I[(1-t)f+tg] &= \diff{}{}{t}\Bigl((1-t)I[f]+tI[g]-t(1-t)I[f-g]\Bigr) \\
@@ -135,29 +135,29 @@
  &= 0
 \end{align*}
 
-$I$$B$NDj5A$KBeF~$7$F@0M}$9$k$H!$(B
+$I$の定義に代入して整理すると，
 
 \begin{align*}
  & \int_0^1\Bigl\{f(x)\bigl(f(x)-g(x)\bigr) + f'(x)\bigl(f'(x)-g'(x)\bigr)\Bigr\} \mathrm{d}x = 0 \\
- \intertext{$BItJ,@QJ,$rMQ$$$F(B}
+ \intertext{部分積分を用いて}
  \Leftrightarrow & \int_0^1f(x)\bigl(f(x)-g(x)\bigr)\mathrm{d}x + \Bigl[ f'(x)\bigl(f(x)-g(x)\bigr) \Bigr]_0^1 - \int_0^1 f''(x)\bigl(f(x)-g(x)\bigr) \mathrm{d}x = 0 \\
  \Leftrightarrow & \int_0^1\bigl(f(x)-f''(x)\bigr)\bigl(f(x)-g(x)\bigr)\mathrm{d}x =0
- \intertext{$G(x)=f(x)-g(x)$$B$HCV$/$H!$(B$G(x)$$B$O(B$G(0)=G(1)=0$$B$rK~$?$9G$0U$N4X?t$G$"$k$N$G!$@_Ld$GM?$($i$l$F$?;v<B$rMQ$$$F(B}
+ \intertext{$G(x)=f(x)-g(x)$と置くと，$G(x)$は$G(0)=G(1)=0$を満たす任意の関数であるので，設問で与えられてた事実を用いて}
  \Rightarrow & f(x)-f''(x) = 0 
 \end{align*}
 
 \begin{screen}
- (3)$B@_Ld(B(2)$B$GF3$$$?>oHyJ,J}Dx<0$N2r$O(B$I$$B$r:G>.2=$9$k!%$=$NM}M3$r@bL@$;$h!%(B
+ (3)設問(2)で導いた常微分方程式の解は$I$を最小化する．その理由を説明せよ．
 \end{screen}
 
-$\diff{}{}{t} I[f+t(g-f)] \bigr|_{t=0} = 0$$B$HJQ7A$9$k$H!$G$0U$NJ}8~(B$g-f$$B$K4X$7$F$NHyJ,$,(B$0$$B$H$J$k6KCM$r9M$($F$$$k$3$H$K$J$k$+$i!%(B($B>\$7$/$OHF4X?t$NJ}8~HyJ,$r;2>H!%(B)
+$\diff{}{}{t} I[f+t(g-f)] \bigr|_{t=0} = 0$と変形すると，任意の方向$g-f$に関しての微分が$0$となる極値を考えていることになるから．(詳しくは汎関数の方向微分を参照．)
 
 \begin{screen}
- (3)$B@_Ld(B(2)$B$GF3$$$?>oHyJ,J}Dx<0$N2r$r5a$a$h!%(B
+ (3)設問(2)で導いた常微分方程式の解を求めよ．
 \end{screen}
 
-$BFC@-J}Dx<0(B$r^2-1=0$$B$r2r$$$F!$(B$r=\pm 1$$B$G$"$k$+$i(B$f(x)=Ae^x + Be^{-x}$$B$HI=$;$k!%(B\\
-$f(0)=A+B=0,f(1)=Ae + Be^{-1}=1$$B$r2r$$$F!$(B$\ds A=-B=\frac{e}{e^2-1}$
+特性方程式$r^2-1=0$を解いて，$r=\pm 1$であるから$f(x)=Ae^x + Be^{-x}$と表せる．\\
+$f(0)=A+B=0,f(1)=Ae + Be^{-1}=1$を解いて，$\ds A=-B=\frac{e}{e^2-1}$
 $$\therefore f(x)=\frac{e}{e^2-1}(e^x-e^{-x})$$
 
 \end{document}

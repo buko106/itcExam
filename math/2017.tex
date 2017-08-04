@@ -6,24 +6,24 @@
 \usepackage{listings}
 \usepackage[english]{babel}
 \lstset{
- 	%$BOH30$K9T$C$?;~$N<+F02~9T(B
+ 	%枠外に行った時の自動改行
  	breaklines = true,
- 	%$BI8=`$N=qBN(B
+ 	%標準の書体
         basicstyle=\ttfamily\footnotesize,
         commentstyle=\footnotesize\bfseries,
         keywordstyle=\footnotesize\bfseries,
- 	%$BOH(B "t"$B$O>e$K@~$r5-:\(B, "T"$B$O>e$KFs=E@~$r5-:\(B
-	%$BB>%*%W%7%g%s!'(Bleftline$B!$(Btopline$B!$(Bbottomline$B!$(Blines$B!$(Bsingle$B!$(Bshadowbox
+ 	%枠 "t"は上に線を記載, "T"は上に二重線を記載
+	%他オプション：leftline，topline，bottomline，lines，single，shadowbox
  	frame = single,
- 	%frame$B$^$G$N4V3V(B($B9THV9f$H%W%m%0%i%`$N4V(B)
+ 	%frameまでの間隔(行番号とプログラムの間)
  	framesep = 5pt,
- 	%$B9THV9f$N0LCV(B
+ 	%行番号の位置
  	numbers = left,
-	%$B9THV9f$N4V3V(B
+	%行番号の間隔
  	stepnumber = 1,
-	%$B%?%V$NBg$-$5(B
+	%タブの大きさ
  	tabsize = 4,
- 	%$B%-%c%W%7%g%s$N>l=j(B("tb"$B$J$i$P>e2<N>J}$K5-:\(B)
+ 	%キャプションの場所("tb"ならば上下両方に記載)
  	captionpos = t
 }
 
@@ -42,14 +42,14 @@
 
 
 %% title configuration
-\title{$BEl5~Bg3XBg3X1!>pJsM}9)3X7O8&5f2J(B2017$BG/EY2a5nLd(B}
+\title{東京大学大学院情報理工学系研究科2017年度過去問}
 \author{}
 \date{}
 
 
 %% headings
 \pagestyle{headings}
-\markright{$BEl5~Bg3XBg3X1!>pJsM}9)3X7O8&5f2J(B2017$BG/EY2a5nLd(B}
+\markright{東京大学大学院情報理工学系研究科2017年度過去問}
 
 
 
@@ -63,70 +63,70 @@
 \section{}
 
 \begin{screen}
- 3$B<!85%Y%/%H%k(B $\begin{pmatrix} x_n \\ y_n \\ z_n \end{pmatrix}$$B$O<0(B
+ 3次元ベクトル $\begin{pmatrix} x_n \\ y_n \\ z_n \end{pmatrix}$は式
  $$\begin{pmatrix} x_{n+1} \\ y_{n+1} \\ z_{n+1} \end{pmatrix} = A\begin{pmatrix} x_n \\ y_n \\ z_n \end{pmatrix} \quad\quad (n=0,1,2,\cdots)$$
- $B$rK~$?$9$b$N$H$9$k!%$?$@$7!$(B$x_0,y_0,z_0,\alpha$$B$O<B?t$H$7!$(B
+ を満たすものとする．ただし，$x_0,y_0,z_0,\alpha$は実数とし，
  $$A=
  \begin{pmatrix}
   1 - 2\alpha & \alpha & \alpha \\
   \alpha & 1-\alpha & 0 \\
   \alpha &  0 & 1-\alpha
  \end{pmatrix}, \quad\quad 0<\alpha < \frac{1}{3}$$
- $B$H$9$k!%0J2<$NLd$$$KEz$($h!%(B
+ とする．以下の問いに答えよ．
 \end{screen}
 
 
 \begin{screen}
- (1) $x_n+y_n+z_n$ $B$r(B $x_0,y_0,z_0$ $B$rMQ$$$FI=$;!%(B
+ (1) $x_n+y_n+z_n$ を $x_0,y_0,z_0$ を用いて表せ．
 \end{screen}
 
 
 \begin{screen}
- (2) $B9TNs(B $A$ $B$N8GM-CM(B $\lambda_1,\lambda_2,\lambda_3$ $B$H!$$=$l$>$l$N8GM-CM$KBP1~$9$k8GM-%Y%/%H%k(B $\bm{v}_1,\bm{v}_2,\bm{v}_3$ $B$r5a$a$h!%(B
+ (2) 行列 $A$ の固有値 $\lambda_1,\lambda_2,\lambda_3$ と，それぞれの固有値に対応する固有ベクトル $\bm{v}_1,\bm{v}_2,\bm{v}_3$ を求めよ．
 \end{screen}
 
 
 \begin{screen}
- (3) $B9TNs(B $A$ $B$r(B $\lambda_1,\lambda_2,\lambda_3,\bm{v}_1,\bm{v}_2,\bm{v}_3$ $B$rMQ$$$FI=$;!%(B
+ (3) 行列 $A$ を $\lambda_1,\lambda_2,\lambda_3,\bm{v}_1,\bm{v}_2,\bm{v}_3$ を用いて表せ．
 \end{screen}
 
 
 \begin{screen}
- (4) $\begin{pmatrix} x_n \\ y_n \\ z_n \end{pmatrix}$ $B$r(B$x_0,y_0,z_0,\alpha$$B$rMQ$$$FI=$;!%(B
+ (4) $\begin{pmatrix} x_n \\ y_n \\ z_n \end{pmatrix}$ を$x_0,y_0,z_0,\alpha$を用いて表せ．
 \end{screen}
 
 \begin{screen}
- (5) $\ds \lim_{n\rightarrow\infty}\begin{pmatrix} x_n \\ y_n \\ z_n \end{pmatrix}$$B$r5a$a$h!%(B
+ (5) $\ds \lim_{n\rightarrow\infty}\begin{pmatrix} x_n \\ y_n \\ z_n \end{pmatrix}$を求めよ．
 \end{screen}
 
 \begin{screen}
- (6) $B0J2<$N<0(B
+ (6) 以下の式
  $$f(x_0,y_0,z_0)=\frac{(x_n,y_n,z_n)\begin{pmatrix} x_{n+1} \\ y_{n+1} \\ z_{n+1} \end{pmatrix}}{(x_n,y_n,z_n)\begin{pmatrix} x_n \\ y_n \\ z_n \end{pmatrix}}$$
- $B$r(B$x_0,y_0,z_0$$B$N4X?t$H$_$J$7$F!$(B $f(x_0,y_0,z_0)$$B$N:GBgCM$*$h$S:G>.CM$r5a$a$h!%$?$@$7!$(B\\ $x_0^2+y_0^2+z_0^2 \neq 0$ $B$H$9$k!%(B
+ を$x_0,y_0,z_0$の関数とみなして， $f(x_0,y_0,z_0)$の最大値および最小値を求めよ．ただし，\\ $x_0^2+y_0^2+z_0^2 \neq 0$ とする．
 \end{screen}
 
 \section{}
 
 \begin{screen}
- $B<B?tCM4X?t(B $u(x,t)$ $B$,(B $0 \leq 1,$ $t\geq 0$ $B$GDj5A$5$l$F$$$k!%$3$3$G!$(B$x$$B$H(B$t$$B$O8_$$$KFHN)$G$"$k!%JPHyJ,J}Dx<0(B
+ 実数値関数 $u(x,t)$ が $0 \leq 1,$ $t\geq 0$ で定義されている．ここで，$x$と$t$は互いに独立である．偏微分方程式
 \begin{align*}
  \pdiff{}{u}{t} = \pdiff{2}{u}{x} \tag{$\ast$} \\
 \end{align*}
- $B$N2r$r<!$N>r7o(B
+ の解を次の条件
  \begin{align*}
-  \mbox{$B6-3&>r7o!'(B} & u(0,t) = u(1,t) = 0 \\
-  \mbox{$B=i4|>r7o!'(B} & u(x,0) = x-x^2\\
+  \mbox{境界条件：} & u(0,t) = u(1,t) = 0 \\
+  \mbox{初期条件：} & u(x,0) = x-x^2\\
  \end{align*}
- $B$N$b$H$G5a$a$k!%$?$@$7!$Dj?t4X?t(B$u(x,t)=0$$B$OL@$i$+$K2r$G$"$k$+$i!$$=$l0J30$N2r$r9M$($k!%0J2<$NLd$$$KEz$($h!%(B
+ のもとで求める．ただし，定数関数$u(x,t)=0$は明らかに解であるから，それ以外の解を考える．以下の問いに答えよ．
 \end{screen}
 
 
 \begin{screen}
- (1) $B<!$N<0$r7W;;$;$h!%$3$3$G!$(B$n,$ $m$ $B$O$H$b$K@5$N@0?t$H$9$k!%(B
+ (1) 次の式を計算せよ．ここで，$n,$ $m$ はともに正の整数とする．
  $$\int_0^1 \sin(n \pi x) \sin(m \pi x) \mathrm{d}x$$
 \end{screen}
 
-$\ds I = \int_0^1 \sin(n \pi x) \sin(m \pi x) \mathrm{d}x$ $B$H$*$/!%(B
+$\ds I = \int_0^1 \sin(n \pi x) \sin(m \pi x) \mathrm{d}x$ とおく．
 \begin{align*}
  I &= \int_0^1 \sin(n \pi x) \sin(m \pi x) \mathrm{d}x \\
  &= \left[- \frac{1}{m \pi} \sin(n \pi x) \cos(m \pi x)\right]_0^1 + \frac{n}{m} \int_0^1 \cos(n \pi x) \cos(m \pi x) \mathrm{d} x \\
@@ -135,8 +135,8 @@ $\ds I = \int_0^1 \sin(n \pi x) \sin(m \pi x) \mathrm{d}x$ $B$H$*$/!%(B
 \end{align*}
 
 \begin{itemize}
- \item[(i)] $m \neq n$ $B$N>l9g!%(B$I=0$
- \item[(ii)] $m = n$ $B$N>l9g!%(B
+ \item[(i)] $m \neq n$ の場合．$I=0$
+ \item[(ii)] $m = n$ の場合．
              \begin{align*}
               I &= \int_0^1 \sin^2 (n \pi x) \mathrm{d}x \\
               &= \frac{1}{2} \int_0^1 \Bigl(1-\cos(2n\pi x)\Bigr) \mathrm{d}x \\
@@ -145,17 +145,17 @@ $\ds I = \int_0^1 \sin(n \pi x) \sin(m \pi x) \mathrm{d}x$ $B$H$*$/!%(B
 \end{itemize}
 
 \begin{screen}
- (2) $x$$B$N$_$N4X?t(B$\xi(x)$ $B$*$h$S(B $t$$B$N$_$N4X?t(B$\tau(t)$ $B$rMQ$$$F!$(B$u(x,t)=\xi(x)\tau(t)$ $B$H$*$1$k$H$9$k!%G$0U$NDj?t(B$C$$B$rMQ$$$F!$(B$\xi$$B$*$h$S(B$\tau$$B$,K~$?$9>oHyJ,J}Dx<0$r$=$l$>$lI=$;!%4X?t(B$f(x)$$B$H4X?t(B$g(t)$$B$,G$0U$N(B$x$$B$H(B$t$$B$K$D$$$F(B$f(x)=g(t)$$B$rK~$?$9>l9g$O!$(B$f(x)$$B$H(B$g(t)$$B$,Dj?t4X?t$H$J$k$3$H$rMQ$$$F$b$h$$!%(B
+ (2) $x$のみの関数$\xi(x)$ および $t$のみの関数$\tau(t)$ を用いて，$u(x,t)=\xi(x)\tau(t)$ とおけるとする．任意の定数$C$を用いて，$\xi$および$\tau$が満たす常微分方程式をそれぞれ表せ．関数$f(x)$と関数$g(t)$が任意の$x$と$t$について$f(x)=g(t)$を満たす場合は，$f(x)$と$g(t)$が定数関数となることを用いてもよい．
 \end{screen}
 
-$(\ast)$$B$K(B$u(x,t)=\xi(x)\tau(t)$$B$rBeF~$9$k$H!$(B
+$(\ast)$に$u(x,t)=\xi(x)\tau(t)$を代入すると，
 \begin{align*}
  \xi(x) \cdot \pdiff{}{\tau}{t}(t) &= \pdiff{2}{\xi}{x}(x) \cdot \tau(t) \\
- \intertext{$BJQ?tJ,N%$7$F!$Bj$GM?$($i$l$?;v<B$rMQ$$$k$H(B}
+ \intertext{変数分離して，題で与えられた事実を用いると}
  \frac{\ds\pdiff{}{\tau}{t}(t)}{\tau(t)} &= \frac{\ds\pdiff{2}{\xi}{x}(x)}{\xi(x)} = C
 \end{align*}
 
-$B$h$C$FK~$?$9$Y$->oHyJ,J}Dx<0$O(B
+よって満たすべき常微分方程式は
 $$
 \begin{cases}
  \ds\idiff{}{\tau}{t} = C\tau(t) \\
@@ -165,20 +165,20 @@ $$
 $$
 
 \begin{screen}
- (3) $B@_Ld(B(2) $B$N>oHyJ,J}Dx<0$r2r$1!%<!$K!$6-3&>r7o$rK~$?$9JPHyJ,J}Dx<0(B$(\ast)$$B$N2r$N0l$D$,<!$N<0$GI=$5$l$k(B $u_n(x,t)$ $B$GM?$($i$l$k$3$H$r<($7!$(B$\alpha,$ $\beta$ $B$r@5$N@0?t(B $n$$B$rMQ$$$FI=$;!%(B
+ (3) 設問(2) の常微分方程式を解け．次に，境界条件を満たす偏微分方程式$(\ast)$の解の一つが次の式で表される $u_n(x,t)$ で与えられることを示し，$\alpha,$ $\beta$ を正の整数 $n$を用いて表せ．
  $$u_n(x,t) = e^{\alpha t}\sin(\beta x)$$
 \end{screen}
 
-(2)$B$N>oHyJ,J}Dx<0$r2r$/$H!$(B$\xi(x) = Ae^{\sqrt{C}x}+Be^{-\sqrt{C}x},$ $\tau(t) = De^{Ct}$ $B$H$J$k!%6-3&>r7o$+$i(B$\xi(0)=\xi(1)=0 \Leftrightarrow A+B=0 \land Ae^{\sqrt{C}}+Be^{-\sqrt{C}} = 0 \Rightarrow e^{\sqrt{C}}=e^{-\sqrt{C}} \Rightarrow C=-n^2\pi^2$
+(2)の常微分方程式を解くと，$\xi(x) = Ae^{\sqrt{C}x}+Be^{-\sqrt{C}x},$ $\tau(t) = De^{Ct}$ となる．境界条件から$\xi(0)=\xi(1)=0 \Leftrightarrow A+B=0 \land Ae^{\sqrt{C}}+Be^{-\sqrt{C}} = 0 \Rightarrow e^{\sqrt{C}}=e^{-\sqrt{C}} \Rightarrow C=-n^2\pi^2$
 
-$A,B,D$$B$rE,Ev$KDj$a$l$P(B $u_n(x,t) = e^{-n^2\pi^2 t} \sin(n \pi x)$ $B$D$^$j!$(B$\alpha = -n^2\pi^2, \beta = n \pi$$B$H$J$k!%(B
+$A,B,D$を適当に定めれば $u_n(x,t) = e^{-n^2\pi^2 t} \sin(n \pi x)$ つまり，$\alpha = -n^2\pi^2, \beta = n \pi$となる．
 
 \begin{screen}
- (4) $B6-3&>r7o$H=i4|>r7o$rK~$?$9JPHyJ,J}Dx<0(B$(\ast)$$B$N2r$O(B $u_n(x,t)$ $B$N@~7?7k9g$H$7$F<!$N<0$GI=$5$l$k!%(B$c_n$ $B$r5a$a$h!%@_Ld(B(1)$B$N7k2L$rMQ$$$F$b$h$$!%(B
+ (4) 境界条件と初期条件を満たす偏微分方程式$(\ast)$の解は $u_n(x,t)$ の線型結合として次の式で表される．$c_n$ を求めよ．設問(1)の結果を用いてもよい．
  $$u(x,t) = \sum_{n=1}^\infty c_n u_n (x,t)$$
 \end{screen}
 
-$B=i4|>r7o(B$u_0 (x) = x-x^2$ $B$H$*$/!%(B$m$$B$r@5$N@0?t$H$7$F(B
+初期条件$u_0 (x) = x-x^2$ とおく．$m$を正の整数として
 
 \begin{align*}
  \int_0^1 \sin(m \pi x)u_0(x) \mathrm{d} x&=  \int_0^1 \sin(m \pi x)u(x,0) \mathrm{d} x \\
