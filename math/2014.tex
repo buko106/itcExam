@@ -103,6 +103,44 @@
 
 \section{}
 
+\begin{screen}
+ 区間$[-1,1]$で定義された実関数$f(x),g(x)$に対して，
+ $$(f,g)=\int_{-1}^1f(x)g(x)\mathrm{d}x$$
+ とおく．以下の設問に答えよ．
+\end{screen}
+
+
+\begin{screen}
+ (1)以下で定義される多項式$q_0(x),q_1(x),q_2(x)$に対して$(q_0,q_1),$ $(q_0,q_2),$ $(q_1,q_2),$ $(q_0,q_0),$ $(q_1,q_1),$ $(q_2,q_2)$を計算せよ．
+ $$q_0(x)=1,\quad q_1(x)=x,\quad q_2(x)=3x^2-1$$
+ ただし，任意の奇関数$h(x)$に対して$\ds \int_{-1}^1h(x)\mathrm{d}x = 0$であることを用いてよい．
+\end{screen}
+
+
+\begin{screen}
+ (2) $p_k(x)$ を $x$ の $k$ 次多項式(ただし，$x^k$ の項の係数は $0$ でないとする)とし，多項式関数の列 $p_0(x),p_1(x),\cdots$ を考える．以下では，$N$ 個の関数の組 $\left\{p_0(x),p_1(x),\cdots,p_{N-1}(x)\right\}$ が $[0,N-1]$ 内の任意の整数 $i,j$ に対して
+ $$(p_i,p_j)=\begin{cases}
+              1 &(i=j)\\
+              0 &(i \neq j)
+             \end{cases}$$
+ を満たすとき，その組は正規直交条件を満たすという．
+ \begin{itemize}
+  \item[(2-1)] 設問(1)で定義した$q_0(x),q_1(x),q_2(x)$を用いて，正規直交条件を満たす関数の組$\left\{p_0(x),p_1(x),p_2(x)\right\}$を一つ求めよ．
+  \item[(2-2)] 関数の組$\left\{p_0(x),p_1(x),p_2(x),p_3(x)\right\}$が正規直交条件を満たすような$p_3(x)$を一つ求めよ．ただし，$p_0(x),p_1(x),p_2(x)$は前問(2-1)で求めたものとする．
+ \end{itemize}
+\end{screen}
+
+
+\begin{screen}
+ (3) いま，関数の組$\left\{p_0(x),p_1(x),\cdots,p_{N-1}(x)\right\}$が正規直交条件を満たしているとする．このとき小問(2-2)と同様に，関数の組$\left\{p_0(x),p_1(x),\cdots,p_{N}(x)\right\}$が正規直交条件をみたすように$p_N(x)$を定めることができる．次の手順により，この$p_N(x)$は符号を除いて一意でることを示せ．
+ \begin{itemize}
+  \item[(3-1)] 一般に任意の$N$次多項式$f_N(x)$は
+               $$f_N(x)=\sum_{k=0}^Nc_kp_k(x)$$
+               と書ける．この係数 $c_k$ $(k=0,\cdots,N)$を$p_0(x),p_1(x),\cdots,p_{N}(x)$と$f_N(x)$を用いて表せ．
+  \item[(3-2)] $p_N(x)$とは異なる$N$次多項式関数$\tilde{p}_N(x)$が存在して，関数の組$\left\{p_0(x),p_1(x),\cdots,\right.$ $\left.p_{N-1}(x),\tilde{p}_{N}(x)\right\}$も正規直交条件を満たしたとする．このとき，前問(3-1)で$f_N(x)=\tilde{p}_N(x)$の場合を考えることで$\tilde{p}_N(x)=-p_N(x)$を示せ．
+ \end{itemize}
+\end{screen}
+
 \section{}
 
 \begin{screen}
