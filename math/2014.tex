@@ -150,15 +150,18 @@
               $x_i$の独立性より \\
               \begin{align*}
                V_n &= V[(1-\alpha)^n] + \sum_{i=0}^{n-1}(1-\alpha)^{2(n-i-1)}\alpha^2 V[x_i] \\
-               &= 0 + p(1-p)\alpha \sum_{i=0}^{n-1}(1-\alpha)^{2i} \\
-               &= p(1-p)\alpha\frac{1-(1-\alpha)^{2n}}{1-(1-\alpha)^2}
+               &= 0 + p(1-p)\alpha^2 \sum_{i=0}^{n-1}(1-\alpha)^{2i} \\
+               &= p(1-p)\alpha^2\frac{1-(1-\alpha)^{2n}}{1-(1-\alpha)^2} \\
+               &= p(1-p)\alpha \frac{1-(1-\alpha)^{2n}}{2-\alpha}
               \end{align*}
- \item[(2-3)] $\ds E_\infty=p,V_\infty = \frac{p(1-p)\alpha}{1-(1-\alpha)^2}$となる．
+ \item[(2-3)] $\ds E_\infty=p,V_\infty = p(1-p)\frac{\alpha}{2-\alpha}$となる．$\ds p>\frac{1}{2}$より，
               \begin{align*}
-               E_\infty - \sqrt{V_\infty} &\geq \frac{1}{2} \\
-               \Leftrightarrow \left(E_\infty - \frac{1}{2} \right)^2 & \geq V_\infty \\
-               \Leftrightarrow p^2 + p + \frac{1}{4} &\geq \frac{p(1-p)\alpha}{1-(1-\alpha)^2}
+               &E_\infty - \sqrt{V_\infty} \geq \frac{1}{2} \\
+               &\Leftrightarrow \left(E_\infty - \frac{1}{2} \right)^2  \geq V_\infty \\
+               &\Leftrightarrow p^2 - p + \frac{1}{4} \geq p(1-p)\frac{\alpha}{2-\alpha} \\
+               &\Leftrightarrow \alpha \leq 2\left(p-\frac{1}{2}\right)^2
               \end{align*}
+              となり，最大値は$\ds \alpha = 2\left(p-\frac{1}{2}\right)^2$
 \end{itemize}
 
 \end{document}
