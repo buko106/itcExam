@@ -79,27 +79,67 @@
  \end{align*}
 \end{screen}
 
+$$A=\begin{pmatrix}
+     1 & 1 & 1 \\
+     1 & 0 & 0 \\
+     0 & 1 & 0      
+    \end{pmatrix}$$
+
 \begin{screen}
  (2) 行列 $A$ のランクおよび特性方程式(固有値が満たす方程式)を求めよ．
 \end{screen}
 
+$A$の各列をなすベクトルは一次独立なので$A$のランクは$3$．
+
+特性方程式は，
+
+$$\left|\lambda I - A\right| = \lambda^3 - \lambda^2 - \lambda - 1 = 0$$
 
 \begin{screen}
  (3) 行列 $A$ の固有値を $\lambda_1,\lambda_2,\lambda_3$とするとき，それぞれの固有値に対応する固有ベクトルを $\lambda_1,\lambda_2,\lambda_3$を用いて表せ．
 \end{screen}
 
+$\ds A \begin{pmatrix} x\\ y \\ z\end{pmatrix} = \lambda_i\begin{pmatrix} x\\ y \\ z\end{pmatrix}$
+$\ds \Leftrightarrow
+\left\{
+\begin{array}[tb]{rrrrrr}
+ x&+&y&+&z&=\lambda_i x \\
+ x& & & & &=\lambda_i y \\
+  & &y& & &=\lambda_i z \\
+\end{array}
+\right.
+\Leftrightarrow
+\begin{cases}
+ (\lambda_i^3 - \lambda_i^2 - \lambda_i - 1)z &= 0 \\
+ x &= \lambda_i^2 z \\
+ y &= \lambda_i   z
+\end{cases}
+$
 
+よって，固有値$\lambda_i$に対応する固有ベクトルは $\begin{pmatrix} \lambda_i^2\\ \lambda_i \\ 1\end{pmatrix}$
 \begin{screen}
  (4) 行列 $A$ は実数固有値を一つのみ有することを示せ．また，これを $\lambda_1$ としたとき，$1<\lambda_1<2$であることを示せ．
 \end{screen}
+
+$f(\lambda)=\lambda^3-\lambda^2-\lambda-1$ と定義する．$f'(\lambda)=3\lambda^2-2\lambda-1>0$より$f(\lambda)$は狭義単調増加し，$f(1)=-2,$ $f(2)=1$より$f(\lambda)=0$の実数解は$1<\lambda<2$の範囲に1つのみとなる．これが$\lambda_1$に対応するので，実数固有値は1つのみで$1<\lambda_1<2$である．
 
 \begin{screen}
  (5) ある複素定数$c_1,c_2,c_3$を用いて $T_n = c_1\lambda_1^n+c_2\lambda_2^n+c_3\lambda_3^n$と表せることを示せ．$c_1,c_2,c_3$の値を明示的に求める必要はない．
 \end{screen}
 
+正則行列$P$を用いて，$\ds A = P \begin{pmatrix} \lambda_1 & & \\ & \lambda_2 & \\ & & \lambda_3 \end{pmatrix} P^{-1}$と分解すると，
+
+$$\begin{pmatrix} T_{n+2} \\ T_{n+1} \\ T_{n} \end{pmatrix} = A^n \begin{pmatrix} T_2 \\ T_1 \\ T_0 \end{pmatrix} = P \begin{pmatrix} \lambda_1^n & & \\ & \lambda_2^n & \\ & & \lambda_3^n \end{pmatrix}P^{-1}\begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}$$
+と書けるので，$T_n$は$\lambda_1^n,\lambda_2^n,\lambda_3^n$の線型結合で表せる．
+
 \begin{screen}
  (6) $\ds \lim_{n \rightarrow \infty} \frac{T_{n+1}}{T_n} = \lambda_1$ を示せ．
 \end{screen}
+
+解と係数の関係から$\lambda_1\lambda_2\lambda_3=1$，および$\lambda_3=\overline{\lambda}_2$より(4)の結果を用いて，$|\lambda_2|=|\lambda_3|<1<|\lambda_1|$が成り立つ．
+
+$$\therefore \lim_{n \rightarrow \infty}\frac{T_{n+1}}{T_n}=\lim_{n \rightarrow \infty}\frac{c_1\lambda_1+c_2\lambda_2\left(\ds\frac{\lambda_2}{\lambda_1}\right)^n+c_3\lambda_3\left(\ds\frac{\lambda_3}{\lambda_1}\right)^n}{c_1+c_2\left(\ds\frac{\lambda_2}{\lambda_1}\right)^n+c_3\left(\ds\frac{\lambda_3}{\lambda_1}\right)^n}=\frac{c_1\lambda_1}{c_1}=\lambda_1$$
+
 \section{}
 
 \begin{screen}
