@@ -72,9 +72,17 @@
  順に$k=1,2,\cdots$の場合を調べることにより，それらのうちで$k$が最も小さい組を求めよ．
 \end{screen}
 
+$k=1$のとき$c_{i+1} = m\cdot c_i$となり不成立．
+
+$k=2$のとき$\ds \begin{pmatrix}c_2 & c_3 \\ c_3 & c_4\end{pmatrix}=M\begin{pmatrix}c_1 & c_2 \\ c_2 & c_3\end{pmatrix}$を解くことにより，$M=\begin{pmatrix}0 & 1 \\ -2 & -3\end{pmatrix}$を得る．このとき，$\ds M\begin{pmatrix}c_{i+1} \\ c_{i+2}\end{pmatrix} = \begin{pmatrix}c_{i} \\ c_{i+1}\end{pmatrix} \Leftrightarrow c_{i+2} = -3c_{i+1}-2c_i$となり$c_1,c_2,\cdots,c_7$に関して成り立つ．
+
+以上により，$\ds k=2, M=\begin{pmatrix}0 & 1 \\ -2 & -3\end{pmatrix}$
+
 \begin{screen}
  (2)設問(1)の$c_i(i=1,2,\cdots,7)$は，設問(1)で求めた$k$と$M$の組，および実数の定数ベクトル$L(\in \mathbb{R}^{1\times k})$，$N(\in\mathbb{R}^{k \times 1})$を用いて，$c_i=LM^{i-1}N$と表せる．そのようなL,Nの組のひとつを示せ．
 \end{screen}
+
+$\ds M^{i-1}\begin{pmatrix}c_1 \\ c_2\end{pmatrix} = M^{i-2}\begin{pmatrix}c_2 \\ c_3\end{pmatrix} = \cdots = \begin{pmatrix}c_i \\ c_{i+1}\end{pmatrix}$となるので，$\ds L=\begin{pmatrix}1 & 0\end{pmatrix}$ , $N=\begin{pmatrix}c_1 \\ c_2\end{pmatrix} = \begin{pmatrix}1 \\ 2\end{pmatrix}$
 
 \begin{screen}
  (3)設問(1),(2)で求めた$M,K,N$を用い，$c_i=LM^{i-1}N$によって$c_8,c_9,\cdots$を定義する．次の行列$C$のランクを求めよ．導出過程も示すこと．
@@ -91,10 +99,24 @@
  \end{pmatrix}$$
 \end{screen}
 
+$\left\{c_i\right\}$は，漸化式$c_{i+2} = -3c_{i+1}-2c_i$に従う数列であるので，行の基本変形を繰り返すことにより第1行と第2行の成分以外は0にできる．また第1行と第2行は線形独立である．以上により$C$のランクは2である．
+
 \begin{screen}
  (4)設問(1),(2)で求めた$M,N,L$と$k \times k$単位行列$I$を用いて，スカラの$x$を変数とする関数$f(x)=L(I-xM)^{-1}N$を定義する．$f(x)$の$x=0$におけるテイラー級数を$f(x)=f_1+f_2x+f_3x^2+\cdots$とする．$f_i(\in\mathbb{R}),i=1,2,\cdots$を$c_i(=LM^{-1}N),i=1,2,\cdots$を用いて表わせ．導出過程も示すこと．必要ならば対角行列$D$についての次式を用いてよい．
  $$\diff{i}{}{x}(I-xD)^{-1}\Biggr|_{x=0}=i!D^i,i=1,2,\cdots$$
 \end{screen}
+
+$M$の固有値は$-1,-2$で対角化可能であるので，対角行列$D$と正則行列$P$を用いて$M=PDP^{-1}$と表せる．
+\begin{align*}
+ f(x) &= L\left(I - xPDP^{-1}\right)^{-1}N \\
+ &= LP\left(I-xD\right)^{-1}P^{-1}N \\
+ f_i &= \frac{1}{(i-1)!}\left. \diff{i-1}{}{x}f(x) \right|_{x=0} \\
+ &= \left. \frac{1}{(i-1)!}\diff{i-1}{}{x} LP\left(I-xD\right)^{-1}P^{-1}N \right|_{x=0}\\
+ \intertext{設問で与えられた式を用いて，}
+ &= L \left(PD^{i-1}P^{-1}\right)N \\
+ &= LM^{-1}N \\
+ &= c_i
+\end{align*}
 
 \section{}
 
