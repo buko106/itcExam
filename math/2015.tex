@@ -62,6 +62,45 @@
 
 \section{}
 
+\begin{screen}
+ $A,b$を以下のように定義する．
+ 
+ $\ds A=\left(
+ \begin{array}{rrr}
+      -3 & 0 & 0 \\
+      -2 & -3 & 1 \\
+      2 & -3 & -3
+ \end{array}\right),
+ b=\left(\begin{array}{c}1 \\ 1 \\ 0\end{array}\right)$
+
+ また，$x=(x_1 \hspace{1mm} x_2 \hspace{1mm} x_3)^T$のスカラー値関数$f(x)$の$x$に関する偏微分$\ds \pdiff{}{}{x}f(x)$を
+ $$\pdiff{}{}{x}f(x) = \left(\pdiff{}{}{x_1}f(x)\hspace{2mm}\pdiff{}{}{x_2}f(x)\hspace{2mm}\pdiff{}{}{x_3}f(x)\right)$$
+ と定義し，$f(x)$の停留点を$\ds \pdiff{}{}{x}f(x)=(0 \hspace{1mm} 0 \hspace{1mm} 0)$となる$x$と定義する．なお，$x^T$は$x$の転置を表すものとする．以下の設問に答えよ．
+\end{screen}
+
+\begin{screen}
+ (1) 行列$A$の特性方程式を記せ．
+\end{screen}
+
+\begin{screen}
+ (2) 行列$C$は行列$A$と単位行列$I$を用いて，$C=A^5 + 9A^4 + 30 A^3 + 36 A^2 + 30 A + 9 I $と表される． 行列$C$を求めよ．
+\end{screen}
+
+\begin{screen}
+ (3) $x^TAx$を$x$について偏微分せよ．
+\end{screen}
+
+\begin{screen}
+ (4) 任意のベクトル$x$に対して，$x^TAx=x^T\tilde{A}x$が成り立つ対称行列$\tilde{A}$を1つ求めよ．また，行列$\tilde{A}$の固有値$\lambda_1,\lambda_2,\lambda_3$ $(\lambda_1\geq\lambda_2\geq\lambda_3)$と固有ベクトル$v_1,v_2,v_3$を求めよ．ただし，固有ベクトルを並べた行列$V = \left(v_1 \hspace{1mm} v_2 \hspace{1mm} v_3\right)$が直交行列となるように固有ベクトルを選べ．
+\end{screen}
+
+\begin{screen}
+ (5) 任意の実ベクトル$x$に対して，$x^TAx \leq 0$が成り立つことを証明せよ．
+\end{screen}
+
+\begin{screen}
+ (6) 関数$g(x)=x^TAx + 2b^Tx$の停留点を求めよ．
+\end{screen}
 
 \section{}
 
@@ -85,4 +124,21 @@
  $$ Y = X_1 + X_2 + \cdots + X_N$$
  の従う確率分布を求めよ．ただし，一般に，2つの確率変数$Z$と$W$に対して，$t$の関数として，$\phi_Z(t)=\phi_W(t)$であれば，$Z$と$W$が従う確率分布は等しいという事実を用いてもよい．
 \end{screen}
+
+\begin{screen}
+ (3) 設問(2)において，$N\in \left\{1,2,\cdots,\infty\right\}$が$\theta(0<\theta<1)$をパラメータとする幾何分布に従って発生するとする．つまり，$N$の確率関数が
+ $$P(N=n) = (1-\theta)^{n-1}\theta$$
+ で与えられるとする．このとき，$Y=X_1+X_2+\cdots+X_N$に対して，$\phi_Y(t)$を
+ $$\phi_Y(t) = E_Y\left[e^{tY}\right]$$
+ と定めるとき，$\phi_Y(t)$を求め，それを$\phi_{X_j}(t)$を用いて表せ．ただし，$\phi_{X_j}(t)$は$j$に依らないので，$\phi_X(t)$と書いてよい．
+\end{screen}
+
+\begin{screen}
+ (4) 設問(3)の$Y$の平均と分散を求めよ．
+\end{screen}
+
+\begin{screen}
+ (5) $\xi(>E_Y\left[Y\right])$が与えられたとして，設問(3)の$Y$の値が$\xi$を超える確率の上界の1つを$\mu,\sigma,\theta,\xi$の関数として与えよ(必ずしも$\mu,\sigma,\theta,\xi$全てを使わなくてもよい)．
+\end{screen}
+
 \end{document}
