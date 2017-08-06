@@ -67,7 +67,7 @@
 \end{screen}
 
 \begin{screen}
- (1)以下の対称行列$A$のすべての固有値と，それらの固有に対応する固有ベクトルを求めよ．
+ (1)以下の対称行列$A$のすべての固有値と，それらの固有値に対応する固有ベクトルを求めよ．
  $$A=\begin{pmatrix}
     1 & -1 & 0 \\
     -1 & 1 & -1 \\
@@ -75,16 +75,32 @@
    \end{pmatrix}$$
 \end{screen}
 
+特性方程式$|\lambda I - A|=(\lambda - 1)(\lambda^2 -2\lambda- 1)$
+
+\begin{itemize}
+ \item[(i)] $\lambda = 1 + \sqrt{2}$のとき，固有ベクトル$\ds \begin{pmatrix} 1 \\ -\sqrt{2} \\ 1\end{pmatrix}$
+ \item[(ii)] $\lambda = 1 $のとき，固有ベクトル$\ds \begin{pmatrix} -1 \\ 0 \\ 1\end{pmatrix}$
+ \item[(iii)] $\lambda = 1 - \sqrt{2}$のとき，固有ベクトル$\ds \begin{pmatrix} 1 \\ \sqrt{2} \\ 1\end{pmatrix}$
+\end{itemize}
 
 \begin{screen}
  (2)実正方行列$M$が対称行列ならば、その固有値はすべて実数となることを証明せよ．
 \end{screen}
 
+$M$の固有値$\lambda$と，対応する固有ベクトル$\bm{v}\neq \bm{0}$に対して，
+\begin{align*}
+ \bm{v}^*M\bm{v}&=\bm{v}^*(\lambda\bm{v})=\lambda(\bm{v}^*\bm{v}) \\
+ \intertext{および対称性を用いて，}
+ \bm{v}^*M\bm{v}&=\bm{v}^*M^*\bm{v}=(M\bm{v})^*\bm{v} = (\lambda\bm{v})^*\bm{v} = \overline{\lambda}(\bm{v}^*\bm{v})
+\end{align*}
+
+$\bm{v}\neq\bm{0}$に対して$\bm{v}^*\bm{v}>0$であるので，$\lambda-\overline{\lambda}=0$が成り立つ．したがって固有値$\lambda$は実数である．
 
 \begin{screen}
  (3)実正方行列$M$の固有値がすべて実数であっても$M$は必ずしも対称行列であるとは限らない．そのような行列$M$の具体例を1つ挙げよ．
 \end{screen}
 
+$\ds \begin{pmatrix} 1 & 1 \\ 0 & 1\end{pmatrix}$は固有値$1$であり，対称行列でない例である．
 
 \begin{screen}
  (4)$\bm{u}=\begin{pmatrix}x \\ y \\ z\end{pmatrix}$を原点を除く3次元実ベクトルとする．ここで，設問(1)の対称行列$A$を用いて，関数$f(x,y,z)$を次のように定義する．
@@ -95,11 +111,20 @@
  $$f(x,y,z)=1-2g(x,y,z)$$
 \end{screen}
 
+省略．
 
 \begin{screen}
  (5)設問(4)の関数$g(x,y,z)$について，次の不等式が成立つことを設問(1)の対称行列$A$の固有値分解を用いて示せ．
  $$-\frac{1}{\sqrt{2}}\leq g(x,y,z) \leq \frac{1}{\sqrt{2}}$$
 \end{screen}
+
+$\ds f\left(\frac{\bm{u}}{|\bm{u}|}\right) = f(\bm{u})$が成り立つので，$|\bm{u}|=1$と制限しても値域は変わらない．$\lambda_1=1+\sqrt{2}, \lambda_2=1, \lambda_3=1-\sqrt{2}$および対応する固有ベクトル$\bm{v}_1,\bm{v}_2,\bm{v}_3$を用いて，$\bm{u}=a_1\bm{v}_1+a_2\bm{v}_2+a_3\bm{v}_3$ (ただし，$a_1^2+a_2^2+a_3^2=1$)と書けば，固有ベクトルは互いに直交しているので，
+\begin{align*}
+ f(\bm{u})&=(a_1\bm{v}_1+a_2\bm{v}_2+a_3\bm{v}_3)^TA(a_1\bm{v}_1+a_2\bm{v}_2+a_3\bm{v}_3)\\
+ &=a_1^2\lambda_1+a_2^2\lambda_2+a_3^2\lambda_3
+\end{align*}
+
+より，$\lambda_3\leq f(\bm{u})\leq \lambda_1$である．(4)を用いて，$\ds -\frac{1}{\sqrt{2}}\leq g(x,y,z) \leq \frac{1}{\sqrt{2}}$
 
 \section{}
 
