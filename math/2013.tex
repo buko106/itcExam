@@ -182,4 +182,75 @@ $\diff{}{}{t} I[f+t(g-f)] \bigr|_{t=0} = 0$と変形すると，任意の方向$
 $f(0)=A+B=0,f(1)=Ae + Be^{-1}=1$を解いて，$\ds A=-B=\frac{e}{e^2-1}$
 $$\therefore f(x)=\frac{e}{e^2-1}(e^x-e^{-x})$$
 
+\section{}
+
+\begin{screen}
+ ある袋の中には，はじめに黒色の玉1個のみが入っている．その袋に対し，次の作業Aを繰り返す問題を考える．
+ 
+\begin{itemize}
+ \item[]作業A:袋の中から玉を無作為に1個取り出し，取り出した玉の色が黒の場合，袋には存在しない色の玉を新たに追加し，取り出した黒色の玉も袋に戻す．黒以外の色の玉であれば，取り出した玉と同色の玉を袋に1つ追加し，取り出した玉も袋に戻す．
+\end{itemize}
+
+ 袋から取り出すまでは玉は区別できないものとする．以下の設問に答えよ．
+\end{screen}
+
+\begin{screen}
+ (1) 作業Aを3回繰り返した後，袋の中の玉の色(黒色を除く)が2種となる確率と，3種となる確率をそれぞれ求めよ．
+\end{screen}
+
+2種となる確率，$\ds \frac{1}{2}\cdot\frac{1}{3} + \frac{1}{2}\cdot\frac{2}{3} = \frac{1}{2}$ 3種となる確率，$\ds \frac{1}{2}\cdot\frac{1}{3}=\frac{1}{6}$
+
+\begin{screen}
+ (2) 作業Aを4回繰り返した後，袋の中の玉の色(黒色を除く)が3種となる確率を求めよ．
+\end{screen}
+
+$\ds \frac{1}{2}\cdot\frac{1}{3}\cdot\frac{1}{4}+\frac{1}{2}\cdot\frac{2}{3}\cdot\frac{1}{4}+\frac{1}{2}\cdot\frac{1}{3}\cdot\frac{3}{4} = \frac{3}{8}$
+
+\begin{screen}
+ (3) 作業Aを$n$回繰り返したときに袋の中の玉の色(黒色を除く)が1種のみとなる確率は$1/n$となることを示せ．
+\end{screen}
+
+$\ds \frac{1}{2}\cdot\frac{2}{3}\cdot \frac{3}{4} \cdots \frac{n-2}{n-1}\cdot\frac{n-1}{n} = \frac{1}{n}$
+
+\begin{screen}
+ (4) 作業$A$を$n$回繰り返した後，袋の中の玉の色(黒色を除く)が$m$種類となる確率$q_n(m)$を求めよ．必要ならば，以下に定義する$S(n,m)$を使ってもよい．
+ $$S(n,m)=
+ \begin{cases}
+  S(n-1,m-1) + (n-1)S(n-1,m), & n > m > 0 \\
+  1, & n = m \geq 0 \\
+  0, & \mbox{それ以外}
+ \end{cases}
+ $$
+\end{screen}
+
+作業を$n-1$回繰り返した後，色が$m-1$種類の場合と$m$種類の場合がある．したがって，$n>m>0$のとき
+$$q_n(m) = \frac{1}{n}q_{n-1}(m-1) + \frac{n-1}{n}q_{n-1}(m)$$
+が成り立つ．$T(n,m)=n!\cdot q_n(m)$と定義すると，$T(n,m)=T(n-1,m-1) + (n-1)T(n-1,m)$ $(n>m>0)$が成り立つ．また$n=m$のとき，毎回の作業で黒玉を取り出す必要があるので$\ds T(n,n)=n!\cdot q_n(n) = n!\cdot \frac{1}{2}\cdot\frac{1}{3}\cdots \frac{1}{n} = 1$となる．以上により，$T(n,m)=S(n,m)$となり，
+$$q_n(m)=\frac{S(n,m)}{n!}$$
+
+\begin{screen}
+ (5) 袋の中の玉の色(黒色を除く)の種類が3以上となる確率が35\%を超える作業Aの繰り返し回数の最小値を求めよ．その根拠も述べよ．
+\end{screen}
+
+\begin{screen}
+ (6) 設問(4)で定義した確率$q_n(m)$が，自然数$n$に対し以下の式を満たすことを示せ．
+ $$\sum_{m=1}^n m q_n(m) = 1 + \frac{1}{2} + \cdots  + \frac{1}{n}$$
+\end{screen}
+
+数学的帰納法で示す．
+
+\begin{itemize}
+ \item[(i)] $n=1$のとき成り立つ．
+ \item[(ii)] $n=k$のとき成り立つと仮定する．このとき，$\ds q_n(m) = \frac{1}{n}q_{n-1}(m-1) + \frac{n-1}{n}q_{n-1}(m)$を用いて
+             \begin{align*}
+              \sum_{m=1}^{k+1} m q_{k+1}(m) &= \sum_{m=1}^{k+1} m \left(\frac{1}{k+1}q_{k}(m-1) + \frac{k}{k+1}q_{k}(m) \right) \\
+              &= \frac{1}{k+1}\sum_{m=1}^{k} (m+1) q_{k}(m) + \frac{k}{k+1}\sum_{m=1}^{k+1} m q_k(m) \\
+              &= \sum_{m=1}^k mq_k(m) + \frac{1}{k+1}\sum_{m=1}^{k} q_{k}(m) \\
+              \intertext{帰納法の仮定，および$\ds \sum_{m=1}^{k} q_{k}(m)=1$を用いて，}
+              &= 1 + \frac{1}{2} + \cdots  + \frac{1}{k} + \frac{1}{k+1}
+             \end{align*}
+\end{itemize}
+
+以上により$n=k+1$のときも成り立つ．
+
 \end{document}
