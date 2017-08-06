@@ -157,6 +157,15 @@ $$\therefore \lim_{n \rightarrow \infty}\frac{T_{n+1}}{T_n}=\lim_{n \rightarrow 
  ただし$\ds y' = \diff{}{y}{x}$である．
 \end{screen}
 
+$x$の増分が$\mathrm{d}x$のときの，表面積の増分$\mathrm{d}S$は，高さ$dx$，半径$y$および$y+y'\mathrm{d}x$の円錐台の側面積で近似できる．
+
+\begin{align*}
+ \mathrm{d}S &\approx \pi (2y+y'\mathrm{d}x) \sqrt{(\mathrm{d}x)^2+(y'\mathrm{d}x)^2} \\
+ &\approx 2 \pi y \sqrt{1+(y')}\mathrm{d}x \\
+ \therefore S &= \int_{-1}^{1} 2 \pi y \sqrt{1+(y')}\mathrm{d}x \\
+ &= 2 \pi \int_{-1}^1 F(y,y') \mathrm{d}x
+\end{align*}
+
 \begin{screen}
  (2) 曲線$y(x)$は任意の$x$に対して以下のオイラー・ラグランジュ方程式を満たすとする．
  \begin{align*}
@@ -169,14 +178,36 @@ $$\therefore \lim_{n \rightarrow \infty}\frac{T_{n+1}}{T_n}=\lim_{n \rightarrow 
  ただし$c$はある定数である．
 \end{screen}
 
+\begin{align*}
+ \diff{}{}{x}\left(F - y'\pdiff{}{F}{y'}\right) &= \left(y' \pdiff{}{F}{y} + y'' \pdiff{}{F}{y'}\right) - \left(y''\pdiff{}{F}{y'} - y' \diff{}{}{x} \pdiff{}{F}{y'}\right) \\
+ &= y' \left(\pdiff{}{F}{y} - \diff{}{}{x}\pdiff{}{F}{y'}\right) \\
+ &= 0
+\end{align*}
+
+よって，両辺を$x$で積分して$\ds F - y'\pdiff{}{F}{y'} = c$を得る．
+
 \begin{screen}
  (3) 曲線 $y(x)$ が満たすべき微分方程式を$y,y',c$を用いて表わせ．
 \end{screen}
 
+$\ds \pdiff{}{F}{y'}= \frac{yy'}{\sqrt{1+\left(y'\right)^2}}$を代入して整理すると，
+$$y=c\sqrt{1+\left(y'\right)^2}$$
 
 \begin{screen}
  (4) 曲線 $y(x)$ を $x$ と $c$ を用いて表わせ．また，定数 $c$ が満たすべき方程式を求めよ．
 \end{screen}
+
+\begin{align*}
+ &\diff{}{y}{x} = \pm \frac{\sqrt{y^2-c^2}}{c} \\
+ &\Rightarrow \int \pm \frac{c}{\sqrt{y^2-c^2}} \mathrm{d}y = \int \mathrm{d}x
+ \intertext{$y=c \cosh(t)$と置換する．$\mathrm{d}y = c \sinh(t)\mathrm{d}t$を用いて，} 
+ &\Rightarrow \int \pm \frac{c}{\sqrt{c^2 \sinh^2 (t)}}\cdot c \sinh(t)\mathrm{d}t = x + D \\
+ &\Rightarrow \int \pm |c| \mathrm{d}t = x + D \\
+ &\Rightarrow t = \pm \frac{x+D}{|c|}
+\end{align*}
+
+以上により，$\ds y(x) = c \cosh \left(\pm \frac{x+D}{|c|}\right) = c \cosh \left( \frac{x+D}{c}\right) $となる．$y(-1)=y(1)=2$より，
+$\ds c \cosh \left(\frac{-1+D}{c}\right) = c \cosh \left(\frac{1+D}{c}\right)=2$を満たす．$\cosh$のグラフの形から$D=0$が分かる．よって，$c$が満たすべき式は$\ds c \cosh\left(\frac{1}{c}\right) = 2$
 
 \section{}
 
