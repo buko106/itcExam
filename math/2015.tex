@@ -82,25 +82,64 @@
  (1) 行列$A$の特性方程式を記せ．
 \end{screen}
 
+\begin{align*}
+ \ds \Phi_A(\lambda) &= |\lambda I - A| \\
+ &=
+ \begin{vmatrix}
+ \lambda + 3 & 0 & 0 \\
+ 2 & \lambda +3 & -1 \\
+ -2 & 3 & \lambda + 3
+ \end{vmatrix} \\&= (\lambda+3)
+ \begin{vmatrix}
+ \lambda + 3 & -1 \\
+ 3 & \lambda+3
+ \end{vmatrix} \\&= \lambda^3+9\lambda^2+30\lambda+36
+\end{align*}
+
+よって，特性方程式は$\ds \Phi_A(\lambda) = \lambda^3+9\lambda^2+30\lambda+36 = 0$．
+
 \begin{screen}
  (2) 行列$C$は行列$A$と単位行列$I$を用いて，$C=A^5 + 9A^4 + 30 A^3 + 36 A^2 + 30 A + 9 I $と表される． 行列$C$を求めよ．
 \end{screen}
+
+$\ds \Phi_A(A) = A^3 + 9A^2 + 30 A + 36 I= O$となるので，$\ds C= A^2 \Phi_A(A) + 30A + 9I =
+\begin{pmatrix}
+ -81 & 0 & 0 \\
+ -60 & -81 & 30 \\
+ 60 & -90 & -81
+\end{pmatrix}$
 
 \begin{screen}
  (3) $x^TAx$を$x$について偏微分せよ．
 \end{screen}
 
+$x^TAx = -3x_1^2-3x_2^2-3x_3^2-2x_1x_2-2x_2x_3+2x_3x_1$である．よって，
+$$\pdiff{}{}{x}\left(x^TAx\right) = \bigl( -6x_1-2x_2+2x_3 \quad -2x_1-6x_2-2x_3 \quad 2x_1-2x_2-6x_3 \bigr)$$
+
+(別解) $\ds\pdiff{}{}{x}\left(x^TAx\right) = (A+A^T)x$ を利用する．
+
 \begin{screen}
  (4) 任意のベクトル$x$に対して，$x^TAx=x^T\tilde{A}x$が成り立つ対称行列$\tilde{A}$を1つ求めよ．また，行列$\tilde{A}$の固有値$\lambda_1,\lambda_2,\lambda_3$ $(\lambda_1\geq\lambda_2\geq\lambda_3)$と固有ベクトル$v_1,v_2,v_3$を求めよ．ただし，固有ベクトルを並べた行列$V = \left(v_1 \hspace{1mm} v_2 \hspace{1mm} v_3\right)$が直交行列となるように固有ベクトルを選べ．
 \end{screen}
+
+$x^TAx = (A^Tx)^Tx = x^T(A^Tx) = x^TA^Tx$が成り立つので，$\ds \tilde{A}=\frac{1}{2}\left(A+A^T\right)$と定めればよい．
+
+$\ds \tilde{A} = \begin{pmatrix} -3 & -1 & 1 \\-1 & -3 & -1 \\1 & -1 & -3\end{pmatrix}$
+である．特性方程式を解くことにより，固有値$\lambda_1=-1$に対応する固有ベクトル$u_1=\begin{pmatrix}1 \\ -1 \\ 1\end{pmatrix}$，固有値$\lambda_2=\lambda_3 = -4$に対応する固有ベクトル$u_2=\begin{pmatrix} -1 \\ 0 \\ 1\end{pmatrix},u_3=\begin{pmatrix} 1\\ 1 \\ 0\end{pmatrix}$ を得る．
+
+$u_1$を正規化して$\ds v_1 = \frac{1}{\sqrt{3}}\begin{pmatrix}1 \\ -1 \\ 1\end{pmatrix}$，$u_2,u_3$を正規直交化して，$\ds v_2=\frac{1}{\sqrt{2}}\begin{pmatrix} -1 \\ 0 \\ 1\end{pmatrix},v_3=\frac{1}{\sqrt{6}}\begin{pmatrix} 1 \\ 2 \\ 1\end{pmatrix}$ とすれば$V$は直交行列になる．
 
 \begin{screen}
  (5) 任意の実ベクトル$x$に対して，$x^TAx \leq 0$が成り立つことを証明せよ．
 \end{screen}
 
+$v_1,v_2,v_3$は(正規直交)基底をなすので，任意の実ベクトル$x$は$x=a_1v_1+a_2v_2+a_3v_3$ と表せる$(a_1,a_2,a_3\in \mathbb{R})$．したがって，$x^TAx = a_1^2\lambda_1+a_2^2\lambda_2+a_3^2\lambda_3 \leq 0$
+
 \begin{screen}
  (6) 関数$g(x)=x^TAx + 2b^Tx$の停留点を求めよ．
 \end{screen}
+
+$\ds \pdiff{}{}{x}g(x) = 2\tilde{A}x + 2b = 0$より，$\tilde{A}x=-b$を解いて，$\ds  x=\frac{1}{4}\begin{pmatrix} 1\\ 1 \\0 \end{pmatrix}$
 
 \section{}
 
