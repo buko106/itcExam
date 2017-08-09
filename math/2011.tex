@@ -194,4 +194,75 @@ $\ds f(n)=\begin{pmatrix} 1&0&0&0&0&0 \end{pmatrix}V
 \end{array}
 \right)^n V^\top\left(\begin{array}{c}1\\0\\0\\0\\0\\0\end{array}\right)$によって直接一般項が求まる．
 
+\section{}
+
+\begin{screen}
+ $x>0$ における微分方程式
+ $$x\idiff{2}{y}{x}+(x+4)\idiff{}{y}{x}+3y = 4x+4$$
+ を考える．以下の各問に答えよ．
+\end{screen}
+
+\begin{screen}
+ (1) $v=x^r$が
+ $$x\idiff{2}{v}{x}+(x+4)\idiff{}{v}{x}+3v=0$$
+ の解であるような$r$の値を求めよ．
+\end{screen}
+
+$\ds \idiff{}{v}{x}=rx^{r-1},\idiff{2}{v}{x}=r(r-1)x^{r-2}$を代入して整理すると，
+$$(r+3)x+r(r+3)=0$$となる．これが任意の$x(>0)$で成り立つのは$r=-3$．
+
+\begin{screen}
+ (2) 問い(1)で得られた$r$に対して$y=x^ru$とおくとき，$u$が満たす微分方程式を求めよ．また，$u=x^4$は，得られた微分方程式の解であることを示せ．
+\end{screen}
+
+$ \ds \idiff{}{y}{x}=-3x^{-4}u + x^{-3}\idiff{}{u}{x} $
+
+$\ds \idiff{2}{y}{x}=12x^{-5}-6x^{-4}\idiff{}{u}{x}+x^{-3}\idiff{2}{u}{x} $
+
+を代入して整理すると，
+
+$$x\idiff{2}{u}{x}+(x-2)\idiff{}{u}{x}=4x^4+4x^3$$
+
+$u=x^4$とすると，$\ds \idiff{}{u}{x}=4x^3,\idiff{2}{u}{x}=12x^2$を代入すると，
+
+$$(\mbox{左辺})=x\cdot 12x^2 +(x-2)\cdot 4x^3= 4x^4+4x^3 = (\mbox{右辺})$$
+
+となり，$u=x^4$は得られた微分方程式の解の1つである．
+
+\begin{screen}
+ (3) 問い(2)で得られた微分方程式を満たす$\ds \idiff{}{u}{x}$の一般形を求めよ．
+\end{screen}
+
+(2)で得られた微分方程式の(左辺の)線形性から，一般解は$u=x^4+z$の形で表される．$z$が満たす微分方程式は，
+
+$$x\idiff{2}{z}{x}+(x-2)\idiff{}{z}{x}=0$$
+
+変数分離により，
+
+$$\frac{z''}{z'}=\frac{2}{x}-1$$
+
+を得る．両辺を$x$で積分して，
+
+$$\log |z'| = 2\log x - x + C \quad(C\mbox{は任意定数})$$
+
+即ち，
+
+$$z' = \pm e^C x^2 e^{-x} = Dx^2e^{-x}\quad(D\mbox{は任意定数})$$
+
+以上により，$\ds\idiff{}{u}{x}$の一般形は
+
+$$\idiff{}{u}{x} = 4x^3 + Dx^2e^{-x}\quad(D\mbox{は任意定数}) $$
+
+
+\begin{screen}
+ (4) $y$の一般解を求めよ．
+\end{screen}
+
+
+(3)から$u$の一般解は，
+$$u = x^4 -D(x^2+2x+2)e^{-x}+E \quad(D,E\mbox{は任意定数})$$
+となる．$y$の解空間の次元は2なので，$y$の一般解は
+
+$$y = x - D(x^{-1}+2x^{-2}+2x^{-3})e^{-x}+ Ex^{-3}\quad(D,E\mbox{は任意定数})$$
+
 \end{document}
