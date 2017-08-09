@@ -1,0 +1,197 @@
+\documentclass[a4j]{jarticle}
+%%  packages
+\usepackage{amsmath,amssymb,ascmac}
+\usepackage{bm}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{listings}
+\usepackage[english]{babel}
+\lstset{
+ 	%枠外に行った時の自動改行
+ 	breaklines = true,
+ 	%標準の書体
+        basicstyle=\ttfamily\footnotesize,
+        commentstyle=\footnotesize\bfseries,
+        keywordstyle=\footnotesize\bfseries,
+ 	%枠 "t"は上に線を記載, "T"は上に二重線を記載
+	%他オプション：leftline，topline，bottomline，lines，single，shadowbox
+ 	frame = single,
+ 	%frameまでの間隔(行番号とプログラムの間)
+ 	framesep = 5pt,
+ 	%行番号の位置
+ 	numbers = left,
+	%行番号の間隔
+ 	stepnumber = 1,
+	%タブの大きさ
+ 	tabsize = 4,
+ 	%キャプションの場所("tb"ならば上下両方に記載)
+ 	captionpos = t
+}
+
+%% math commands
+\let \ds \displaystyle
+\newcommand{\idiff}[3]{
+  \frac{d^{#1} #2}{d #3^{#1}}
+}
+\newcommand{\diff}[3]{
+  \frac{\mathrm{d}^{#1} #2}{\mathrm{d} #3^{#1}}
+}
+\newcommand{\pdiff}[3]{
+  \frac{\partial^{#1} #2}{\partial #3^{#1}}
+}
+\newcommand{\intd}[1]{
+  \mathrm{d} #1
+}
+
+
+%% title configuration
+\title{東京大学大学院情報理工学系研究科2011年度過去問}
+\author{}
+\date{}
+
+
+%% headings
+\pagestyle{headings}
+\markright{東京大学大学院情報理工学系研究科2011年度過去問}
+
+
+
+
+\begin{document}
+%%  begin title page
+\thispagestyle{empty}
+\maketitle
+\pagebreak
+
+\section{}
+
+\begin{screen}
+ 行列$A$ , 行列$B$ , 関数$f(n)$ を以下のように定義する．
+ 
+ $\ds A=\begin{pmatrix}
+         a & b & b \\
+         b & a & b \\
+         b & b & a \\
+        \end{pmatrix}$
+
+ $\ds B=\begin{pmatrix}
+         0&0&0&a&b&b\\
+         0&0&0&b&a&b\\
+         0&0&0&b&b&a\\         
+         a&b&b&0&0&0\\
+         b&a&b&0&0&0\\
+         b&b&a&0&0&0\\         
+        \end{pmatrix}$
+ 
+ $\ds f(n)=\begin{pmatrix} 1&0&0&0&0&0 \end{pmatrix}B^n
+ \left(\begin{array}{c}1\\0\\0\\0\\0\\0\end{array}\right)$
+
+ ただし，$a,b$は$a>0,b>0,a \neq b$なる実数，$n$は正の整数とする．以下の各問に答えよ．
+\end{screen}
+
+\begin{screen}
+ (1) 行列$A$のすべての固有値を求めよ．また行列$A$の線形独立な3つの固有ベクトルをあげよ．
+\end{screen}
+
+\begin{align*}
+ \left|\lambda I - A \right| &=
+ \begin{vmatrix}
+  \lambda -a & -b & -b \\
+  -b & \lambda -a & -b \\
+  -b & -b & \lambda -a \\
+ \end{vmatrix}\\
+ &=
+ \begin{vmatrix}
+  \lambda -a & -b & -b \\
+  0 & \lambda -a+b & -(\lambda-a+b) \\
+  -b & -b & \lambda -a \\
+ \end{vmatrix}\\
+ &=
+ \begin{vmatrix}
+  \lambda -a+b & 0 & -(\lambda-a+b) \\
+  0 & \lambda -a+b & -(\lambda-a+b) \\
+  -b & -b & \lambda -a \\
+ \end{vmatrix}\\
+ &=
+ \begin{vmatrix}
+  \lambda -a+b & 0 & 0 \\
+  0 & \lambda -a+b & -(\lambda-a+b) \\
+  -b & -b & \lambda -a-b \\
+ \end{vmatrix}\\
+ &= (\lambda - a + b)^2(\lambda - a -2b) = 0
+\end{align*}
+
+より，固有値$\lambda = a-b,a-b,a+2b$．
+
+\begin{itemize}
+ \item[(i)] $\lambda=a-b$のとき，固有ベクトル$\left(\begin{array}{c}-2\\1\\1\end{array}\right)$と$\left(\begin{array}{c}0\\-1\\1\end{array}\right)$
+ \item[(ii)] $\lambda=a+2b$のとき，固有ベクトル$\left(\begin{array}{c}1\\1\\1\end{array}\right)$
+\end{itemize}
+
+\begin{screen}
+ (2) 行列$B$のすべての固有値を求めよ．また行列$B$の線形独立な6つの固有ベクトルをあげよ．
+\end{screen}
+
+$\ds B =
+\left(
+\begin{array}{c|c}
+ O&A \\
+ \hline
+ A&O \\
+\end{array}
+\right),
+\bm{x} =
+\left(
+\begin{array}{c}
+ \bm{x}_1\\ \hline 
+ \bm{x}_2
+\end{array}
+\right)$ と表すと，$B\bm{x}=\lambda \bm{x} \Leftrightarrow
+\begin{cases}
+ A \bm{x}_1 = \lambda \bm{x}_2 \\
+ A \bm{x}_2 = \lambda \bm{x}_1 \\
+\end{cases}
+\Leftrightarrow
+\begin{cases}
+ A (\bm{x}_1+\bm{x}_2) = \lambda(\bm{x}_1+\bm{x}_2) \\
+ A (\bm{x}_1-\bm{x}_2) = -\lambda(\bm{x}_1-\bm{x}_2) \\
+\end{cases}
+$ 
+
+$\bm{x}_2 \neq \pm \bm{x}_1 $とすると$\pm \lambda$が$A$の固有値となり，$A$の固有値がすべて正であることと矛盾する．
+
+$\bm{x}_2 = \bm{x}_1$のとき，$A \bm{x}_1 = \lambda \bm{x}_1$が必要十分で$\lambda$は$A$の固有値となり，$\bm{x}_1$は固有値$\lambda$に対応する固有ベクトルである．
+
+よって，固有値$a-b$に対応する固有ベクトル$\left(\begin{array}{c}-2\\1\\1\\-2\\1\\1\end{array}\right)$と$\left(\begin{array}{c}0\\-1\\1\\0\\-1\\1\end{array}\right)$
+
+固有値$a+2b$に対応する固有ベクトル$\left(\begin{array}{c}1\\1\\1\\1\\1\\1\end{array}\right)$
+
+$\bm{x}_2 = -\bm{x}_1$のとき，$A \bm{x}_1 = -\lambda \bm{x}_1$が必要十分で$-\lambda$は$A$の固有値となり，$\bm{x}_1$は固有値$-\lambda$に対応する固有ベクトルである．
+
+よって，固有値$-(a-b)$に対応する固有ベクトル$\left(\begin{array}{c}-2\\1\\1\\2\\-1\\-1\end{array}\right)$と$\left(\begin{array}{c}0\\-1\\1\\0\\1\\-1\end{array}\right)$
+
+固有値$-(a+2b)$に対応する固有ベクトル$\left(\begin{array}{c}1\\1\\1\\-1\\-1\\-1\end{array}\right)$
+
+\begin{screen}
+ (3) $f(1),f(2),f(3)$ を求めよ．
+\end{screen}
+
+$f(1)=0,f(2)=a^2+2b^2,f(3)=0$
+
+\begin{screen}
+ (4) $a=3,b=2$のとき$f(n)$を求めよ．
+\end{screen}
+
+(略解)$B$は対称行列であり，正規直交化された固有ベクトルを並べた直交行列$V$により対角化される．
+$\ds f(n)=\begin{pmatrix} 1&0&0&0&0&0 \end{pmatrix}V
+\left(
+\begin{array}{cccccc}
+ 1 & 0 & 0 & 0 & 0 & 0 \\
+ 0 & 1 & 0 & 0 & 0 & 0 \\
+ 0 & 0 & 7 & 0 & 0 & 0 \\
+ 0 & 0 & 0 &-1 & 0 & 0 \\
+ 0 & 0 & 0 & 0 &-1 & 0 \\
+ 0 & 0 & 0 & 0 & 0 &-7 \\
+\end{array}
+\right)^n V^\top\left(\begin{array}{c}1\\0\\0\\0\\0\\0\end{array}\right)$によって直接一般項が求まる．
+
+\end{document}
